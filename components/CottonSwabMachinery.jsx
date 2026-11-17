@@ -110,7 +110,7 @@ as individual machines into existing lines.
 
           <div style={lineRow.wrap}>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>01 · Stick production</div>
+              <div className="mono" style={lineRow.colHeader}>Stick production</div>
               <a href="#prx" style={lineRow.link}>
                 <div style={lineRow.machine}>
                   <div className="data" style={lineRow.code}>PRX <span style={lineRow.linkArrow}>↗</span></div>
@@ -121,7 +121,7 @@ as individual machines into existing lines.
             </div>
             <div style={lineRow.arrow}>→</div>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>02 · Swab production</div>
+              <div className="mono" style={lineRow.colHeader}>Swab production</div>
               <a href="#cb1" style={lineRow.link}>
                 <div style={lineRow.machine}>
                   <div className="data" style={lineRow.code}>CB1 4.1 <span style={lineRow.linkArrow}>↗</span></div>
@@ -132,7 +132,7 @@ as individual machines into existing lines.
             </div>
             <div style={lineRow.arrow}>→</div>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>03 · Packaging · 6 machines</div>
+              <div className="mono" style={lineRow.colHeader}>Packaging · 6 machines</div>
               <div style={lineRow.list}>
                 {[
                 ["SV-2X", "Cardboard box packaging", "#sv2x"],
@@ -210,9 +210,6 @@ const lineRow = {
 function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel, flipped }) {
   const left =
   <div style={{ padding: "var(--space-6) var(--space-6)" }}>
-      <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-2)" }}>
-        Step {num}
-      </div>
       <h3 style={{ fontSize: "var(--fs-l)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
         {title}
       </h3>

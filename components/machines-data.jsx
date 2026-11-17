@@ -38,8 +38,8 @@ window.FALU_MACHINES = {
     lineHeadline: "The RB-2 is the packaging stage of the cotton pad line.",
     lineLede: "Pads are produced and cut by the WR-2100 S, then transferred to the RB-2 for bagging and sealing.",
     line: [
-      { stage: "01 · Pad production", code: "WR-2100 S", label: "Cotton pad cutting", href: "#wr2100" },
-      { stage: "02 · Packaging", code: "RB-2", label: "Bagging & sealing", current: true },
+      { stage: "Pad production", code: "WR-2100 S", label: "Cotton pad cutting", href: "#wr2100" },
+      { stage: "Packaging", code: "RB-2", label: "Bagging & sealing", current: true },
       { stage: "Output", code: "Bagged pads", label: "Sealed polybags or paper bags" }
     ],
     ctaHeadline: "Packaging cotton pads, or planning a complete pad line?"
@@ -78,9 +78,9 @@ window.FALU_MACHINES = {
     lineHeadline: "The SV-2X is the cardboard packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred directly to the SV-2X for cartoning, with no manual handling between the two.",
     line: [
-      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · Packaging", code: "SV-2X", label: "Cardboard box packaging", current: true }
+      { stage: "Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "Packaging", code: "SV-2X", label: "Cardboard box packaging", current: true }
     ],
     ctaHeadline: "Moving cotton swab packaging to cardboard, or planning a complete line?"
   },
@@ -118,9 +118,9 @@ window.FALU_MACHINES = {
     lineHeadline: "The RB-30A is the round-box packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the RB-30A for round-box filling and lid closing.",
     line: [
-      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · Packaging", code: "RB-30A", label: "Round box packaging", current: true }
+      { stage: "Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "Packaging", code: "RB-30A", label: "Round box packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into round boxes, or planning a complete line?"
   },
@@ -157,9 +157,9 @@ window.FALU_MACHINES = {
     lineHeadline: "The polybag machines are the bagging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the BV-2M or ABS-2 for bagging and sealing.",
     line: [
-      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · Packaging", code: "BV-2M / ABS-2", label: "Polybag packaging", current: true }
+      { stage: "Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "Packaging", code: "BV-2M / ABS-2", label: "Polybag packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into polybags, or planning a complete line?"
   },
@@ -196,9 +196,9 @@ window.FALU_MACHINES = {
     lineHeadline: "The SQB-2A is the square-box packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the SQB-2A for square-box filling and closing.",
     line: [
-      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · Packaging", code: "SQB-2A", label: "Square box packaging", current: true }
+      { stage: "Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "Packaging", code: "SQB-2A", label: "Square box packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into square boxes, or planning a complete line?"
   },
@@ -234,9 +234,9 @@ window.FALU_MACHINES = {
     lineHeadline: "The BL-12 is the blister packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the BL-12 for blister forming, filling and sealing.",
     line: [
-      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · Packaging", code: "BL-12", label: "Blister packaging", current: true }
+      { stage: "Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "Packaging", code: "BL-12", label: "Blister packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into blister packs, or planning a complete line?"
   },
@@ -271,8 +271,8 @@ window.FALU_MACHINES = {
     lineHeadline: "The WR-600 V is the entry-capacity pad production stage.",
     lineLede: "The WR-600 V forms and stacks cosmetic pads, then the RB-2 bags and seals them.",
     line: [
-      { stage: "01 · Pad production", code: "WR-600 V", label: "Cotton pad forming", current: true },
-      { stage: "02 · Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
+      { stage: "Pad production", code: "WR-600 V", label: "Cotton pad forming", current: true },
+      { stage: "Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
     ],
     ctaHeadline: "Starting cotton pad production, or planning a complete line?"
   },
@@ -307,8 +307,8 @@ window.FALU_MACHINES = {
     lineHeadline: "The WR-2100 S is the high-volume pad production stage.",
     lineLede: "The WR-2100 S forms and stacks cosmetic pads, then the RB-2 bags and seals them.",
     line: [
-      { stage: "01 · Pad production", code: "WR-2100 S", label: "Cotton pad forming", current: true },
-      { stage: "02 · Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
+      { stage: "Pad production", code: "WR-2100 S", label: "Cotton pad forming", current: true },
+      { stage: "Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
     ],
     ctaHeadline: "Scaling up cotton pad production, or planning a complete line?"
   },
@@ -342,8 +342,8 @@ window.FALU_MACHINES = {
     lineHeadline: "The VP-2 is a standalone, semi-automatic pad machine.",
     lineLede: "The VP-2 cuts and embosses pads, then an operator fills them into bags. No separate packaging machine is required.",
     line: [
-      { stage: "01 · Pad production", code: "VP-2", label: "Cutting and embossing", current: true },
-      { stage: "02 · Packaging", code: "Operator", label: "Semi-automatic bagging" }
+      { stage: "Pad production", code: "VP-2", label: "Cutting and embossing", current: true },
+      { stage: "Packaging", code: "Operator", label: "Semi-automatic bagging" }
     ],
     ctaHeadline: "Producing square or rectangular cotton pads, or planning a line?"
   }

@@ -133,7 +133,7 @@ window.MachinePRX = function MachinePRX() {
 
           <div style={prxLine.wrap}>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>01 · Stick production</div>
+              <div className="mono" style={prxLine.colHeader}>Stick production</div>
               <div style={{ ...prxLine.machine, ...prxLine.featured }}>
                 <div className="data" style={{ ...prxLine.code, color: "var(--on-blue)" }}>PRX</div>
                 <div style={prxLine.label}>Paper stick production</div>
@@ -143,7 +143,7 @@ window.MachinePRX = function MachinePRX() {
             </div>
             <div style={prxLine.arrow}>→</div>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>02 · Swab production</div>
+              <div className="mono" style={prxLine.colHeader}>Swab production</div>
               <a href="#cb1" style={prxLine.link}>
                 <div style={prxLine.machine}>
                   <div className="data" style={prxLine.code}>CB1 4.1 <span style={prxLine.linkArrow}>↗</span></div>
@@ -154,7 +154,7 @@ window.MachinePRX = function MachinePRX() {
             </div>
             <div style={prxLine.arrow}>→</div>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>03 · Packaging · 7 options</div>
+              <div className="mono" style={prxLine.colHeader}>Packaging · 7 options</div>
               <div style={prxLine.list}>
                 {[
                 ["SV-2X", "Cardboard boxes", "#sv2x"],

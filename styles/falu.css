@@ -21,6 +21,8 @@
   --falu-blue-hover: #1a3a6b;
   /* Fills on blue and over photos */
   --on-blue-fill: rgba(255, 255, 255, 0.04);  /* quiet panel on falu-blue */
+  --hover-fill: rgba(14, 42, 83, 0.06);        /* hover on outline buttons, light backgrounds */
+  --on-blue-hover-fill: rgba(255, 255, 255, 0.1); /* hover on outline buttons, blue bands */
   --overlay: rgba(14, 42, 83, 0.85);          /* caption chips and controls over media */
   --overlay-light: rgba(255, 255, 255, 0.85); /* caption chips over light placeholders */
   /* Photo overlay so white hero text keeps 4.5:1 (see DESIGN.md, Imagery) */
@@ -278,9 +280,12 @@ button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
   line-height: 1;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
   text-decoration: none;
 }
+/* One hover language for every button (DESIGN.md, Buttons):
+ * filled buttons shift their fill one step, outline buttons get a faint fill,
+ * the arrow moves 3px right. Nothing changes size, so nothing jumps. */
 /* Primary is falu-blue: white on the logo red is only 4.4:1, too low for button labels */
 .btn--primary {
   background: var(--falu-blue);
@@ -293,15 +298,26 @@ button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
   color: var(--navy);
   border-color: var(--navy);
 }
-.btn--ghost:hover { background: var(--falu-blue); color: var(--on-blue); }
+.btn--ghost:hover { background: var(--hover-fill); }
+/* Outline button on falu-blue bands */
+.btn--ghost-inverse {
+  background: transparent;
+  color: var(--on-blue);
+  border-color: var(--on-blue-muted);
+}
+.btn--ghost-inverse:hover { background: var(--on-blue-hover-fill); }
 .btn--minimal {
   background: transparent;
   color: var(--navy);
   padding: 8px 0;
   border: none;
-  border-bottom: 1px solid var(--navy);
+  /* A text link, not a box: square, and the underline is an inset shadow so
+   * thickening it on hover never changes the size (no jump, no flicker). */
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 currentColor;
+  transition: color 120ms ease, box-shadow 120ms ease;
 }
-.btn--minimal:hover { color: var(--falu-blue-hover); border-bottom-width: 2px; }
+.btn--minimal:hover { color: var(--falu-blue-hover); box-shadow: inset 0 -2px 0 currentColor; }
 /* On falu-blue bands: white button, blue label */
 .btn--inverse {
   background: var(--on-blue);
@@ -320,8 +336,10 @@ button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
 }
 /* Focus on blue bands: white ring */
 .falu-footer .btn:focus-visible,
-.btn--inverse:focus-visible { outline-color: var(--on-blue); }
-.btn .arrow { width: 14px; height: 1px; background: currentColor; position: relative; }
+.btn--inverse:focus-visible,
+.btn--ghost-inverse:focus-visible { outline-color: var(--on-blue); }
+.btn .arrow { width: 14px; height: 1px; background: currentColor; position: relative; transition: transform 120ms ease; }
+.btn:hover .arrow { transform: translateX(3px); }
 .btn .arrow::after {
   content: "";
   position: absolute;

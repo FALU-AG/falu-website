@@ -54,7 +54,6 @@ window.Services = function Services() {
               ["S-06", "Remote diagnostics & support", "Modem-based remote access lets FALU technicians diagnose and often resolve issues without a site visit, reducing downtime."]
             ].map(([num, title, body]) => (
               <div key={num} style={svc.cell}>
-                <div className="data" style={svc.num}>{num}</div>
                 <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-m)" }}>{title}</h3>
                 <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
               </div>
@@ -94,25 +93,21 @@ window.Services = function Services() {
 
           <div style={svcRetro.grid}>
             <RetroLine
-              code="R-01"
               title="Hot Melt System"
               body="High-precision adhesive application that replaces heating bars and mechanical cold gluing. Speed-independent, fully metered, closed-loop."
               compat="All FALU cotton swab machine models"
             />
             <RetroLine
-              code="R-02"
               title="Camera-based Quality Management"
               body="Industrial camera and centralised evaluation unit inspect swabs at up to 3'000 swabs/min from a defined distance, replacing fibre-optic light guides. Detects missing heads and visible defects, with image memory for root-cause analysis."
               compat="All FALU swab machines, all swab variants incl. baby and cosmetic"
             />
             <RetroLine
-              code="R-03"
               title="Belt Drive System"
               body="Replaces the lubricated primary chain with a dry-running belt. Eliminates oil and grease from the enclosure, reduces contamination risk, and lowers maintenance standstill time. Standard on new CB1 4.1."
               compat="Standard on new CB1 4.1. Retrofit available for all existing FALU swab machines."
             />
             <RetroLine
-              code="R-04"
               title="Dust Extraction System"
               body="Four extraction modules remove airborne fibres and heavier particles where they are generated: cotton feeder, secondary belt, airflow housing, and a belt-and-chain blow-off."
               compat="All FALU machine models featuring a closable machine housing"
@@ -155,10 +150,6 @@ window.Services = function Services() {
 function RetroLine({ code, title, body, compat, status, statusTone }) {
   return (
     <div style={svcRetro.row}>
-      <div style={svcRetro.left}>
-        <div className="data" style={svcRetro.code}>{code}</div>
-        <div style={status ? (statusTone === "navy" ? svcRetro.statusNavy : svcRetro.status) : { display: "none" }}>{status}</div>
-      </div>
       <div style={svcRetro.mid}>
         <h3 style={{ fontSize: "var(--fs-m)", color: "var(--navy)", letterSpacing: "-0.01em" }}>{title}</h3>
         <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
@@ -188,7 +179,7 @@ const svc = {
 
 const svcRetro = {
   grid: { border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", borderBottom: "none" },
-  row: { display: "grid", gridTemplateColumns: "160px 1fr auto", gap: "var(--space-4)", padding: "var(--space-4)", borderBottom: "1px solid var(--rule)", alignItems: "start", background: "var(--surface)" },
+  row: { display: "grid", gridTemplateColumns: "1fr auto", gap: "var(--space-4)", padding: "var(--space-4)", borderBottom: "1px solid var(--rule)", alignItems: "start", background: "var(--surface)" },
   left: { display: "flex", flexDirection: "column", gap: "var(--space-1-5)" },
   code: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 600 },
   status: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", border: "1px solid var(--rule)", borderRadius: "var(--radius-sm)", alignSelf: "start" },

@@ -100,7 +100,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
 
           <div style={padLine.wrap}>
             <div style={padLine.col}>
-              <div className="mono" style={padLine.colHeader}>01 · Pad production</div>
+              <div className="mono" style={padLine.colHeader}>Pad production</div>
               <div style={padLine.list}>
                 {[
                 ["WR-2100 S", "Round / oval · 2'100 pcs/min", "#wr2100"],
@@ -116,7 +116,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
             </div>
             <div style={padLine.arrow}>→</div>
             <div style={padLine.col}>
-              <div className="mono" style={padLine.colHeader}>02 · Packaging</div>
+              <div className="mono" style={padLine.colHeader}>Packaging</div>
               <a href="#rb2" style={padLine.link}>
                 <div style={padLine.machine}>
                   <div className="data" style={padLine.code}>RB-2 <span style={padLine.linkArrow}>↗</span></div>
@@ -177,9 +177,6 @@ const padBenefits = {
 function PadBlock({ num, title, body, imgId, image, links, flipped }) {
   const left =
   <div style={{ padding: "var(--space-6) var(--space-6)" }}>
-      <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-2)" }}>
-        Step {num}
-      </div>
       <h3 style={{ fontSize: "var(--fs-l)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
         {title}
       </h3>

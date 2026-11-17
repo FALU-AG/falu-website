@@ -136,13 +136,12 @@ window.HomepageB = function HomepageB() {
             </div>
             <div style={planning.right}>
               {[
-              ["A", "Output targets", "Volume, mix, throughput planning"],
-              ["B", "Production flow", "Material flow & line integration"],
-              ["C", "Layout", "Factory footprint & expansion"],
-              ["D", "Scalability", "Capacity roadmap, phased rollout"]].
-              map(([k, t, d]) =>
-              <div key={k} style={planning.tile}>
-                  <div className="mono" style={planning.tileKey}>{k}</div>
+              ["Output targets", "Volume, mix, throughput planning"],
+              ["Production flow", "Material flow & line integration"],
+              ["Layout", "Factory footprint & expansion"],
+              ["Scalability", "Capacity roadmap, phased rollout"]].
+              map(([t, d]) =>
+              <div key={t} style={planning.tile}>
                   <div style={planning.tileTitle}>{t}</div>
                   <div style={planning.tileDesc}>{d}</div>
                 </div>
@@ -183,7 +182,6 @@ window.HomepageB = function HomepageB() {
             }].
             map((v, i) =>
             <div key={i} style={whyB.cell}>
-                <div className="data" style={whyB.cellNum}>{String(i + 1).padStart(2, "0")}</div>
                 <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-l)" }}>{v.head}</h3>
                 <p style={{ marginTop: "var(--space-2)", color: "var(--ink-soft)", fontSize: "var(--fs-body)", lineHeight: 1.65 }}>{v.body}</p>
               </div>
@@ -254,7 +252,6 @@ window.HomepageB = function HomepageB() {
             map((p, i, arr) =>
             <div key={p.phase} style={{ ...journey.col, ...(i === arr.length - 1 ? { borderRight: "1px solid var(--rule)" } : {}) }}>
                 <div style={journey.head}>
-                  <div className="mono" style={journey.phase}>Phase {p.phase}</div>
                   <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-m)" }}>{p.title}</h3>
                 </div>
                 <ul style={journey.list}>
@@ -279,7 +276,7 @@ window.HomepageB = function HomepageB() {
           </h2>
           <div style={{ display: "flex", gap: "var(--space-2)", justifyContent: "center", marginTop: "var(--space-6)" }}>
             <a href="#contact" className="btn btn--inverse btn--lg">Request a quotation<span className="arrow" /></a>
-            <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "var(--on-blue-muted)", color: "var(--on-blue)" }}>
+            <a href="tel:+41552255151" className="btn btn--ghost-inverse btn--lg">
               +41 55 225 51 51
             </a>
           </div>
@@ -427,15 +424,13 @@ const planning = {
   tag: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
   right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", overflow: "hidden" },
   tile: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)", marginRight: -1, marginBottom: -1 },
-  tileKey: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
-  tileTitle: { marginTop: "var(--space-2)", color: "var(--on-blue)", fontSize: "var(--fs-lead)", fontWeight: 600 },
+  tileTitle: { color: "var(--on-blue)", fontSize: "var(--fs-lead)", fontWeight: 600 },
   tileDesc: { marginTop: "var(--space-1)", color: "var(--on-blue-muted)", fontSize: "var(--fs-label)", lineHeight: 1.55 }
 };
 
 const whyB = {
   grid: { marginTop: "var(--section-y)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-8)" },
   cell: { padding: "0" },
-  cellNum: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 }
 };
 
 const mapStats = {
@@ -449,7 +444,6 @@ const journey = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderTop: "2px solid var(--navy)", borderLeft: "1px solid var(--rule)" },
   col: { padding: "var(--space-4) var(--space-4) var(--space-4)", borderRight: "1px solid var(--rule)", background: "var(--surface)" },
   head: {},
-  phase: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
   list: { marginTop: "var(--space-3)", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "var(--space-1-5)" },
   item: { display: "flex", gap: "var(--space-1-5)", alignItems: "flex-start", color: "var(--ink-soft)", fontSize: "var(--fs-body)" },
   itemDot: { width: 14, height: 1, background: "var(--falu-red)", marginTop: "var(--space-1-5)", flexShrink: 0 }

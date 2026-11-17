@@ -95,9 +95,11 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 
 **Buttons** (`.btn`, 14px / 600, padding 12px 20px; `--lg` 16px text, padding 16px 28px):
 - `--primary`: blue fill, white label. One per view.
-- `--ghost`: blue 1px outline, fills blue on hover.
-- `--minimal`: text with a 1px underline, for "View CB1 specification" style links.
+- `--ghost`: blue 1px outline on light backgrounds.
+- `--ghost-inverse`: light outline and white label on blue bands (the phone number next to a white button).
+- `--minimal`: a text link with a 1px underline drawn as an inset shadow, square, for "View CB1 specification" style links.
 - `--inverse`: white fill, blue label, only on blue bands.
+- Hover, the same everywhere: filled buttons shift their fill one step (`--falu-blue-hover`, `--surface-tint`), outline buttons get a faint fill (`--hover-fill`, `--on-blue-hover-fill`), text links thicken the underline to 2px, and the arrow moves 3px right. 120ms ease. A hover never changes size, border width or padding, so nothing on the page moves.
 - Focus: 2px blue outline, 2px offset (white on blue bands). Disabled: `--muted` label, `--line` border, no hover.
 - Labels name the destination. One primary action across the site: **Request a quotation**. Secondary: **Browse machinery**, or the phone number. No "Learn more".
 
@@ -122,6 +124,7 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 - English, factual, engineering led. Short declarative sentences, numbers over adjectives.
 - Never an en dash or em dash. Use a colon, comma, new sentence, or "to" for ranges.
 - No eyebrows above headlines. Labels in sentence case, no all caps, no wide tracking.
+- No index numbering as decoration: no "01" to "04", "A" to "D", "S-01", "F · 01", "Phase 01" or "Step 01" above titles. Order on the page already shows a sequence. Numbers appear only where they are facts (figures, machine codes) or where the reader must refer to them.
 - "Machinery", never "Solutions". Production planning is a service, kept apart from the three machinery families.
 - Claims need a source on the page: "market leader" or "lowest total cost of ownership" only next to the figure that backs them. No invented customers, counts or certifications.
 

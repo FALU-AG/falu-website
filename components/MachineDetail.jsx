@@ -89,7 +89,6 @@ window.MachineDetail = function MachineDetail({ id }) {
           <div style={md.featGrid(m.features.length)}>
             {m.features.map(([title, body], i) =>
             <div key={title} style={md.featCell}>
-                <div className="mono" style={md.featNum}>F · {String(i + 1).padStart(2, "0")}</div>
                 <h4 style={{ marginTop: "var(--space-1-5)", fontSize: "var(--fs-body)" }}>{title}</h4>
                 <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
               </div>
@@ -177,7 +176,6 @@ const md = {
 
   featGrid: (n) => ({ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" }),
   featCell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1 },
-  featNum: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
 
   tableWrap: { background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" },
   tableRow: { display: "grid", gridTemplateColumns: "180px 1fr 1.5fr", padding: "var(--space-2) var(--space-3)", borderBottom: "1px solid var(--rule-soft)", alignItems: "center", fontSize: "var(--fs-ui)" },
