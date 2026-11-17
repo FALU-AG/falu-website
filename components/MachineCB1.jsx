@@ -164,7 +164,7 @@ window.MachineCB1 = function MachineCB1() {
                 <div key={i} style={{ ...techTable.row, ...(showGroup ? techTable.rowGrouped : {}) }}>
                   <div className="mono" style={techTable.group}>{showGroup ? group : ""}</div>
                   <div style={techTable.key}>{key}</div>
-                  <div className="mono" style={techTable.value}>{value}</div>
+                  <div className="data" style={techTable.value}>{value}</div>
                 </div>);
 
             })}
@@ -291,7 +291,7 @@ window.MachineCB1 = function MachineCB1() {
               <div className="mono" style={lineInt.colHeader}>Upstream</div>
               <a href="#prx" style={lineInt.machineLink}>
                 <div style={lineInt.machine}>
-                  <div className="mono" style={lineInt.machineCode}>PRX <span style={lineInt.linkArrow}>↗</span></div>
+                  <div className="data" style={lineInt.machineCode}>PRX <span style={lineInt.linkArrow}>↗</span></div>
                   <div style={lineInt.machineLabel}>Paper stick production</div>
                   <p style={lineInt.machineNote}>Wound paper sticks fed directly into the CB1 stick magazine.</p>
                 </div>
@@ -301,7 +301,7 @@ window.MachineCB1 = function MachineCB1() {
             <div style={lineInt.col}>
               <div className="mono" style={lineInt.colHeader}>Core</div>
               <div style={{ ...lineInt.machine, ...lineInt.machineFeatured }}>
-                <div className="mono" style={{ ...lineInt.machineCode, color: "var(--on-blue)" }}>CB1 4.1</div>
+                <div className="data" style={{ ...lineInt.machineCode, color: "var(--on-blue)" }}>CB1 4.1</div>
                 <div style={lineInt.machineLabel}>Cotton swab forming</div>
                 <p style={lineInt.machineNote}>Forms swabs from cotton string and applicator sticks at up to 3'100/min.</p>
                 <div className="mono" style={lineInt.youAreHere}>You are here</div>
@@ -320,7 +320,7 @@ window.MachineCB1 = function MachineCB1() {
                 ["BL-12", "Blister packaging", "#bl12"]].
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={lineInt.machineRow}>
-                    <span className="mono" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={lineInt.linkArrow}>↗</span></span>
+                    <span className="data" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={lineInt.linkArrow}>↗</span></span>
                     <span style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>{label}</span>
                   </a>
                 )}
@@ -378,7 +378,7 @@ window.MachineCB1 = function MachineCB1() {
 
 const featuredRetro = {
   grid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-3)", alignItems: "stretch", gridAutoRows: "1fr" },
-  card: { border: "1px solid var(--rule)", background: "var(--surface)", display: "flex", flexDirection: "column" },
+  card: { border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", background: "var(--surface)", display: "flex", flexDirection: "column" },
   media: { borderBottom: "1px solid var(--rule)" },
   title: { fontSize: "var(--fs-m)", marginTop: "var(--space-4)", color: "var(--navy)", letterSpacing: "-0.01em", padding: "0 var(--space-4)" },
   lede: { marginTop: "var(--space-1-5)", marginBottom: "var(--space-4)", fontSize: "var(--fs-ui)", color: "var(--ink-soft)", lineHeight: 1.6, padding: "0 var(--space-4)" },
@@ -439,7 +439,7 @@ const hero = {
   left: {},
   eyebrow: { fontSize: "var(--fs-label)" },
   lede: { marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", color: "var(--ink-soft)", lineHeight: 1.6, maxWidth: 580 },
-  headlineSpec: { marginTop: "var(--space-6)", padding: "var(--space-4) var(--space-4)", border: "1px solid var(--rule)", display: "inline-block" },
+  headlineSpec: { marginTop: "var(--space-6)", padding: "var(--space-4) var(--space-4)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", display: "inline-block" },
   specNum: { fontSize: "var(--fs-xxl)", color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1 },
   specUnit: { fontSize: "var(--fs-body)", color: "var(--ink-soft)" },
   specLabel: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontFamily: "var(--font-mono)" },
@@ -447,12 +447,12 @@ const hero = {
 };
 
 const features = {
-  grid: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  cell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }
+  grid: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" },
+  cell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1 }
 };
 
 const techTable = {
-  wrap: { background: "var(--surface)", border: "1px solid var(--rule)" },
+  wrap: { background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" },
   row: { display: "grid", gridTemplateColumns: "180px 1fr 1.5fr", padding: "var(--space-2) var(--space-3)", borderBottom: "1px solid var(--rule-soft)", alignItems: "center", fontSize: "var(--fs-ui)" },
   rowGrouped: { borderTop: "1px solid var(--rule)", paddingTop: "var(--space-2)" },
   group: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
@@ -462,7 +462,7 @@ const techTable = {
 
 const options = {
   grid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-4)", alignItems: "stretch" },
-  group: { border: "1px solid var(--rule)", background: "var(--surface)", display: "flex", flexDirection: "column" },
+  group: { border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", background: "var(--surface)", display: "flex", flexDirection: "column" },
   groupHeader: { padding: "var(--space-3) var(--space-3)", borderBottom: "1px solid var(--rule)", background: "var(--bg-alt)" },
   itemList: { display: "flex", flexDirection: "column", flex: 1 },
   item: { padding: "var(--space-3) var(--space-3)", flex: 1 },
@@ -480,9 +480,9 @@ const retrofitBanner = {
 };
 
 const lineInt = {
-  video: { marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)" },
+  video: { marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px" },
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
-  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)" },
+  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", padding: "var(--space-4)" },
   colHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-blue-line)", fontSize: "var(--fs-l)" },
   machine: { padding: "var(--space-3) 0" },
@@ -506,12 +506,12 @@ const lineInt = {
 
 const downloads = {
   wrap: {},
-  list: { marginTop: "var(--space-3)", border: "1px solid var(--rule)" },
+  list: { marginTop: "var(--space-3)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" },
   row: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--space-2) var(--space-3)", borderBottom: "1px solid var(--rule-soft)", background: "var(--surface)" }
 };
 
 const sparePromise = {
-  wrap: { padding: "var(--space-6)", background: "var(--bg-band)", border: "1px solid var(--rule)", alignSelf: "start", marginTop: "var(--space-8)" }
+  wrap: { padding: "var(--space-6)", background: "var(--bg-band)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", alignSelf: "start", marginTop: "var(--space-8)" }
 };
 
 const cta = {

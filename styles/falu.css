@@ -39,8 +39,11 @@
   --bg-band: var(--surface-tint);
   --falu-red-dark: var(--falu-red);
 
-  /* Type: Archivo for everything, figures with tabular numerals */
+  /* Type: Archivo for text and labels; JetBrains Mono for figures, machine
+   * codes and spec values (.data), shared with PMAS.
+   * --font-mono is a legacy alias used by labels and stays Archivo. */
   --font-sans: "Archivo", Arial, "Helvetica Neue", sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --font-mono: var(--font-sans);
 
   /* Type scale: nine steps, see DESIGN.md. Phones redefine the large ones below. */
@@ -67,8 +70,14 @@
   --section-y: var(--space-12);   /* vertical padding of every section */
   --card-pad: var(--space-6);     /* padding of large cards and panels */
 
-  /* Shape and depth: square, flat */
-  --radius: 0;
+  /* Shape and depth (shared FALU core with PMAS: 4 / 8 / 12) */
+  --radius-sm: 4px;    /* chips, tooltips, small controls */
+  --radius: 8px;       /* buttons, inputs, cards, tables, dropdowns */
+  --radius-lg: 12px;   /* images, video, map, large panels */
+  --shadow-float: 0 12px 32px rgba(14, 42, 83, 0.14);  /* floating UI only: dropdowns, tooltips */
+
+  /* Shared FALU core: the dark surface PMAS uses for anything digital */
+  --board: #06182b;
 
   /* Layout */
   --maxw: 1280px;
@@ -92,7 +101,7 @@ html, body {
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
-/* No rounded corners — anywhere */
+/* Corners from the radius scale (DESIGN.md, Shape and depth) */
 button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
 
 .container {
@@ -101,10 +110,16 @@ button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
   padding: 0 var(--gutter);
 }
 
-/* Figures, specs, model numbers: Archivo with tabular numerals */
+/* Labels that line up: Archivo with tabular numerals */
 .mono {
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
+}
+/* Data: figures, machine codes, spec values, timestamps (shared with PMAS) */
+.data {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
 }
 
 /* ========== HEADER ========== */
@@ -184,9 +199,11 @@ button, input, select, textarea, .card, .btn { border-radius: var(--radius); }
   top: 100%;
   left: 14px;
   min-width: 248px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--rule);
-  border-top: 2px solid var(--falu-blue);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
   opacity: 0;
   transform: translateY(6px);
   pointer-events: none;
@@ -416,6 +433,7 @@ iframe { height: auto; }
   padding: 0;
   background: transparent;
   border: 1px solid var(--rule);
+  border-radius: var(--radius);
   cursor: pointer;
 }
 .falu-burger__icon { position: relative; width: 20px; height: 14px; display: block; }

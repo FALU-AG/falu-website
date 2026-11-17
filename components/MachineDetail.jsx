@@ -63,8 +63,8 @@ window.MachineDetail = function MachineDetail({ id }) {
             <div style={md.statBox}>
                 <div style={md.statLabel}>{m.headlineStat.label}</div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "var(--space-1-5)", marginTop: "var(--space-2)" }}>
-                  <span className="mono" style={md.statNum}>{m.headlineStat.value}</span>
-                  <span className="mono" style={md.statUnit}>{m.headlineStat.unit}</span>
+                  <span className="data" style={md.statNum}>{m.headlineStat.value}</span>
+                  <span className="data" style={md.statUnit}>{m.headlineStat.unit}</span>
                 </div>
               </div>
             }
@@ -112,7 +112,7 @@ window.MachineDetail = function MachineDetail({ id }) {
                 <div key={i} style={{ ...md.tableRow, ...(showGroup ? md.tableRowGrouped : {}) }}>
                   <div className="mono" style={md.tableGroup}>{showGroup ? group : ""}</div>
                   <div style={md.tableKey}>{key}</div>
-                  <div className="mono" style={{ ...md.tableValue, color: "var(--navy)" }}>{value}</div>
+                  <div className="data" style={{ ...md.tableValue, color: "var(--navy)" }}>{value}</div>
                 </div>);
             })}
           </div>
@@ -132,7 +132,7 @@ window.MachineDetail = function MachineDetail({ id }) {
                 {i > 0 && <div style={md.lineArrow}>→</div>}
                 <a href={node.href || "#"} style={{ ...md.lineCol, ...(node.current ? md.lineColCurrent : {}), textDecoration: "none" }}>
                   <div className="mono" style={md.lineColHeader}>{node.stage}</div>
-                  <div className="mono" style={{ ...md.lineCode, color: "var(--on-blue)" }}>
+                  <div className="data" style={{ ...md.lineCode, color: "var(--on-blue)" }}>
                     {node.code}{!node.current && node.href ? <span style={md.lineArrowMark}> ↗</span> : null}
                   </div>
                   <div style={md.lineLabel}>{node.label}</div>
@@ -170,16 +170,16 @@ const md = {
   crumbSep: { color: "var(--muted)" },
   crumbCurrent: { color: "var(--navy)", fontWeight: 600 },
 
-  statBox: { marginTop: "var(--space-6)", padding: "var(--space-3) var(--space-4)", border: "1px solid var(--rule)", display: "inline-block" },
+  statBox: { marginTop: "var(--space-6)", padding: "var(--space-3) var(--space-4)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", display: "inline-block" },
   statLabel: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontFamily: "var(--font-mono)" },
   statNum: { fontSize: "var(--fs-xl)", color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1 },
   statUnit: { fontSize: "var(--fs-body)", color: "var(--ink-soft)" },
 
-  featGrid: (n) => ({ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" }),
-  featCell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" },
+  featGrid: (n) => ({ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" }),
+  featCell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1 },
   featNum: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
 
-  tableWrap: { background: "var(--surface)", border: "1px solid var(--rule)" },
+  tableWrap: { background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" },
   tableRow: { display: "grid", gridTemplateColumns: "180px 1fr 1.5fr", padding: "var(--space-2) var(--space-3)", borderBottom: "1px solid var(--rule-soft)", alignItems: "center", fontSize: "var(--fs-ui)" },
   tableRowGrouped: { borderTop: "1px solid var(--rule)", paddingTop: "var(--space-2)" },
   tableGroup: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
@@ -187,7 +187,7 @@ const md = {
   tableValue: { fontSize: "var(--fs-ui)", fontWeight: 500 },
 
   lineRow: { display: "flex", alignItems: "stretch", gap: 0 },
-  lineCol: { flex: 1, background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)", display: "block", color: "inherit" },
+  lineCol: { flex: 1, background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", padding: "var(--space-4)", display: "block", color: "inherit" },
   lineColCurrent: {},
   lineColHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
   lineCode: { fontSize: "var(--fs-m)", color: "var(--on-blue)", fontWeight: 600, letterSpacing: "-0.01em" },

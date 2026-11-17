@@ -59,7 +59,7 @@ function faluToast(message) {
     el.id = "falu-toast";
     el.style.cssText =
       "position:fixed;left:50%;bottom:32px;transform:translateX(-50%);z-index:9999;" +
-      "background:var(--falu-blue);color:var(--on-blue);border:1px solid var(--on-blue-line);padding:var(--space-1-5) var(--space-2);" +
+      "background:var(--falu-blue);color:var(--on-blue);border:1px solid var(--on-blue-line);border-radius:var(--radius);padding:var(--space-1-5) var(--space-2);" +
       "font-family:var(--font-sans);font-size:var(--fs-label);font-weight:600;" +
       "pointer-events:none;opacity:0;transition:opacity .18s ease;";
     document.body.appendChild(el);
@@ -85,6 +85,7 @@ window.FaluHeader = function FaluHeader({ active = "home" }) {
     { id: "services", label: "Services" },
     { id: "about", label: "About" },
     { id: "careers", label: "Careers" },
+    { id: "pmas", label: "PMAS", href: "https://pmas.falu.com/" },
   ];
   return (
     <header className="falu-header">
@@ -96,7 +97,7 @@ window.FaluHeader = function FaluHeader({ active = "home" }) {
           {items.map((it) => (
             <div key={it.id} className={`falu-nav__item${it.children ? " has-dropdown" : ""}`}>
               <a
-                href={`#${it.id}`}
+                href={it.href || `#${it.id}`}
                 className={active === it.id ? "active" : ""}
                 aria-current={active === it.id ? "page" : undefined}
                 aria-haspopup={it.children ? "true" : undefined}
@@ -144,7 +145,7 @@ window.FaluHeader = function FaluHeader({ active = "home" }) {
           {items.map((it) => (
             <React.Fragment key={it.id}>
               <a
-                href={`#${it.id}`}
+                href={it.href || `#${it.id}`}
                 className={`falu-mobile-link${active === it.id ? " active" : ""}`}
                 aria-current={active === it.id ? "page" : undefined}
                 onClick={close}
@@ -197,6 +198,7 @@ window.FaluFooter = function FaluFooter() {
             <li><a href="#cotton-pad-machinery">Cotton Pad Machinery</a></li>
             <li><a href="#prx">Paper Stick Machinery</a></li>
             <li><a href="#services">Production Planning & Layout</a></li>
+            <li><a href="https://pmas.falu.com/">PMAS production monitoring</a></li>
           </ul>
         </div>
         <div>
@@ -253,6 +255,9 @@ window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, da
         aspectRatio: height ? undefined : ratio,
         height: height || undefined,
         border,
+        // Rounded on its own; a card that clips its children sets --slot-radius: 0px.
+        borderRadius: "var(--slot-radius, var(--radius-lg))",
+        overflow: "hidden",
         position: "relative",
         display: "flex",
         alignItems: "center",
@@ -364,7 +369,7 @@ window.MachineHeroVideo = function MachineHeroVideo({ id, src, poster, label, ra
       style={{
         position: "relative",
         background: "var(--falu-blue)",
-        border: "1px solid var(--on-blue-line)",
+        border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px",
         aspectRatio: full ? undefined : ratio,
         height: full ? "100%" : undefined,
         overflow: "hidden",
@@ -405,7 +410,7 @@ window.MachineHeroVideo = function MachineHeroVideo({ id, src, poster, label, ra
           aria-label="Seek"
           style={vid.range}
         />
-        <span className="mono" style={vid.time}>{faluClock(time)} / {faluClock(duration)}</span>
+        <span className="data" style={vid.time}>{faluClock(time)} / {faluClock(duration)}</span>
         <button
           type="button"
           onClick={toggleFull}
@@ -426,7 +431,7 @@ function VideoPlaceholder({ id, label, ratio }) {
         background: SHOW_SLOT_IDS
           ? "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, var(--falu-blue-hover) 8px 16px)"
           : "var(--falu-blue)",
-        border: "1px solid var(--on-blue-line)",
+        border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px",
         aspectRatio: ratio,
         position: "relative",
         display: "flex",
@@ -436,7 +441,7 @@ function VideoPlaceholder({ id, label, ratio }) {
         gap: "var(--space-2)",
       }}
     >
-      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: "var(--fs-lead)", border: "1px solid var(--on-blue-line)", background: "var(--overlay)" }}>▶</div>
+      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: "var(--fs-lead)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-sm)", background: "var(--overlay)" }}>▶</div>
       <div
         style={{
           fontFamily: "var(--font-mono)",
@@ -444,7 +449,7 @@ function VideoPlaceholder({ id, label, ratio }) {
           color: "var(--on-blue-muted)",
           background: "var(--overlay)",
           padding: "var(--space-1) var(--space-2)",
-          border: "1px solid var(--on-blue-line)",
+          border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-sm)",
           textAlign: "center",
         }}
       >
@@ -493,7 +498,7 @@ const vid = {
     height: 32,
     flexShrink: 0,
     padding: 0,
-    border: "1px solid var(--on-blue-line)",
+    border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-sm)",
     background: "var(--overlay)",
     color: "var(--on-blue)",
     fontSize: "var(--fs-label)",

@@ -4,6 +4,23 @@ The single reference for how falu.com looks and reads. Tokens come from the FALU
 
 Supersedes `BRAND_RULES.md` and `design-system/` (Inter, JetBrains Mono, red buttons, navy `#002e5b`), which describe the June version of the site.
 
+## Shared FALU core (with PMAS)
+
+The machinery site and the PMAS site (pmas.falu.com, `pmas-website/DESIGN.md`) are one family. These rules are the same on both; change them in both files together.
+
+| Rule | Value |
+|---|---|
+| Brand blue | `#0e2a53` (`--falu-blue`) |
+| Dark surface for anything digital | `#06182b` (`--board`) |
+| Red | `#ec1c24`, a signal only: it marks the one thing that matters in a view, never decoration. On PMAS it means a machine error |
+| Text and labels | Archivo |
+| Figures, machine codes, spec values, timestamps | JetBrains Mono with tabular numerals (`.data`, `--font-data`) |
+| Corner radius | 4 / 8 / 12 (`--radius-sm`, `--radius`, `--radius-lg`) |
+| Copy | English, factual, numbers over adjectives, no en or em dashes, no eyebrows, no unbacked superlatives |
+| Cross-links | PMAS in this site's main nav and footer; the FALU logo in the PMAS footer |
+
+Deliberately different: this site is light, left aligned and without motion (a datasheet); PMAS is mostly dark, centers section headlines and uses functional motion (a wallboard).
+
 ## Reader and job
 
 - **Reader:** procurement engineers, production managers and plant directors buying capital equipment that runs for 30+ years.
@@ -18,7 +35,7 @@ Light theme only. One blue carries the structure, one red marks a single point p
 |---|---|---|
 | `--falu-blue` | `#0e2a53` | Primary buttons, blue bands, footer, active nav |
 | `--falu-blue-hover` | `#1a3a6b` | Hover and pressed state of blue buttons |
-| `--falu-red` | `#ec1c24` | Logo, installed countries on the map, the current machine in a line diagram. At most one red emphasis per view, as a shape or 24px+ bold text |
+| `--falu-red` | `#ec1c24` | A signal, never decoration: the logo, the current machine in a line diagram, the country under the pointer on the map. At most one red emphasis per view, as a shape or 24px+ bold text |
 | `--ink` | `#0e2a53` | Headings and body text. Text is blue, never black |
 | `--muted` | `#5b6b80` | Captions, labels, secondary text (5.4:1 on white) |
 | `--line` | `#d9dee5` | Hairlines, borders, dividers |
@@ -30,6 +47,7 @@ Light theme only. One blue carries the structure, one red marks a single point p
 | `--on-blue-fill` | white at 4% | Quiet panels on blue (line diagrams) |
 | `--overlay` | blue at 85% | Caption chips and video controls over media |
 | `--overlay-light` | white at 85% | Caption chips over light placeholders |
+| `--board` | `#06182b` | Shared with PMAS: dark surface for digital product sections (not used yet) |
 
 Rules:
 - No red text on blue, no blue text on red, no red buttons (white on the logo red is 4.4:1, under AA for 14px labels).
@@ -38,7 +56,7 @@ Rules:
 
 ## Typography
 
-Archivo for everything (400, 500, 600, 700). Figures, model numbers and specs use tabular numerals (`.mono`). Headings are left aligned statements in sentence case.
+Archivo (400, 500, 600, 700) for headlines, text and labels; labels that line up use tabular numerals (`.mono`, still Archivo). JetBrains Mono (400 to 600) only for data: figures, machine codes (CB1 4.1, SV-2X), spec table values, timestamps and file sizes (`.data`). Never for labels or running text. Headings are left aligned statements in sentence case.
 
 | Token | Size / line height | Phone | Use |
 |---|---|---|---|
@@ -64,9 +82,14 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 
 ## Shape and depth
 
-- Radius 0 everywhere: buttons, inputs, cards, images, dropdowns.
-- No shadows. Separation comes from hairlines (`1px solid var(--line)`) and tinted bands.
-- Floating UI (nav dropdown) uses a border and a 2px blue top rule, not a shadow.
+- Radius scale, shared with PMAS:
+  - `--radius-sm` 4px: chips, tooltips, small controls.
+  - `--radius` 8px: buttons, inputs, cards, tables, hairline grids, dropdowns, the burger button.
+  - `--radius-lg` 12px: images, video, the map, large panels.
+- Square: full-width bands and sections, table rows, list rows. The datasheet character lives there.
+- A box that holds other boxes clips them (`overflow: hidden`) and sets `--slot-radius: 0px`, so an image inside a card is not rounded twice.
+- Hairline grids (cells sharing lines) get a full border and radius on the wrapper; cells carry right and bottom lines and `margin: 0 -1px -1px 0` so the outer lines tuck under the wrapper's border.
+- No shadows on the page. Separation comes from hairlines (`1px solid var(--line)`) and tinted bands. Floating UI only (dropdowns, tooltips) gets `--shadow-float`.
 
 ## Components
 
@@ -78,9 +101,9 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 - Focus: 2px blue outline, 2px offset (white on blue bands). Disabled: `--muted` label, `--line` border, no hover.
 - Labels name the destination. One primary action across the site: **Request a quotation**. Secondary: **Browse machinery**, or the phone number. No "Learn more".
 
-**Navigation:** sticky white header, 84px (68px on phones), hairline below. Machinery · Services · About · Careers · Contact. Phone and the primary button on the right; on phones the primary button stays visible next to the burger.
+**Navigation:** sticky white header, 84px (68px on phones), hairline below. Machinery · Services · About · Careers · PMAS (links to pmas.falu.com). Phone and the primary button on the right; on phones the primary button stays visible next to the burger.
 
-**Figures:** a large number in `--fs-h3` or `--fs-h2` with tabular numerals and a `--fs-label` caption below. Swiss separators: `3'100`, `1'000`. Units tight: `3'100/min`.
+**Figures:** a large number in `--fs-l` or `--fs-xl`, set in `.data`, with a `--fs-label` caption below. Swiss separators: `3'100`, `1'000`. Units tight: `3'100/min`.
 
 **Cards and rows:** no fill on white pages, `--surface-tint` fill on white when they need grouping, hairline between list items. Never three identical cards in a row as decoration.
 
@@ -91,7 +114,7 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 - Real machine and factory photography only: machines at 3/4 front, details close up, the Rüti floor wide. No stock, no illustrations of people, no renders that are not a FALU machine.
 - Hero photo uses `--scrim` from the bottom so the headline passes 4.5:1.
 - Placeholders until the shoot: a flat `--surface-tint` block with the photo brief as caption. Slot codes (`HOME-01`) and stripes show only in development builds.
-- The world map colors only countries with installations, listed in `FALU_COUNTRIES` (`components/HomepageB.jsx`, 74 countries). The "70+" figure in the copy must stay true to that list; change both together.
+- The world map colors only countries with installations, listed in `FALU_COUNTRIES` (`components/HomepageB.jsx`, 74 countries), in `--on-blue-muted`; the country under the pointer turns red. The "70+" figure in the copy must stay true to that list; change both together.
 - Icons: none decorative. A thin arrow on links and buttons; 1.5px stroke icons at 16px for download and external links only.
 
 ## Copy

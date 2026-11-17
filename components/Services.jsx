@@ -54,7 +54,7 @@ window.Services = function Services() {
               ["S-06", "Remote diagnostics & support", "Modem-based remote access lets FALU technicians diagnose and often resolve issues without a site visit, reducing downtime."]
             ].map(([num, title, body]) => (
               <div key={num} style={svc.cell}>
-                <div className="mono" style={svc.num}>{num}</div>
+                <div className="data" style={svc.num}>{num}</div>
                 <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-m)" }}>{title}</h3>
                 <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
               </div>
@@ -156,7 +156,7 @@ function RetroLine({ code, title, body, compat, status, statusTone }) {
   return (
     <div style={svcRetro.row}>
       <div style={svcRetro.left}>
-        <div className="mono" style={svcRetro.code}>{code}</div>
+        <div className="data" style={svcRetro.code}>{code}</div>
         <div style={status ? (statusTone === "navy" ? svcRetro.statusNavy : svcRetro.status) : { display: "none" }}>{status}</div>
       </div>
       <div style={svcRetro.mid}>
@@ -181,18 +181,18 @@ const svcCrumb = {
 };
 
 const svc = {
-  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  cell: { padding: "var(--space-4) var(--space-4) var(--space-4)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", background: "var(--surface)" },
+  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" },
+  cell: { padding: "var(--space-4) var(--space-4) var(--space-4)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1, background: "var(--surface)" },
   num: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 }
 };
 
 const svcRetro = {
-  grid: { border: "1px solid var(--rule)", borderBottom: "none" },
+  grid: { border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", borderBottom: "none" },
   row: { display: "grid", gridTemplateColumns: "160px 1fr auto", gap: "var(--space-4)", padding: "var(--space-4)", borderBottom: "1px solid var(--rule)", alignItems: "start", background: "var(--surface)" },
   left: { display: "flex", flexDirection: "column", gap: "var(--space-1-5)" },
   code: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 600 },
-  status: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", border: "1px solid var(--rule)", alignSelf: "start" },
-  statusNavy: { fontSize: "var(--fs-label)", color: "var(--on-blue)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", background: "var(--navy)", alignSelf: "start" },
+  status: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", border: "1px solid var(--rule)", borderRadius: "var(--radius-sm)", alignSelf: "start" },
+  statusNavy: { borderRadius: "var(--radius-sm)", fontSize: "var(--fs-label)", color: "var(--on-blue)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", background: "var(--navy)", alignSelf: "start" },
   mid: {},
   compat: { marginTop: "var(--space-2)", paddingTop: "var(--space-2)", borderTop: "1px solid var(--rule-soft)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", lineHeight: 1.5 },
   link: { fontSize: "var(--fs-label)", color: "var(--navy)", textDecoration: "none", whiteSpace: "nowrap", paddingTop: "var(--space-1)" },

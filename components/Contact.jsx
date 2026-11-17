@@ -22,7 +22,7 @@ function MapEmbed() {
 
   if (consented) {
     return (
-      <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)" }}>
+      <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px" }}>
         <iframe
           title="FALU AG location, Joweid Zentrum 5, 8630 Rüti, Switzerland"
           src="https://maps.google.com/maps?q=FALU%20AG%2C%20Joweid%20Zentrum%205%2C%208630%20R%C3%BCti%2C%20Switzerland&z=15&output=embed"
@@ -35,7 +35,7 @@ function MapEmbed() {
   }
 
   return (
-    <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", background: "var(--bg-alt)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--space-3)", gap: "var(--space-2)" }}>
+    <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px", background: "var(--bg-alt)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--space-3)", gap: "var(--space-2)" }}>
       <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>
         Location map
       </div>
@@ -172,14 +172,14 @@ window.Contact = function Contact() {
                 </span>
               </label>
               {files.length > 0 &&
-              <div style={{ marginTop: "var(--space-1-5)", border: "1px solid var(--rule)" }}>
+              <div style={{ marginTop: "var(--space-1-5)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" }}>
                 {files.map((f, idx) =>
                 <div key={idx} style={cForm.fileRow}>
                     <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", width: 36 }}>
                       {(f.name.split(".").pop() || "").toUpperCase().slice(0, 4)}
                     </span>
                     <span style={{ flex: 1, fontSize: "var(--fs-label)", color: "var(--navy)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{f.name}</span>
-                    <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
+                    <span className="data" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
                     <button onClick={() => removeFile(idx)} style={cForm.fileRemove} aria-label="Remove">×</button>
                   </div>
                 )}
@@ -281,7 +281,7 @@ const cForm = {
   input: {
     width: "100%",
     padding: "var(--space-1-5) var(--space-2)",
-    border: "1px solid var(--rule)",
+    border: "1px solid var(--rule)", borderRadius: "var(--radius)",
     background: "var(--surface)",
     fontFamily: "var(--font-sans)",
     fontSize: "var(--fs-ui)",

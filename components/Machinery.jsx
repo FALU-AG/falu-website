@@ -127,7 +127,7 @@ window.Machinery = function Machinery() {
 // ============ FAMILY CARD ============
 function FamilyCard({ num, title, imgId, image, bullets, ctaLabel, href }) {
   return (
-    <a href={href} style={{ display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", background: "var(--surface)", border: "1px solid var(--rule)" }}>
+    <a href={href} style={{ display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" }}>
       <ImageSlot id={imgId} label={image} ratio="4 / 3" />
       <div style={{ padding: "var(--space-4) var(--space-4) var(--space-4)", display: "flex", flexDirection: "column", flex: 1 }}>
         <h3 style={{ fontSize: "var(--fs-l)", lineHeight: 1.15, letterSpacing: "-0.015em", color: "var(--navy)" }}>

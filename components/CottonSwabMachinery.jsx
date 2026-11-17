@@ -104,7 +104,7 @@ as individual machines into existing lines.
             </p>
           </div>
 
-          <div style={{ marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)" }}>
+          <div style={{ marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px" }}>
             <ImageSlot id="SWAB-04" label="Complete CB1 production line, video walkthrough" ratio="16 / 9" dark />
           </div>
 
@@ -113,7 +113,7 @@ as individual machines into existing lines.
               <div className="mono" style={lineRow.colHeader}>01 · Stick production</div>
               <a href="#prx" style={lineRow.link}>
                 <div style={lineRow.machine}>
-                  <div className="mono" style={lineRow.code}>PRX <span style={lineRow.linkArrow}>↗</span></div>
+                  <div className="data" style={lineRow.code}>PRX <span style={lineRow.linkArrow}>↗</span></div>
                   <div style={lineRow.label}>Paper stick production</div>
                   <p style={lineRow.note}>Wound paper sticks fed directly into the CB1 stick magazine.</p>
                 </div>
@@ -124,7 +124,7 @@ as individual machines into existing lines.
               <div className="mono" style={lineRow.colHeader}>02 · Swab production</div>
               <a href="#cb1" style={lineRow.link}>
                 <div style={lineRow.machine}>
-                  <div className="mono" style={lineRow.code}>CB1 4.1 <span style={lineRow.linkArrow}>↗</span></div>
+                  <div className="data" style={lineRow.code}>CB1 4.1 <span style={lineRow.linkArrow}>↗</span></div>
                   <div style={lineRow.label}>Cotton swab production</div>
                   <p style={lineRow.note}>Forms swabs from cotton string and applicator sticks at a mechanical speed of up to 3'100 swabs/min.</p>
                 </div>
@@ -143,7 +143,7 @@ as individual machines into existing lines.
                 ["BL-12", "Blister packaging", "#bl12"]].
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={lineRow.row}>
-                    <span className="mono" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={lineRow.linkArrow}>↗</span></span>
+                    <span className="data" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={lineRow.linkArrow}>↗</span></span>
                     <span style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>{label}</span>
                   </a>
                 )}
@@ -193,7 +193,7 @@ const lineBenefits = {
 // ============ LINE ROW STYLES ============
 const lineRow = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
-  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)" },
+  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", padding: "var(--space-4)" },
   colHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-blue-line)", fontSize: "var(--fs-l)" },
   link: { display: "block", textDecoration: "none", color: "inherit" },
@@ -246,7 +246,7 @@ function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel,
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       background: "var(--surface)",
-      border: "1px solid var(--rule)",
+      border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px",
       alignItems: "stretch"
     }}>
       {flipped ? <>{right}{left}</> : <>{left}{right}</>}

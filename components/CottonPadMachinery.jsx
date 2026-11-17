@@ -94,7 +94,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
             </p>
           </div>
 
-          <div style={{ marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)" }}>
+          <div style={{ marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", overflow: "hidden", "--slot-radius": "0px" }}>
             <ImageSlot id="PAD-03" label="Complete WR-2100 S + RB-2 pad line, video walkthrough" ratio="16 / 9" dark />
           </div>
 
@@ -108,7 +108,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
                 ["VP-2", "Square / rectangle · 1'000 pcs/min", "#vp2"]].
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={padLine.row}>
-                  <span className="mono" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={padLine.linkArrow}>↗</span></span>
+                  <span className="data" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={padLine.linkArrow}>↗</span></span>
                   <span style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>{label}</span>
                 </a>
                 )}
@@ -119,7 +119,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
               <div className="mono" style={padLine.colHeader}>02 · Packaging</div>
               <a href="#rb2" style={padLine.link}>
                 <div style={padLine.machine}>
-                  <div className="mono" style={padLine.code}>RB-2 <span style={padLine.linkArrow}>↗</span></div>
+                  <div className="data" style={padLine.code}>RB-2 <span style={padLine.linkArrow}>↗</span></div>
                   <div style={padLine.label}>Polybag &amp; paper bag packaging</div>
                   <p style={padLine.note}>Fills and heat-seals bags at up to 52 per minute, connected to the WR-series interface.</p>
                 </div>
@@ -151,7 +151,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
 
 const padLine = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr", gap: 0, alignItems: "stretch" },
-  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)" },
+  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", padding: "var(--space-4)" },
   colHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-blue-line)", fontSize: "var(--fs-l)" },
   link: { display: "block", textDecoration: "none", color: "inherit" },
@@ -188,9 +188,9 @@ function PadBlock({ num, title, body, imgId, image, links, flipped }) {
       </div>
       <div style={{ marginTop: "var(--space-4)", paddingTop: "var(--space-3)", borderTop: "1px solid var(--rule)", display: "flex", flexWrap: "wrap", gap: "var(--space-2)" }}>
         {links.map(([code, sub, href]) =>
-        <a key={code} href={href} style={{ flex: "1 1 0", minWidth: 160, display: "flex", flexDirection: "column", gap: "var(--space-half)", padding: "var(--space-2) var(--space-3)", border: "1px solid var(--rule)", borderLeft: "3px solid var(--falu-blue)", background: "var(--surface)", textDecoration: "none", transition: "background 120ms ease" }}>
+        <a key={code} href={href} style={{ flex: "1 1 0", minWidth: 160, display: "flex", flexDirection: "column", gap: "var(--space-half)", padding: "var(--space-2) var(--space-3)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", borderLeft: "3px solid var(--falu-blue)", background: "var(--surface)", textDecoration: "none", transition: "background 120ms ease" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-1)" }}>
-            <span className="mono" style={{ fontSize: "var(--fs-body)", fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" }}>{code}</span>
+            <span className="data" style={{ fontSize: "var(--fs-body)", fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" }}>{code}</span>
             <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 600 }}>→</span>
           </div>
           <span style={{ fontSize: "var(--fs-label)", color: "var(--ink-soft)", whiteSpace: "pre-line", lineHeight: 1.45 }}>{sub}</span>
@@ -202,7 +202,7 @@ function PadBlock({ num, title, body, imgId, image, links, flipped }) {
   const right = <ImageSlot id={imgId} label={image} height="100%" />;
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "var(--surface)", border: "1px solid var(--rule)", alignItems: "stretch" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", alignItems: "stretch" }}>
       {flipped ? <>{right}{left}</> : <>{left}{right}</>}
     </div>);
 }

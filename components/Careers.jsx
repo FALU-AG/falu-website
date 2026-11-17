@@ -188,7 +188,7 @@ function JobAccordion({ roles }) {
     return next;
   });
   return (
-    <div style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
+    <div style={{ border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", background: "var(--surface)" }}>
       {roles.map((r, i) => {
         const isOpen = open.has(i);
         return (

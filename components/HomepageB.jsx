@@ -183,7 +183,7 @@ window.HomepageB = function HomepageB() {
             }].
             map((v, i) =>
             <div key={i} style={whyB.cell}>
-                <div className="mono" style={whyB.cellNum}>{String(i + 1).padStart(2, "0")}</div>
+                <div className="data" style={whyB.cellNum}>{String(i + 1).padStart(2, "0")}</div>
                 <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-l)" }}>{v.head}</h3>
                 <p style={{ marginTop: "var(--space-2)", color: "var(--ink-soft)", fontSize: "var(--fs-body)", lineHeight: 1.65 }}>{v.body}</p>
               </div>
@@ -335,7 +335,7 @@ function WorldMap() {
   };
 
   return (
-    <div ref={wrapRef} style={{ background: "var(--falu-blue)", border: "1px solid var(--on-blue-line)", padding: "var(--space-3)", position: "relative" }}>
+    <div ref={wrapRef} style={{ background: "var(--falu-blue)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-lg)", padding: "var(--space-3)", position: "relative" }}>
       <svg viewBox="0 0 1200 560" style={{ width: "100%", display: "block" }} onMouseLeave={() => setTip(null)}>
         {paths ? paths.map((p, i) => {
           const isFalu = p.a2 && FALU_COUNTRIES.has(p.a2);
@@ -344,8 +344,9 @@ function WorldMap() {
             <path
               key={i}
               d={p.d}
-              fill={isFalu ? "var(--falu-red)" : "var(--on-blue-line)"}
-              fillOpacity={hovered ? 0.75 : 1}
+              // Installed countries in light blue; red marks only the country under the pointer
+              fill={isFalu ? (hovered ? "var(--falu-red)" : "var(--on-blue-muted)") : "var(--on-blue-line)"}
+              fillOpacity={1}
               stroke={hovered ? "var(--on-blue-muted)" : "var(--falu-blue)"}
               strokeWidth="0.5"
               style={{ cursor: "default" }}
@@ -365,7 +366,7 @@ function WorldMap() {
         top: tip.y + 14,
         pointerEvents: "none",
         background: "var(--falu-blue)",
-        border: "1px solid var(--on-blue-line)",
+        border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius-sm)",
         color: "var(--on-blue)",
         fontFamily: "var(--font-mono)",
         fontSize: "var(--fs-label)",
@@ -378,7 +379,7 @@ function WorldMap() {
       }
 
       <div style={{ marginTop: "var(--space-2)", paddingTop: "var(--space-2)", borderTop: "1px solid var(--on-blue-line)", display: "flex", gap: "var(--space-3)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", flexWrap: "wrap" }}>
-        <span><span style={{ display: "inline-block", width: 10, height: 10, background: "var(--falu-red)", marginRight: "var(--space-1)", verticalAlign: "middle" }} />Country with FALU installations</span>
+        <span><span style={{ display: "inline-block", width: 10, height: 10, borderRadius: 2, background: "var(--on-blue-muted)", marginRight: "var(--space-1)", verticalAlign: "middle" }} />Country with FALU installations</span>
         <span style={{ marginLeft: "auto" }}>70+ countries served since 1965</span>
       </div>
     </div>);
@@ -402,8 +403,8 @@ const heroB = {
 
 const featB = {
   tag: { fontSize: "var(--fs-label)" },
-  specGrid: { marginTop: "var(--space-4)", display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  specCell: { padding: "var(--space-2) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" },
+  specGrid: { marginTop: "var(--space-4)", display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" },
+  specCell: { padding: "var(--space-2) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1 },
   specKey: { fontSize: "var(--fs-label)", color: "var(--ink-muted)" },
   specVal: { marginTop: "var(--space-1)", fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.005em" }
 };
@@ -424,8 +425,8 @@ const planning = {
   frame: { display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "var(--space-8)", alignItems: "center" },
   left: {},
   tag: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
-  right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderTop: "1px solid var(--on-blue-line)", borderLeft: "1px solid var(--on-blue-line)" },
-  tile: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)" },
+  right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", overflow: "hidden" },
+  tile: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)", marginRight: -1, marginBottom: -1 },
   tileKey: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
   tileTitle: { marginTop: "var(--space-2)", color: "var(--on-blue)", fontSize: "var(--fs-lead)", fontWeight: 600 },
   tileDesc: { marginTop: "var(--space-1)", color: "var(--on-blue-muted)", fontSize: "var(--fs-label)", lineHeight: 1.55 }

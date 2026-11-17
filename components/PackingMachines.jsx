@@ -94,7 +94,7 @@ window.PackingMachines = function PackingMachines() {
                 <ImageSlot id={`PACK-0${i + 1}`} label={m.img} ratio="16 / 9" />
                 <div style={pack.body}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-1-5)", flexWrap: "wrap" }}>
-                    <div className="mono" style={pack.code}>{m.code}</div>
+                    <div className="data" style={pack.code}>{m.code}</div>
                     <div style={{ display: "flex", gap: "var(--space-1)", flexWrap: "wrap" }}>
                       {m.automation.map((a) =>
                       <span key={a} className="mono" style={pack.pill}>{automationLabel[a]}</span>
@@ -176,13 +176,13 @@ window.PackingMachines = function PackingMachines() {
 };
 
 const pack = {
-  card: { display: "flex", flexDirection: "column", background: "var(--surface)", border: "1px solid var(--rule)", textDecoration: "none", color: "inherit" },
+  card: { display: "flex", flexDirection: "column", background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px", textDecoration: "none", color: "inherit" },
   body: { padding: "var(--space-4) var(--space-4) var(--space-3)", display: "flex", flexDirection: "column", flex: 1 },
   code: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 600 },
   pill: { fontSize: "var(--fs-label)", color: "var(--navy)", background: "var(--bg-alt)", padding: "var(--space-half) var(--space-1-5)", borderRadius: 999, fontWeight: 600, whiteSpace: "nowrap" },
   foot: { marginTop: "var(--space-3)", paddingTop: "var(--space-2)", borderTop: "1px solid var(--rule)", display: "flex", justifyContent: "flex-end", alignItems: "center" },
   ghost: { padding: "var(--space-4) var(--space-4)", background: "var(--surface)", border: "1px dashed var(--rule)", display: "flex", flexDirection: "column" },
-  ghostCta: { padding: "var(--space-4) var(--space-4)", background: "var(--surface)", border: "1px solid var(--navy)", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", position: "relative" },
+  ghostCta: { padding: "var(--space-4) var(--space-4)", background: "var(--surface)", border: "1px solid var(--navy)", borderRadius: "var(--radius)", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", position: "relative" },
   ghostLabel: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", marginBottom: "var(--space-2)" },
   ghostTitle: { fontSize: "var(--fs-m)", lineHeight: 1.2, letterSpacing: "-0.015em", color: "var(--navy)" },
   ghostDesc: { marginTop: "var(--space-1-5)", fontSize: "var(--fs-ui)", lineHeight: 1.6, color: "var(--ink-soft)", flex: 1 },

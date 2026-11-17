@@ -113,7 +113,7 @@ window.MachinePRX = function MachinePRX() {
                 <div key={i} style={{ ...prxTable.row, ...(showGroup ? prxTable.rowGrouped : {}) }}>
                   <div className="mono" style={prxTable.group}>{showGroup ? group : ""}</div>
                   <div style={prxTable.key}>{key}</div>
-                  <div className="mono" style={{ ...prxTable.value, color: "var(--navy)" }}>{value}</div>
+                  <div className="data" style={{ ...prxTable.value, color: "var(--navy)" }}>{value}</div>
                 </div>);
             })}
           </div>
@@ -135,7 +135,7 @@ window.MachinePRX = function MachinePRX() {
             <div style={prxLine.col}>
               <div className="mono" style={prxLine.colHeader}>01 · Stick production</div>
               <div style={{ ...prxLine.machine, ...prxLine.featured }}>
-                <div className="mono" style={{ ...prxLine.code, color: "var(--on-blue)" }}>PRX</div>
+                <div className="data" style={{ ...prxLine.code, color: "var(--on-blue)" }}>PRX</div>
                 <div style={prxLine.label}>Paper stick production</div>
                 <p style={prxLine.note}>Forms paper sticks straight from the paper roll and feeds the swab machine magazine directly.</p>
                 <div className="mono" style={prxLine.here}>You are here</div>
@@ -146,7 +146,7 @@ window.MachinePRX = function MachinePRX() {
               <div className="mono" style={prxLine.colHeader}>02 · Swab production</div>
               <a href="#cb1" style={prxLine.link}>
                 <div style={prxLine.machine}>
-                  <div className="mono" style={prxLine.code}>CB1 4.1 <span style={prxLine.linkArrow}>↗</span></div>
+                  <div className="data" style={prxLine.code}>CB1 4.1 <span style={prxLine.linkArrow}>↗</span></div>
                   <div style={prxLine.label}>Cotton swab forming</div>
                   <p style={prxLine.note}>Forms swabs from cotton string and the applicator sticks at up to 3'100/min.</p>
                 </div>
@@ -166,7 +166,7 @@ window.MachinePRX = function MachinePRX() {
                 ["Round table", "Manual placing (semi-auto)", "#packing"]].
                 map(([code, l, href]) =>
                 <a key={code} href={href} style={prxLine.row}>
-                  <span className="mono" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={prxLine.linkArrow}>↗</span></span>
+                  <span className="data" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={prxLine.linkArrow}>↗</span></span>
                   <span style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>{l}</span>
                 </a>
                 )}
@@ -207,12 +207,12 @@ const prxCrumb = {
 };
 
 const prxFeatures = {
-  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  cell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }
+  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden" },
+  cell: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", marginRight: -1, marginBottom: -1 }
 };
 
 const prxTable = {
-  wrap: { background: "var(--surface)", border: "1px solid var(--rule)" },
+  wrap: { background: "var(--surface)", border: "1px solid var(--rule)", borderRadius: "var(--radius)", overflow: "hidden", "--slot-radius": "0px" },
   row: { display: "grid", gridTemplateColumns: "180px 1fr 1.5fr", padding: "var(--space-2) var(--space-3)", borderBottom: "1px solid var(--rule-soft)", alignItems: "center", fontSize: "var(--fs-ui)" },
   rowGrouped: { borderTop: "1px solid var(--rule)", paddingTop: "var(--space-2)" },
   group: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
@@ -222,7 +222,7 @@ const prxTable = {
 
 const prxLine = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
-  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)" },
+  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", borderRadius: "var(--radius)", padding: "var(--space-4)" },
   colHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-blue-line)", fontSize: "var(--fs-l)" },
   link: { display: "block", textDecoration: "none", color: "inherit" },
