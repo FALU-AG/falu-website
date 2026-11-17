@@ -1,7 +1,7 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
-//  /about-us — About / Company
+//  /about-us: About / Company
 //  Vendor-qualification page. Heritage, Rüti, the engineering
 //  approach, the long-horizon promise. Grounded in supplied facts.
 // ============================================================
@@ -13,10 +13,10 @@ window.About = function About() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>ABOUT</span>
+            <span style={{ color: "var(--navy)" }}>About</span>
           </div>
         </div>
       </div>
@@ -57,7 +57,6 @@ window.About = function About() {
       {/* HERITAGE NARRATIVE */}
       <section style={{ padding: "96px 0", background: "var(--bg-band)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="01">The company</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start", marginTop: 32 }}>
             <div>
               <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em" }}>
@@ -86,7 +85,6 @@ window.About = function About() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
             <ImageSlot id="ABOUT-02" label="FALU factory, Rüti, Switzerland, exterior" ratio="4 / 3" />
             <div>
-              <SectionLabel num="02">Rüti, Switzerland</SectionLabel>
               <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: 32 }}>
                 Designed, built and assembled<br />under one roof.
               </h2>
@@ -106,10 +104,9 @@ window.About = function About() {
         </div>
       </section>
 
-      {/* WHAT GUIDES US — navy slab */}
+      {/* WHAT GUIDES US: navy slab */}
       <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
         <div className="container">
-          <SectionLabel num="03" tone="dark">What guides us</SectionLabel>
           <h2 style={{ fontSize: 44, color: "#fff", letterSpacing: "-0.025em", lineHeight: 1.1, maxWidth: 820, marginTop: 32, marginBottom: 56 }}>
             Manufacturing machines that outlast the people who specified them.
           </h2>
@@ -119,9 +116,9 @@ window.About = function About() {
               ["Lifecycle commitment", "Spare parts guaranteed for the entire life of the machine, independent of installation date. Many FALU machines run for over forty years."],
               ["Long-term partnership", "Most of our business is with customers we have supported for decades. We sell machines, but we keep relationships."]
             ].map(([t, b]) => (
-              <div key={t} style={{ paddingTop: 20, borderTop: "2px solid var(--falu-red)" }}>
+              <div key={t} style={{ paddingTop: 20, borderTop: "1px solid var(--on-blue-muted)" }}>
                 <h4 style={{ color: "#fff", fontSize: 18, fontWeight: 600, marginBottom: 12 }}>{t}</h4>
-                <p style={{ color: "#9ab3cc", fontSize: 14, lineHeight: 1.6 }}>{b}</p>
+                <p style={{ color: "var(--on-blue-muted)", fontSize: 14, lineHeight: 1.6 }}>{b}</p>
               </div>
             ))}
           </div>
@@ -136,7 +133,7 @@ window.About = function About() {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-end" }}>
             <a href="#contact" className="btn btn--primary btn--lg">Get in touch with our specialists<span className="arrow" /></a>
-            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: 12, letterSpacing: "0.06em" }}>
+            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: 13 }}>
               <a href="mailto:sales@falu.com" style={{ color: "inherit" }}>sales@falu.com</a>
               {" · "}
               <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>

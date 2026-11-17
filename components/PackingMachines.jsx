@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
 //  /machinery/cotton-swab-machinery/packing
@@ -58,14 +58,14 @@ window.PackingMachines = function PackingMachines() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>MACHINERY</a>
+            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>Machinery</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <a href="#cotton-swab-machinery" style={{ color: "inherit", textDecoration: "none" }}>COTTON SWAB MACHINERY</a>
+            <a href="#cotton-swab-machinery" style={{ color: "inherit", textDecoration: "none" }}>Cotton swab machinery</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>PACKAGING</span>
+            <span style={{ color: "var(--navy)" }}>Packaging</span>
           </div>
         </div>
       </div>
@@ -88,7 +88,6 @@ window.PackingMachines = function PackingMachines() {
       {/* MACHINE LIST */}
       <section style={{ padding: "0 0 96px", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ paddingTop: 80 }}>
-          <SectionLabel num="01">Six packaging machines</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 48 }}>
             {machines.map((m, i) =>
             <a key={m.code} href={m.href} style={pack.card}>
@@ -113,7 +112,7 @@ window.PackingMachines = function PackingMachines() {
               <ImageSlot id="PACK-06" label="Round table semi-automatic packaging" ratio="16 / 9" />
               <div style={pack.body}>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-                  <div className="mono" style={pack.code}>ROUND TABLE</div>
+                  <div className="mono" style={pack.code}>Round table</div>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                     <span className="mono" style={pack.pill}>Semi-automatic</span>
                   </div>
@@ -133,7 +132,6 @@ window.PackingMachines = function PackingMachines() {
       {/* SPECIAL SOLUTIONS */}
       <section style={{ padding: "96px 0 0" }}>
         <div className="container">
-          <SectionLabel num="02">Beyond the standard formats</SectionLabel>
           <h2 style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.025em", color: "var(--navy)", marginTop: 32, marginBottom: 20, maxWidth: 760 }}>
             Special and custom formats.
           </h2>
@@ -142,17 +140,17 @@ window.PackingMachines = function PackingMachines() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, marginTop: 48 }}>
             <div style={pack.ghost}>
-              <div className="mono" style={pack.ghostLabel}>SPECIAL FORMAT</div>
+              <div className="mono" style={pack.ghostLabel}>Special format</div>
               <h3 style={pack.ghostTitle}>Flip-top boxes</h3>
               <p style={pack.ghostDesc}>Hinged-lid retail box packaging, available in combination with FALU cotton swab machines.</p>
             </div>
             <div style={pack.ghost}>
-              <div className="mono" style={pack.ghostLabel}>SPECIAL FORMAT</div>
+              <div className="mono" style={pack.ghostLabel}>Special format</div>
               <h3 style={pack.ghostTitle}>Flow packs</h3>
               <p style={pack.ghostDesc}>Horizontal flow-wrap packaging for individual swabs or counted multipacks.</p>
             </div>
             <a href="#contact" style={pack.ghostCta}>
-              <div className="mono" style={pack.ghostLabel}>CUSTOM SOLUTION</div>
+              <div className="mono" style={pack.ghostLabel}>Custom solution</div>
               <h3 style={pack.ghostTitle}>Tell us your requirements</h3>
               <p style={pack.ghostDesc}>Further packaging solutions are developed on request. Get in touch to discuss your specific format.</p>
               <span style={pack.ghostArrow}>→</span>
@@ -180,13 +178,13 @@ window.PackingMachines = function PackingMachines() {
 const pack = {
   card: { display: "flex", flexDirection: "column", background: "#fff", border: "1px solid var(--rule)", textDecoration: "none", color: "inherit" },
   body: { padding: "28px 28px 24px", display: "flex", flexDirection: "column", flex: 1 },
-  code: { fontSize: 13, color: "var(--falu-red)", letterSpacing: "0.1em", fontWeight: 600 },
-  pill: { fontSize: 10, color: "var(--navy)", background: "var(--bg-alt)", letterSpacing: "0.12em", textTransform: "uppercase", padding: "5px 10px", borderRadius: 999, fontWeight: 600, whiteSpace: "nowrap" },
+  code: { fontSize: 13, color: "var(--ink)", fontWeight: 600 },
+  pill: { fontSize: 13, color: "var(--navy)", background: "var(--bg-alt)", padding: "5px 10px", borderRadius: 999, fontWeight: 600, whiteSpace: "nowrap" },
   foot: { marginTop: 22, paddingTop: 18, borderTop: "1px solid var(--rule)", display: "flex", justifyContent: "flex-end", alignItems: "center" },
   ghost: { padding: "32px 28px", background: "#fff", border: "1px dashed var(--rule)", display: "flex", flexDirection: "column" },
   ghostCta: { padding: "32px 28px", background: "#fff", border: "1px solid var(--navy)", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", position: "relative" },
-  ghostLabel: { fontSize: 10, color: "var(--ink-muted)", letterSpacing: "0.16em", textTransform: "uppercase", marginBottom: 14 },
+  ghostLabel: { fontSize: 13, color: "var(--ink-muted)", marginBottom: 14 },
   ghostTitle: { fontSize: 22, lineHeight: 1.2, letterSpacing: "-0.015em", color: "var(--navy)" },
   ghostDesc: { marginTop: 12, fontSize: 14, lineHeight: 1.6, color: "var(--ink-soft)", flex: 1 },
-  ghostArrow: { position: "absolute", right: 28, bottom: 24, color: "var(--falu-red)", fontSize: 20, fontWeight: 600 }
+  ghostArrow: { position: "absolute", right: 28, bottom: 24, color: "var(--ink)", fontSize: 20, fontWeight: 600 }
 };

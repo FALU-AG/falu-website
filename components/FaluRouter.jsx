@@ -1,6 +1,6 @@
 /* global React */
 // ============================================================
-//  FALU site router — hash-based navigation
+//  FALU site router: hash-based navigation
 //  Maps URL hash -> page component. Scrolls to top on navigate.
 // ============================================================
 

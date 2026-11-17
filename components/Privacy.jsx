@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel */
+/* global React, FaluHeader, FaluFooter */
 
 // ============================================================
 // PRIVACY POLICY / DATENSCHUTZERKLÄRUNG
@@ -44,7 +44,6 @@ window.Privacy = function Privacy() {
         <div className="container">
           <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
 
-            <SectionLabel num="01">Controller</SectionLabel>
             <div style={{ marginTop: 28 }}>
               <p style={cBody.para}>
                 The controller responsible for the processing of personal data on this website is:
@@ -62,7 +61,6 @@ window.Privacy = function Privacy() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="02">Data we process</SectionLabel>
               <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
                 <div>
                   <h3 style={cBody.h3}>Server log data (hosting)</h3>
@@ -91,7 +89,6 @@ window.Privacy = function Privacy() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="03">Cookies and local storage</SectionLabel>
               <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
                 <div>
                   <p style={cBody.para}>
@@ -105,7 +102,6 @@ window.Privacy = function Privacy() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="04">Third-party services</SectionLabel>
               <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
                 <div>
                   <h3 style={cBody.h3}>Google Maps</h3>
@@ -140,7 +136,6 @@ window.Privacy = function Privacy() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="05">Your rights</SectionLabel>
               <div style={{ marginTop: 28 }}>
                 <p style={cBody.para}>
                   Subject to the applicable law, you have the right to access the personal data we
@@ -155,7 +150,6 @@ window.Privacy = function Privacy() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="06">Changes</SectionLabel>
               <div style={{ marginTop: 28 }}>
                 <p style={cBody.para}>
                   We may update this privacy policy to reflect changes to our website or to legal
@@ -175,17 +169,17 @@ window.Privacy = function Privacy() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
   link: { color: "var(--ink-soft)" },
-  sep: { color: "var(--rule)" },
+  sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
-  label: { fontSize: 10, color: "var(--falu-red)", letterSpacing: "0.18em", marginBottom: 12 },
+  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
   value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
   addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
   h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
   para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
-  inlineLink: { color: "var(--falu-red)", textDecoration: "none" }
+  inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }
 };

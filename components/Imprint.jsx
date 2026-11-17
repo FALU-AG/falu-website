@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel */
+/* global React, FaluHeader, FaluFooter */
 
 // ============================================================
 // IMPRINT / IMPRESSUM
@@ -39,11 +39,10 @@ window.Imprint = function Imprint() {
       <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
           <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
-            <SectionLabel num="01">Company details</SectionLabel>
 
             <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 28 }}>
               <div>
-                <div className="mono" style={cBody.label}>OPERATOR</div>
+                <div className="mono" style={cBody.label}>Operator</div>
                 <p style={cBody.addr}>
                   FALU AG<br />
                   Joweid Zentrum 5<br />
@@ -53,13 +52,13 @@ window.Imprint = function Imprint() {
               </div>
 
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
-                <div className="mono" style={cBody.label}>CONTACT</div>
+                <div className="mono" style={cBody.label}>Contact</div>
                 <a href="mailto:sales@falu.com" style={cBody.value}>sales@falu.com</a>
                 <a href="tel:+41552255151" style={cBody.value}>+41 55 225 51 51</a>
               </div>
 
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
-                <div className="mono" style={cBody.label}>LEGAL FORM &amp; REGISTRATION</div>
+                <div className="mono" style={cBody.label}>Legal form &amp; registration</div>
                 <p style={cBody.addr}>
                   Aktiengesellschaft (AG) under Swiss law, registered in the
                   Commercial Register of the Canton of Zurich.
@@ -71,7 +70,7 @@ window.Imprint = function Imprint() {
               </div>
 
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
-                <div className="mono" style={cBody.label}>REPRESENTED BY</div>
+                <div className="mono" style={cBody.label}>Represented by</div>
                 <p style={cBody.addr}>
                   Marc Wyss, Owner &amp; Chief Executive Officer
                 </p>
@@ -79,7 +78,6 @@ window.Imprint = function Imprint() {
             </div>
 
             <div style={{ marginTop: 48 }}>
-              <SectionLabel num="02">Disclaimer</SectionLabel>
 
               <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
                 <div>
@@ -135,18 +133,18 @@ window.Imprint = function Imprint() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
   link: { color: "var(--ink-soft)" },
-  sep: { color: "var(--rule)" },
+  sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
-  label: { fontSize: 10, color: "var(--falu-red)", letterSpacing: "0.18em", marginBottom: 12 },
+  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
   value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
   addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
-  reg: { fontSize: 12, color: "var(--ink-soft)", letterSpacing: "0.04em" },
+  reg: { fontSize: 13, color: "var(--ink-soft)" },
   h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
   para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
-  inlineLink: { color: "var(--falu-red)", textDecoration: "none" }
+  inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }
 };

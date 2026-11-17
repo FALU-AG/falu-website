@@ -50,9 +50,19 @@ components/
   Careers.jsx              # #careers
   Contact.jsx              # #contact / #quote
 assets/falu-logo.png       # logo (keep as-is, never recreate)
-design-system/             # portable design system: README, tokens, SKILL.md, preview cards
-BRAND_RULES.md             # standing brand + copy rules (read before editing copy)
 ```
+
+## Design system
+
+The site follows the FALU design system (Claude artifact "FALU"). Light theme only for now.
+
+- **Colors** come from the tokens at the top of `styles/falu.css`: `--falu-blue`, `--falu-red`, `--ink`, `--muted`, `--line`, `--surface`, `--surface-tint`, `--on-blue`, `--on-blue-muted`. Older names (`--navy`, `--ink-soft`, `--rule`, ...) are aliases onto them. Do not hard-code colors in components.
+- **Type** is Archivo for everything; figures use tabular numerals (`.mono`).
+- **Text is blue (`--ink`), never black.** Red is the logo red: at most one emphasis per view, as a shape or 24px+ bold text, never red text on blue.
+- **Primary buttons are blue**; on blue bands use `.btn--inverse` (white). White on the logo red is too low in contrast for button labels.
+- **No eyebrows**: nothing small above a headline. Labels are sentence case, never all caps or wide tracking.
+- **Headlines are statements**, left aligned, sentence case.
+- **Never use en or em dashes.** Use a colon, a comma, a new sentence, or "to" for ranges.
 
 ## Routing
 

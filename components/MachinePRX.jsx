@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, MachineHeroVideo */
+/* global React, FaluHeader, FaluFooter, MachineHeroVideo */
 
 // ============================================================
 // PRX, PAPER STICK PRODUCTION MACHINE, DETAIL PAGE
@@ -52,7 +52,6 @@ window.MachinePRX = function MachinePRX() {
       {/* FEATURES */}
       <section style={{ padding: "96px 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="01">Machine features</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "start", marginBottom: 56 }}>
             <h2>From paper rolls<br />to finished sticks.</h2>
             <p style={{ color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.65 }}>
@@ -83,7 +82,6 @@ window.MachinePRX = function MachinePRX() {
       {/* TECHNICAL DATA */}
       <section style={{ padding: "96px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="02">Technical data</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "end", marginBottom: 48 }}>
             <h2>Specifications.</h2>
             <p style={{ color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.65 }}>Layout dimensions vary by configuration, FALU provides a layout plan on request based on your production requirements and available space.
@@ -94,20 +92,20 @@ window.MachinePRX = function MachinePRX() {
 
           <div style={prxTable.wrap}>
             {[
-            ["OUTPUT", "Production speed", "Up to 3'000 sticks/min"],
+            ["Output", "Production speed", "Up to 3'000 sticks/min"],
             ["", "Operating mode", "Standalone or integrated with CT / CB swab machines"],
-            ["BUFFER", "Capacity", "75'000 sticks"],
+            ["Buffer", "Capacity", "75'000 sticks"],
             ["", "Equivalent runtime", "~30 min of swab production at 2'800/min"],
-            ["PAPER ROLL", "Roll diameter", "max. 1'100 mm (including core)"],
+            ["Paper roll", "Roll diameter", "max. 1'100 mm (including core)"],
             ["", "Roll width", "max. 900 mm"],
-            ["STICK CARTON", "Dimensions (standalone)", "230 × 80 × 800 mm"],
+            ["Stick carton", "Dimensions (standalone)", "230 × 80 × 800 mm"],
             ["", "Carton capacity", "~30'000 paper sticks"],
             ["", "Filling time", "up to 5 min, including handling"],
-            ["DIMENSIONS", "Layout", "Configurable, layout plan on request"],
-            ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+            ["Dimensions", "Layout", "Configurable, layout plan on request"],
+            ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
             ["", "Control system", "PLC controlled electrical system"],
-            ["CERTIFICATION", "Compliance", "CE certified, European machinery safety standards"],
-            ["DELIVERY", "Tooling", "Complete standard tooling for one stick configuration"],
+            ["Certification", "Compliance", "CE certified, European machinery safety standards"],
+            ["Delivery", "Tooling", "Complete standard tooling for one stick configuration"],
             ["", "Documentation", "Instruction manual and spare parts documentation"]].
             map(([group, key, value], i, arr) => {
               const showGroup = group && (i === 0 || arr[i - 1][0] !== group);
@@ -125,10 +123,9 @@ window.MachinePRX = function MachinePRX() {
       {/* LINE INTEGRATION */}
       <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
         <div className="container">
-          <SectionLabel num="03" tone="dark">Line integration</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "end", marginBottom: 48, marginTop: 32 }}>
             <h2 style={{ color: "#fff", maxWidth: 720 }}>The PRX is the first stage of a complete swab line.</h2>
-            <p style={{ color: "#cfdcec", fontSize: 16, lineHeight: 1.65 }}>Sticks can be fed straight into CB or CT swab machine stick magazines. Click a downstream machine to see its product page.
+            <p style={{ color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65 }}>Sticks can be fed straight into CB or CT swab machine stick magazines. Click a downstream machine to see its product page.
 
 
             </p>
@@ -136,17 +133,17 @@ window.MachinePRX = function MachinePRX() {
 
           <div style={prxLine.wrap}>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>01 · STICK PRODUCTION</div>
+              <div className="mono" style={prxLine.colHeader}>01 · Stick production</div>
               <div style={{ ...prxLine.machine, ...prxLine.featured }}>
-                <div className="mono" style={{ ...prxLine.code, color: "var(--falu-red)" }}>PRX</div>
+                <div className="mono" style={{ ...prxLine.code, color: "var(--on-blue)" }}>PRX</div>
                 <div style={prxLine.label}>Paper stick production</div>
                 <p style={prxLine.note}>Forms paper sticks straight from the paper roll and feeds the swab machine magazine directly.</p>
-                <div className="mono" style={prxLine.here}>YOU ARE HERE</div>
+                <div className="mono" style={prxLine.here}>You are here</div>
               </div>
             </div>
             <div style={prxLine.arrow}>→</div>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>02 · SWAB PRODUCTION</div>
+              <div className="mono" style={prxLine.colHeader}>02 · Swab production</div>
               <a href="#cb1" style={prxLine.link}>
                 <div style={prxLine.machine}>
                   <div className="mono" style={prxLine.code}>CB1 4.1 <span style={prxLine.linkArrow}>↗</span></div>
@@ -157,7 +154,7 @@ window.MachinePRX = function MachinePRX() {
             </div>
             <div style={prxLine.arrow}>→</div>
             <div style={prxLine.col}>
-              <div className="mono" style={prxLine.colHeader}>03 · PACKAGING · 7 OPTIONS</div>
+              <div className="mono" style={prxLine.colHeader}>03 · Packaging · 7 options</div>
               <div style={prxLine.list}>
                 {[
                 ["SV-2X", "Cardboard boxes", "#sv2x"],
@@ -166,11 +163,11 @@ window.MachinePRX = function MachinePRX() {
                 ["RB-30A", "Round boxes", "#rb30a"],
                 ["SQB-2A", "Square boxes", "#sqb2a"],
                 ["BL-12", "Blister packaging", "#bl12"],
-                ["ROUND TABLE", "Manual placing (semi-auto)", "#packing"]].
+                ["Round table", "Manual placing (semi-auto)", "#packing"]].
                 map(([code, l, href]) =>
                 <a key={code} href={href} style={prxLine.row}>
                   <span className="mono" style={{ color: "#fff", fontWeight: 600 }}>{code} <span style={prxLine.linkArrow}>↗</span></span>
-                  <span style={{ color: "#cfdcec", fontSize: 13 }}>{l}</span>
+                  <span style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>{l}</span>
                 </a>
                 )}
               </div>
@@ -187,7 +184,7 @@ window.MachinePRX = function MachinePRX() {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-end" }}>
             <a href="#contact" className="btn btn--primary btn--lg">Request a quotation<span className="arrow" /></a>
-            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: 12, letterSpacing: "0.06em" }}>
+            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: 13 }}>
               <a href="mailto:sales@falu.com" style={{ color: "inherit" }}>sales@falu.com</a>
               {" · "}
               <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>
@@ -203,9 +200,9 @@ window.MachinePRX = function MachinePRX() {
 // ============ STYLES ============
 const prxCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
   link: { color: "var(--ink-soft)" },
-  sep: { color: "var(--rule)" },
+  sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
@@ -218,7 +215,7 @@ const prxTable = {
   wrap: { background: "#fff", border: "1px solid var(--rule)" },
   row: { display: "grid", gridTemplateColumns: "180px 1fr 1.5fr", padding: "14px 24px", borderBottom: "1px solid var(--rule-soft)", alignItems: "center", fontSize: 14 },
   rowGrouped: { borderTop: "1px solid var(--rule)", paddingTop: 18 },
-  group: { fontSize: 10, color: "var(--falu-red)", letterSpacing: "0.18em", fontWeight: 500 },
+  group: { fontSize: 13, color: "var(--ink)", fontWeight: 500 },
   key: { color: "var(--ink-soft)" },
   value: { fontSize: 14, fontWeight: 500 }
 };
@@ -226,16 +223,16 @@ const prxTable = {
 const prxLine = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
   col: { background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.15)", padding: "28px" },
-  colHeader: { fontSize: 10, color: "#9ab3cc", letterSpacing: "0.18em", marginBottom: 20 },
+  colHeader: { fontSize: 13, color: "var(--on-blue-muted)", marginBottom: 20 },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.3)", fontSize: 24 },
   link: { display: "block", textDecoration: "none", color: "inherit" },
   machine: { padding: "20px 0" },
   featured: { borderTop: "3px solid var(--falu-red)", paddingTop: 16 },
   code: { fontSize: 22, color: "#fff", fontWeight: 600, letterSpacing: "-0.01em", display: "flex", alignItems: "baseline", gap: 6 },
   label: { color: "#fff", marginTop: 4, fontSize: 14, fontWeight: 500 },
-  note: { marginTop: 12, color: "#9ab3cc", fontSize: 13, lineHeight: 1.55 },
-  here: { marginTop: 16, fontSize: 9, color: "var(--falu-red)", letterSpacing: "0.18em" },
+  note: { marginTop: 12, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 },
+  here: { marginTop: 16, fontSize: 13, color: "var(--on-blue-muted)" },
   list: { display: "flex", flexDirection: "column" },
   row: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: 13, textDecoration: "none" },
-  linkArrow: { fontSize: 12, color: "#9ab3cc", fontWeight: 400 }
+  linkArrow: { fontSize: 13, color: "var(--on-blue-muted)", fontWeight: 400 }
 };

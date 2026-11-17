@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel */
+/* global React, FaluHeader, FaluFooter */
 
 // ============================================================
 // TERMS OF USE
@@ -41,7 +41,6 @@ window.Terms = function Terms() {
       <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
           <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
-            <SectionLabel num="01">Terms of use</SectionLabel>
 
             <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
               <div>
@@ -160,15 +159,15 @@ window.Terms = function Terms() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
   link: { color: "var(--ink-soft)" },
-  sep: { color: "var(--rule)" },
+  sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
   h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
   para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
-  inlineLink: { color: "var(--falu-red)", textDecoration: "none" },
-  eff: { fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.08em", textTransform: "uppercase" }
+  inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 },
+  eff: { fontSize: 13, color: "var(--ink-muted)" }
 };

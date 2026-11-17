@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
 //  /machinery/cotton-pad-machinery
@@ -13,12 +13,12 @@ window.CottonPadMachinery = function CottonPadMachinery() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>MACHINERY</a>
+            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>Machinery</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>COTTON PAD MACHINERY</span>
+            <span style={{ color: "var(--navy)" }}>Cotton pad machinery</span>
           </div>
         </div>
       </div>
@@ -42,7 +42,6 @@ window.CottonPadMachinery = function CottonPadMachinery() {
       {/* PROCESS BLOCKS */}
       <section style={{ padding: "0 0 96px", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ paddingTop: 80 }}>
-          <SectionLabel num="01">Production process</SectionLabel>
           <div style={{ marginTop: 32, marginBottom: 64 }}>
             <h2 style={{ fontSize: 48, lineHeight: 1.05, letterSpacing: "-0.025em", color: "var(--navy)" }}>
               Two connected steps.<br />Run together, or independently.
@@ -75,8 +74,8 @@ window.CottonPadMachinery = function CottonPadMachinery() {
           </div>
 
           <div style={{ marginTop: 64, paddingTop: 40, borderTop: "1px solid var(--rule)", textAlign: "center" }}>
-            <p className="mono" style={{ fontSize: 12, color: "var(--ink-muted)", letterSpacing: "0.16em" }}>
-              EACH STEP CAN BE IMPLEMENTED INDIVIDUALLY WITH EXISTING MACHINERY OR COMBINED INTO A COMPLETE PRODUCTION LINE
+            <p className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+              Each step can be implemented individually with existing machinery or combined into a complete production line.
             </p>
           </div>
         </div>
@@ -85,12 +84,11 @@ window.CottonPadMachinery = function CottonPadMachinery() {
       {/* COMPLETE LINE */}
       <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
         <div className="container">
-          <SectionLabel num="02" tone="dark">The complete line</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "end", marginBottom: 48, marginTop: 32 }}>
             <h2 style={{ color: "#fff", maxWidth: 760, fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               Pad production and packaging as one inline FALU line.
             </h2>
-            <p style={{ color: "#cfdcec", fontSize: 16, lineHeight: 1.65 }}>
+            <p style={{ color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65 }}>
               Production and packaging, engineered and serviced by FALU. Click any model below to
               see its product page.
             </p>
@@ -102,7 +100,7 @@ window.CottonPadMachinery = function CottonPadMachinery() {
 
           <div style={padLine.wrap}>
             <div style={padLine.col}>
-              <div className="mono" style={padLine.colHeader}>01 · PAD PRODUCTION</div>
+              <div className="mono" style={padLine.colHeader}>01 · Pad production</div>
               <div style={padLine.list}>
                 {[
                 ["WR-2100 S", "Round / oval · 2'100 pcs/min", "#wr2100"],
@@ -111,14 +109,14 @@ window.CottonPadMachinery = function CottonPadMachinery() {
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={padLine.row}>
                   <span className="mono" style={{ color: "#fff", fontWeight: 600 }}>{code} <span style={padLine.linkArrow}>↗</span></span>
-                  <span style={{ color: "#cfdcec", fontSize: 13 }}>{label}</span>
+                  <span style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>{label}</span>
                 </a>
                 )}
               </div>
             </div>
             <div style={padLine.arrow}>→</div>
             <div style={padLine.col}>
-              <div className="mono" style={padLine.colHeader}>02 · PACKAGING</div>
+              <div className="mono" style={padLine.colHeader}>02 · Packaging</div>
               <a href="#rb2" style={padLine.link}>
                 <div style={padLine.machine}>
                   <div className="mono" style={padLine.code}>RB-2 <span style={padLine.linkArrow}>↗</span></div>
@@ -154,15 +152,15 @@ window.CottonPadMachinery = function CottonPadMachinery() {
 const padLine = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr", gap: 0, alignItems: "stretch" },
   col: { background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.15)", padding: "28px" },
-  colHeader: { fontSize: 10, color: "#9ab3cc", letterSpacing: "0.18em", marginBottom: 20 },
+  colHeader: { fontSize: 13, color: "var(--on-blue-muted)", marginBottom: 20 },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.3)", fontSize: 24 },
   link: { display: "block", textDecoration: "none", color: "inherit" },
   machine: { padding: "20px 0" },
   featured: { borderTop: "3px solid var(--falu-red)", paddingTop: 16 },
   code: { fontSize: 22, color: "#fff", fontWeight: 600, letterSpacing: "-0.01em", display: "flex", alignItems: "baseline", gap: 6 },
   label: { color: "#fff", marginTop: 4, fontSize: 14, fontWeight: 500 },
-  note: { marginTop: 12, color: "#9ab3cc", fontSize: 13, lineHeight: 1.55 },
-  linkArrow: { fontSize: 12, color: "#9ab3cc", fontWeight: 400 },
+  note: { marginTop: 12, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 },
+  linkArrow: { fontSize: 13, color: "var(--on-blue-muted)", fontWeight: 400 },
   list: { display: "flex", flexDirection: "column" },
   row: { display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, padding: "14px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: 13, textDecoration: "none" }
 };
@@ -171,16 +169,16 @@ const padBenefits = {
   wrap: { marginTop: 64, paddingTop: 48, borderTop: "1px solid rgba(255,255,255,0.15)" },
   label: { fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#fff", maxWidth: 760, marginTop: 0, marginBottom: 32 },
   grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 },
-  benefit: { paddingTop: 20, borderTop: "2px solid var(--falu-red)" },
+  benefit: { paddingTop: 20, borderTop: "1px solid var(--on-blue-muted)" },
   benefitTitle: { color: "#fff", fontSize: 16, fontWeight: 600, lineHeight: 1.3, marginBottom: 12 },
-  benefitBody: { color: "#9ab3cc", fontSize: 13, lineHeight: 1.6 }
+  benefitBody: { color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.6 }
 };
 
 function PadBlock({ num, title, body, imgId, image, links, flipped }) {
   const left =
   <div style={{ padding: "48px 48px" }}>
-      <div className="mono" style={{ fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.2em", marginBottom: 16 }}>
-        STEP · {num}
+      <div className="mono" style={{ fontSize: 13, color: "var(--ink)", marginBottom: 16 }}>
+        Step {num}
       </div>
       <h3 style={{ fontSize: 32, lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
         {title}
@@ -190,10 +188,10 @@ function PadBlock({ num, title, body, imgId, image, links, flipped }) {
       </div>
       <div style={{ marginTop: 28, paddingTop: 24, borderTop: "1px solid var(--rule)", display: "flex", flexWrap: "wrap", gap: 14 }}>
         {links.map(([code, sub, href]) =>
-        <a key={code} href={href} style={{ flex: "1 1 0", minWidth: 160, display: "flex", flexDirection: "column", gap: 4, padding: "16px 20px", border: "1px solid var(--rule)", borderLeft: "3px solid var(--falu-red)", background: "#fff", textDecoration: "none", transition: "background 120ms ease" }}>
+        <a key={code} href={href} style={{ flex: "1 1 0", minWidth: 160, display: "flex", flexDirection: "column", gap: 4, padding: "16px 20px", border: "1px solid var(--rule)", borderLeft: "3px solid var(--falu-blue)", background: "#fff", textDecoration: "none", transition: "background 120ms ease" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
             <span className="mono" style={{ fontSize: 15, fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" }}>{code}</span>
-            <span className="mono" style={{ fontSize: 12, color: "var(--falu-red)", fontWeight: 600 }}>→</span>
+            <span className="mono" style={{ fontSize: 13, color: "var(--ink)", fontWeight: 600 }}>→</span>
           </div>
           <span style={{ fontSize: 13, color: "var(--ink-soft)", whiteSpace: "pre-line", lineHeight: 1.45 }}>{sub}</span>
         </a>
@@ -212,6 +210,6 @@ function PadBlock({ num, title, body, imgId, image, links, flipped }) {
 function PadConnector() {
   return (
     <div style={{ display: "flex", justifyContent: "center", padding: "20px 0" }}>
-      <div style={{ width: 0, height: 0, borderLeft: "32px solid transparent", borderRight: "32px solid transparent", borderTop: "20px solid rgba(236, 28, 36, 0.28)" }} />
+      <div style={{ width: 0, height: 0, borderLeft: "32px solid transparent", borderRight: "32px solid transparent", borderTop: "20px solid var(--chart-3)" }} />
     </div>);
 }

@@ -59,7 +59,7 @@ function faluToast(message) {
     el.id = "falu-toast";
     el.style.cssText =
       "position:fixed;left:50%;bottom:32px;transform:translateX(-50%);z-index:9999;" +
-      "background:#00213f;color:#fff;border:1px solid #103e6c;padding:12px 18px;" +
+      "background:var(--falu-blue);color:#fff;border:1px solid var(--on-blue-line);padding:12px 18px;" +
       "font-family:var(--font-mono, monospace);font-size:12px;letter-spacing:0.08em;" +
       "text-transform:uppercase;pointer-events:none;opacity:0;transition:opacity .18s ease;";
     document.body.appendChild(el);
@@ -183,7 +183,7 @@ window.FaluFooter = function FaluFooter() {
             Swiss-engineered production and packaging machinery for cotton swabs, cotton pads,
             and paper sticks. Built in Switzerland since 1965.
           </p>
-          <p style={{ marginTop: 4, fontSize: 12, color: "#8fa1b3" }}>
+          <p style={{ marginTop: 4, fontSize: 13, color: "var(--on-blue-muted)" }}>
             Joweidzentrum 5, 8630 Rüti, Switzerland<br/>
             <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>
             {" · "}
@@ -231,25 +231,15 @@ window.FaluFooter = function FaluFooter() {
 };
 
 // ============ SHARED PRIMITIVES ============
-window.SectionLabel = function SectionLabel({ num, children, tone }) {
-  const dark = tone === "dark";
-  return (
-    <div className="section-label" style={dark ? { color: "#fff" } : undefined}>
-      <span className="num" style={dark ? { color: "var(--falu-red)" } : undefined}>{num}</span>
-      <span>{children}</span>
-      <span className="rule" style={dark ? { background: "rgba(255,255,255,0.2)" } : undefined} />
-    </div>
-  );
-};
 
 // Labelled image placeholder, diagonal stripes, mono caption.
 // `id` is the shot number the team uses to hand images back (e.g. "CB1-01").
 window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, dark = false, style = {} }) {
   const bg = dark
-    ? "repeating-linear-gradient(135deg, #00213f 0 8px, #002e5b 8px 16px)"
-    : "repeating-linear-gradient(135deg, #eaeef2 0 8px, #f1f4f7 8px 16px)";
-  const fg = dark ? "#9ab3cc" : "#7a8a9a";
-  const border = dark ? "1px solid #103e6c" : "1px solid #d8dde3";
+    ? "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, #13305b 8px 16px)"
+    : "repeating-linear-gradient(135deg, #eaeef3 0 8px, var(--surface-tint) 8px 16px)";
+  const fg = dark ? "var(--on-blue-muted)" : "var(--muted)";
+  const border = dark ? "1px solid var(--on-blue-line)" : "1px solid var(--line)";
   return (
     <div
       style={{
@@ -267,13 +257,11 @@ window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, da
       <div
         style={{
           fontFamily: "var(--font-mono)",
-          fontSize: 11,
-          textTransform: "uppercase",
-          letterSpacing: "0.16em",
+          fontSize: 13,
           color: fg,
-          background: dark ? "rgba(0,33,63,0.85)" : "rgba(255,255,255,0.85)",
+          background: dark ? "rgba(14,42,83,0.85)" : "rgba(255,255,255,0.85)",
           padding: "8px 14px",
-          border: dark ? "1px solid #103e6c" : "1px solid #d8dde3",
+          border: dark ? "1px solid var(--on-blue-line)" : "1px solid var(--line)",
         }}
       >
         {label}
@@ -285,11 +273,9 @@ window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, da
           fontFamily: "var(--font-mono)",
           fontSize: id ? 13 : 10,
           fontWeight: id ? 700 : 400,
-          letterSpacing: "0.14em",
           color: id ? "#fff" : fg,
           background: id ? "var(--falu-red)" : "transparent",
           padding: id ? "5px 9px" : 0,
-          textTransform: "uppercase",
         }}
       >
         {id || "IMG · placeholder"}
@@ -370,8 +356,8 @@ window.MachineHeroVideo = function MachineHeroVideo({ id, src, poster, label, ra
       ref={wrapRef}
       style={{
         position: "relative",
-        background: "#00213f",
-        border: "1px solid #103e6c",
+        background: "var(--falu-blue)",
+        border: "1px solid var(--on-blue-line)",
         aspectRatio: full ? undefined : ratio,
         height: full ? "100%" : undefined,
         overflow: "hidden",
@@ -430,8 +416,8 @@ function VideoPlaceholder({ id, label, ratio }) {
   return (
     <div
       style={{
-        background: "repeating-linear-gradient(135deg, #00213f 0 8px, #002e5b 8px 16px)",
-        border: "1px solid #103e6c",
+        background: "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, #13305b 8px 16px)",
+        border: "1px solid var(--on-blue-line)",
         aspectRatio: ratio,
         position: "relative",
         display: "flex",
@@ -441,17 +427,15 @@ function VideoPlaceholder({ id, label, ratio }) {
         gap: 14,
       }}
     >
-      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: 18, border: "1px solid #103e6c", background: "rgba(0,33,63,0.85)" }}>▶</div>
+      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: 18, border: "1px solid var(--on-blue-line)", background: "rgba(14,42,83,0.85)" }}>▶</div>
       <div
         style={{
           fontFamily: "var(--font-mono)",
-          fontSize: 11,
-          textTransform: "uppercase",
-          letterSpacing: "0.16em",
-          color: "#9ab3cc",
-          background: "rgba(0,33,63,0.85)",
+          fontSize: 13,
+          color: "var(--on-blue-muted)",
+          background: "rgba(14,42,83,0.85)",
           padding: "8px 14px",
-          border: "1px solid #103e6c",
+          border: "1px solid var(--on-blue-line)",
           textAlign: "center",
         }}
       >
@@ -465,11 +449,9 @@ function VideoPlaceholder({ id, label, ratio }) {
           fontFamily: "var(--font-mono)",
           fontSize: 13,
           fontWeight: 700,
-          letterSpacing: "0.14em",
           color: "#fff",
           background: "var(--falu-red)",
           padding: "5px 9px",
-          textTransform: "uppercase",
         }}
       >
         {id || "VIDEO · placeholder"}
@@ -491,7 +473,7 @@ const vid = {
     alignItems: "center",
     gap: 14,
     padding: "14px 16px",
-    background: "linear-gradient(180deg, transparent, rgba(0,20,40,0.85) 45%)",
+    background: "linear-gradient(180deg, transparent, rgba(14,42,83,0.85) 45%)",
   },
   btn: {
     display: "flex",
@@ -502,9 +484,9 @@ const vid = {
     flexShrink: 0,
     padding: 0,
     border: "1px solid rgba(255,255,255,0.35)",
-    background: "rgba(0,33,63,0.6)",
+    background: "rgba(14,42,83,0.6)",
     color: "#fff",
-    fontSize: 12,
+    fontSize: 13,
     lineHeight: 1,
     cursor: "pointer",
   },
@@ -512,13 +494,12 @@ const vid = {
     flex: 1,
     minWidth: 0,
     height: 4,
-    accentColor: "var(--falu-red)",
+    accentColor: "var(--falu-blue)",
     cursor: "pointer",
   },
   time: {
     flexShrink: 0,
-    fontSize: 11,
-    letterSpacing: "0.08em",
+    fontSize: 13,
     color: "#fff",
   },
 };

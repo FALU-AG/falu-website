@@ -1,7 +1,7 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
-//  /careers — Careers
+//  /careers: Careers
 //  Recruiting page. Why work at FALU, what we look for, open
 //  roles, and how to apply. Grounded, no startup-perks fluff.
 // ============================================================
@@ -235,10 +235,10 @@ window.Careers = function Careers() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>CAREERS</span>
+            <span style={{ color: "var(--navy)" }}>Careers</span>
           </div>
         </div>
       </div>
@@ -262,7 +262,6 @@ window.Careers = function Careers() {
       {/* WHY FALU */}
       <section style={{ padding: "96px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="01">Why work here</SectionLabel>
           <h2 style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: 32, marginBottom: 56 }}>
             A small team that owns its work.
           </h2>
@@ -288,7 +287,6 @@ window.Careers = function Careers() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
             <ImageSlot id="CAREERS-01" label="FALU team at work in Rüti" ratio="4 / 3" />
             <div>
-              <SectionLabel num="02">Who we look for</SectionLabel>
               <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: 32 }}>
                 Precise, curious, patient.
               </h2>
@@ -309,7 +307,7 @@ window.Careers = function Careers() {
                   "Administration & finance",
                   "Apprenticeships"
                 ].map((a) => (
-                  <div key={a} className="mono" style={{ fontSize: 12, color: "var(--navy)", letterSpacing: "0.04em", display: "flex", alignItems: "center", gap: 10 }}>
+                  <div key={a} className="mono" style={{ fontSize: 13, color: "var(--navy)", display: "flex", alignItems: "center", gap: 10 }}>
                     <span style={{ width: 14, height: 1, background: "var(--falu-red)", flexShrink: 0 }} />
                     {a}
                   </div>
@@ -323,7 +321,6 @@ window.Careers = function Careers() {
       {/* OPEN ROLES */}
       <section style={{ padding: "96px 0", background: "var(--bg-band)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="03">Open positions</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 80, alignItems: "end", marginTop: 32, marginBottom: 48 }}>
             <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em" }}>
               Current openings.
@@ -343,18 +340,17 @@ window.Careers = function Careers() {
       <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 64, alignItems: "center" }}>
           <div>
-            <SectionLabel num="04" tone="dark">Speculative applications</SectionLabel>
             <h2 style={{ fontSize: 44, color: "#fff", letterSpacing: "-0.025em", lineHeight: 1.1, marginTop: 32, maxWidth: 720 }}>
               Nothing matching, but you want to work here?
             </h2>
-            <p style={{ marginTop: 24, color: "#9ab3cc", fontSize: 16, lineHeight: 1.65, maxWidth: 640 }}>
+            <p style={{ marginTop: 24, color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 640 }}>
               Send us your CV and a short note about what you would like to do. We read every
               application, and good people are worth making room for.
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-end" }}>
-            <a href="mailto:jobs@falu.com" className="btn btn--primary btn--lg">Send a speculative application<span className="arrow" /></a>
-            <div className="mono" style={{ color: "#9ab3cc", fontSize: 12, letterSpacing: "0.06em" }}>
+            <a href="mailto:jobs@falu.com" className="btn btn--inverse btn--lg">Send a speculative application<span className="arrow" /></a>
+            <div className="mono" style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>
               <a href="mailto:jobs@falu.com" style={{ color: "inherit" }}>jobs@falu.com</a>
               {" · "}
               <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>

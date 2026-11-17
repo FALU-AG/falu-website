@@ -27,20 +27,20 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the RB-2. Output depends on bag size and pad format.",
     tech: [
-      ["OUTPUT", "Speed", "Up to 52 bags/min (depending on bag size and pad format)"],
+      ["Output", "Speed", "Up to 52 bags/min (depending on bag size and pad format)"],
       ["", "Bag contents", "Typically 50 to 120 cotton pads"],
-      ["PACKAGING", "Bag types", "Polybags or paper bags"],
+      ["Packaging", "Bag types", "Polybags or paper bags"],
       ["", "Sealing", "Automatic, heat stamp"],
-      ["INFEED", "Source machine", "WR-2100 S cutting machine"],
+      ["Infeed", "Source machine", "WR-2100 S cutting machine"],
       ["", "Transfer", "Metal cassettes via WR-2100 S interface"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The RB-2 is the packaging stage of the cotton pad line.",
     lineLede: "Pads are produced and cut by the WR-2100 S, then transferred to the RB-2 for bagging and sealing.",
     line: [
-      { stage: "01 · PAD PRODUCTION", code: "WR-2100 S", label: "Cotton pad cutting", href: "#wr2100" },
-      { stage: "02 · PACKAGING", code: "RB-2", label: "Bagging & sealing", current: true },
-      { stage: "OUTPUT", code: "Bagged pads", label: "Sealed polybags or paper bags" }
+      { stage: "01 · Pad production", code: "WR-2100 S", label: "Cotton pad cutting", href: "#wr2100" },
+      { stage: "02 · Packaging", code: "RB-2", label: "Bagging & sealing", current: true },
+      { stage: "Output", code: "Bagged pads", label: "Sealed polybags or paper bags" }
     ],
     ctaHeadline: "Packaging cotton pads, or planning a complete pad line?"
   },
@@ -65,22 +65,22 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the SV-2X. Output depends on carton size and raw material quality.",
     tech: [
-      ["OUTPUT", "Speed", "Up to 14 boxes/min (depending on carton size and material)"],
+      ["Output", "Speed", "Up to 14 boxes/min (depending on carton size and material)"],
       ["", "Matched to", "CB1 maximum production speed"],
-      ["CARTON", "Supply", "Flat, pre-folded, pre-glued cartons"],
+      ["Carton", "Supply", "Flat, pre-folded, pre-glued cartons"],
       ["", "Magazine capacity", "Approx. 200 cartons"],
       ["", "Filling range", "60 to 400 swabs (higher counts on request)"],
       ["", "Layer configuration", "12 to 25 swabs per layer (other counts on request)"],
-      ["SEALING", "Method", "Hotmelt glue"],
-      ["COMPATIBILITY", "Machines", "All FALU CT and CB1 machinery"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Sealing", "Method", "Hotmelt glue"],
+      ["Compatibility", "Machines", "All FALU CT and CB1 machinery"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The SV-2X is the cardboard packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred directly to the SV-2X for cartoning, with no manual handling between the two.",
     line: [
-      { stage: "01 · STICK PRODUCTION", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · SWAB PRODUCTION", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · PACKAGING", code: "SV-2X", label: "Cardboard box packaging", current: true }
+      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "03 · Packaging", code: "SV-2X", label: "Cardboard box packaging", current: true }
     ],
     ctaHeadline: "Moving cotton swab packaging to cardboard, or planning a complete line?"
   },
@@ -105,22 +105,22 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the RB-30A. Output depends on container size and raw material quality.",
     tech: [
-      ["OUTPUT", "Production speed", "Up to 25 boxes/min"],
+      ["Output", "Production speed", "Up to 25 boxes/min"],
       ["", "Swabs per box", "50 to 300 swabs"],
-      ["PACKAGING", "Container", "Round boxes, plastic or cardboard"],
+      ["Packaging", "Container", "Round boxes, plastic or cardboard"],
       ["", "Per layer", "1 set of swab quantity per layer included"],
-      ["DIMENSIONS", "Length × Width × Height", "1'639 × 1'207 × 1'735 mm"],
-      ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+      ["Dimensions", "Length × Width × Height", "1'639 × 1'207 × 1'735 mm"],
+      ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
       ["", "Control system", "PLC controlled electrical system"],
-      ["COMPATIBILITY", "Machines", "All FALU CT and CB machinery"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Compatibility", "Machines", "All FALU CT and CB machinery"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The RB-30A is the round-box packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the RB-30A for round-box filling and lid closing.",
     line: [
-      { stage: "01 · STICK PRODUCTION", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · SWAB PRODUCTION", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · PACKAGING", code: "RB-30A", label: "Round box packaging", current: true }
+      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "03 · Packaging", code: "RB-30A", label: "Round box packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into round boxes, or planning a complete line?"
   },
@@ -145,21 +145,21 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the BV-2M and ABS-2. Output depends on bag size.",
     tech: [
-      ["PACKAGING", "Type", "Polybag (polyethylene or paper)"],
+      ["Packaging", "Type", "Polybag (polyethylene or paper)"],
       ["", "Bag contents", "50 to 400 swabs, customisable on request"],
-      ["OUTPUT", "Speed", "Up to 25 bags/min (depending on bag size)"],
-      ["SEALING", "BV-2M", "Manual"],
+      ["Output", "Speed", "Up to 25 bags/min (depending on bag size)"],
+      ["Sealing", "BV-2M", "Manual"],
       ["", "ABS-2", "Automatic"],
-      ["CLOSURE", "Top finish", "Optional zipper-lock with seal and perforation"],
-      ["COMPATIBILITY", "Machines", "FALU CB and CT series"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Closure", "Top finish", "Optional zipper-lock with seal and perforation"],
+      ["Compatibility", "Machines", "FALU CB and CT series"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The polybag machines are the bagging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the BV-2M or ABS-2 for bagging and sealing.",
     line: [
-      { stage: "01 · STICK PRODUCTION", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · SWAB PRODUCTION", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · PACKAGING", code: "BV-2M / ABS-2", label: "Polybag packaging", current: true }
+      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "03 · Packaging", code: "BV-2M / ABS-2", label: "Polybag packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into polybags, or planning a complete line?"
   },
@@ -184,21 +184,21 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the SQB-2A. Output depends on box size and raw material quality.",
     tech: [
-      ["OUTPUT", "Production speed", "Up to 25 boxes/min"],
+      ["Output", "Production speed", "Up to 25 boxes/min"],
       ["", "Swabs per box", "50 to 200 swabs"],
-      ["PACKAGING", "Container", "Square boxes, plastic or cardboard"],
+      ["Packaging", "Container", "Square boxes, plastic or cardboard"],
       ["", "Per layer", "1 set of swab quantity per layer included"],
-      ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+      ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
       ["", "Control system", "PLC controlled electrical system"],
-      ["COMPATIBILITY", "Machines", "All FALU CT and CB machinery"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Compatibility", "Machines", "All FALU CT and CB machinery"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The SQB-2A is the square-box packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the SQB-2A for square-box filling and closing.",
     line: [
-      { stage: "01 · STICK PRODUCTION", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · SWAB PRODUCTION", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · PACKAGING", code: "SQB-2A", label: "Square box packaging", current: true }
+      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "03 · Packaging", code: "SQB-2A", label: "Square box packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into square boxes, or planning a complete line?"
   },
@@ -223,20 +223,20 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the BL-12. Output depends on pack format and raw material quality.",
     tech: [
-      ["OUTPUT", "Production speed", "Up to 12 cycles/min"],
-      ["PACKAGING", "Type", "Blister pack, film with backing card or foil"],
+      ["Output", "Production speed", "Up to 12 cycles/min"],
+      ["Packaging", "Type", "Blister pack, film with backing card or foil"],
       ["", "Per cycle", "Counted set of swabs per blister"],
-      ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+      ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
       ["", "Control system", "PLC controlled electrical system"],
-      ["COMPATIBILITY", "Machines", "All FALU CT and CB machinery"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Compatibility", "Machines", "All FALU CT and CB machinery"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The BL-12 is the blister packaging stage of the swab line.",
     lineLede: "Swabs are formed by the CB1, then transferred to the BL-12 for blister forming, filling and sealing.",
     line: [
-      { stage: "01 · STICK PRODUCTION", code: "PRX", label: "Paper stick production", href: "#prx" },
-      { stage: "02 · SWAB PRODUCTION", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
-      { stage: "03 · PACKAGING", code: "BL-12", label: "Blister packaging", current: true }
+      { stage: "01 · Stick production", code: "PRX", label: "Paper stick production", href: "#prx" },
+      { stage: "02 · Swab production", code: "CB1 4.1", label: "Cotton swab forming", href: "#cb1" },
+      { stage: "03 · Packaging", code: "BL-12", label: "Blister packaging", current: true }
     ],
     ctaHeadline: "Packaging cotton swabs into blister packs, or planning a complete line?"
   },
@@ -260,19 +260,19 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the WR-600 V. Output depends on pad size and material quality.",
     tech: [
-      ["OUTPUT", "Production speed", "Up to 600 pads/min"],
-      ["PRODUCT", "Pad shape", "Round or oval"],
+      ["Output", "Production speed", "Up to 600 pads/min"],
+      ["Product", "Pad shape", "Round or oval"],
       ["", "Material", "Cotton, viscose and blends"],
-      ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+      ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
       ["", "Control system", "PLC controlled electrical system"],
-      ["COMPATIBILITY", "Packaging", "FALU RB-2 cotton pad packaging machine"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Compatibility", "Packaging", "FALU RB-2 cotton pad packaging machine"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The WR-600 V is the entry-capacity pad production stage.",
     lineLede: "The WR-600 V forms and stacks cosmetic pads, then the RB-2 bags and seals them.",
     line: [
-      { stage: "01 · PAD PRODUCTION", code: "WR-600 V", label: "Cotton pad forming", current: true },
-      { stage: "02 · PACKAGING", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
+      { stage: "01 · Pad production", code: "WR-600 V", label: "Cotton pad forming", current: true },
+      { stage: "02 · Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
     ],
     ctaHeadline: "Starting cotton pad production, or planning a complete line?"
   },
@@ -296,19 +296,19 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the WR-2100 S. Output depends on pad size and material quality.",
     tech: [
-      ["OUTPUT", "Production speed", "Up to 2'100 pads/min"],
-      ["PRODUCT", "Pad shape", "Round or oval"],
+      ["Output", "Production speed", "Up to 2'100 pads/min"],
+      ["Product", "Pad shape", "Round or oval"],
       ["", "Material", "Cotton, viscose and blends"],
-      ["ELECTRICAL", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
+      ["Electrical", "Voltage", "400 V / 50 Hz (transformer required for other voltages)"],
       ["", "Control system", "PLC controlled electrical system"],
-      ["COMPATIBILITY", "Packaging", "FALU RB-2 cotton pad packaging machine"],
-      ["CERTIFICATION", "Compliance", "CE certified"]
+      ["Compatibility", "Packaging", "FALU RB-2 cotton pad packaging machine"],
+      ["Certification", "Compliance", "CE certified"]
     ],
     lineHeadline: "The WR-2100 S is the high-volume pad production stage.",
     lineLede: "The WR-2100 S forms and stacks cosmetic pads, then the RB-2 bags and seals them.",
     line: [
-      { stage: "01 · PAD PRODUCTION", code: "WR-2100 S", label: "Cotton pad forming", current: true },
-      { stage: "02 · PACKAGING", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
+      { stage: "01 · Pad production", code: "WR-2100 S", label: "Cotton pad forming", current: true },
+      { stage: "02 · Packaging", code: "RB-2", label: "Bagging and sealing", href: "#rb2" }
     ],
     ctaHeadline: "Scaling up cotton pad production, or planning a complete line?"
   },
@@ -332,18 +332,18 @@ window.FALU_MACHINES = {
     ],
     techLede: "Verified specifications for the VP-2. Output depends on pad size and material quality.",
     tech: [
-      ["PRODUCT", "Pad shape", "Rectangular and square (without waste)"],
-      ["OUTPUT", "Speed", "Up to 1'000 pads/min"],
-      ["PATTERN", "Embossing", "Optional embossed pattern"],
-      ["PACKAGING", "Type", "Semi-automatic (operator-filled bags)"],
-      ["MATERIAL", "Cotton tape width", "max. 100 mm"],
+      ["Product", "Pad shape", "Rectangular and square (without waste)"],
+      ["Output", "Speed", "Up to 1'000 pads/min"],
+      ["Pattern", "Embossing", "Optional embossed pattern"],
+      ["Packaging", "Type", "Semi-automatic (operator-filled bags)"],
+      ["Material", "Cotton tape width", "max. 100 mm"],
       ["", "Materials", "100% cotton, 100% rayon, or blends"]
     ],
     lineHeadline: "The VP-2 is a standalone, semi-automatic pad machine.",
     lineLede: "The VP-2 cuts and embosses pads, then an operator fills them into bags. No separate packaging machine is required.",
     line: [
-      { stage: "01 · PAD PRODUCTION", code: "VP-2", label: "Cutting and embossing", current: true },
-      { stage: "02 · PACKAGING", code: "OPERATOR", label: "Semi-automatic bagging" }
+      { stage: "01 · Pad production", code: "VP-2", label: "Cutting and embossing", current: true },
+      { stage: "02 · Packaging", code: "Operator", label: "Semi-automatic bagging" }
     ],
     ctaHeadline: "Producing square or rectangular cotton pads, or planning a line?"
   }

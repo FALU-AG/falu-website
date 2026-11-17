@@ -1,7 +1,7 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
-//  /machinery — Machinery family index page
+//  /machinery: Machinery family index page
 //  Adapted from /solutions wireframe: 3 grouped machinery blocks,
 //  planning visually separate. Bulleted, simple, scannable.
 // ============================================================
@@ -13,15 +13,15 @@ window.Machinery = function Machinery() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>MACHINERY</span>
+            <span style={{ color: "var(--navy)" }}>Machinery</span>
           </div>
         </div>
       </div>
 
-      {/* HERO — above the fold */}
+      {/* HERO: above the fold */}
       <section style={{ padding: "112px 0 88px" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
@@ -37,10 +37,9 @@ window.Machinery = function Machinery() {
         </div>
       </section>
 
-      {/* MACHINERY BLOCKS — grouped */}
+      {/* MACHINERY BLOCKS: grouped */}
       <section style={{ padding: "0 0 96px", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ paddingTop: 80 }}>
-          <SectionLabel num="01">Machinery families</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32, marginTop: 56 }}>
             <FamilyCard
               num="01"
@@ -85,10 +84,9 @@ window.Machinery = function Machinery() {
         </div>
       </section>
 
-      {/* PRODUCTION PLANNING — visually separate */}
+      {/* PRODUCTION PLANNING: visually separate */}
       <section style={{ padding: "112px 0", background: "#fff" }}>
         <div className="container">
-          <SectionLabel num="02">Production planning</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 80, alignItems: "start", marginTop: 32 }}>
             <div>
               <h2 style={{ fontSize: 56, lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--navy)" }}>
@@ -115,7 +113,7 @@ window.Machinery = function Machinery() {
                   </div>
                 )}
               </div>
-              <a href="#contact" style={{ marginTop: 40, display: "inline-flex", alignItems: "center", gap: 8, color: "var(--falu-red)", fontSize: 15, fontWeight: 600, textDecoration: "none", borderBottom: "1px solid var(--falu-red)", paddingBottom: 4, alignSelf: "flex-start" }}>Get in touch with our specialists<span className="arrow" style={{ borderColor: "var(--falu-red)" }} /></a>
+              <a href="#contact" style={{ marginTop: 40, display: "inline-flex", alignItems: "center", gap: 8, color: "var(--ink)", fontSize: 15, fontWeight: 600, textDecoration: "none", borderBottom: "1px solid var(--falu-blue)", paddingBottom: 4, alignSelf: "flex-start" }}>Get in touch with our specialists<span className="arrow" style={{ borderColor: "var(--falu-red)" }} /></a>
             </div>
           </div>
         </div>

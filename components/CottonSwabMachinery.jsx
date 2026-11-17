@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
 //  /machinery/cotton-swab-machinery
@@ -13,12 +13,12 @@ window.CottonSwabMachinery = function CottonSwabMachinery() {
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.14em" }}>
-            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>HOME</a>
+          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+            <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>MACHINERY</a>
+            <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>Machinery</a>
             <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
-            <span style={{ color: "var(--navy)" }}>COTTON SWAB MACHINERY</span>
+            <span style={{ color: "var(--navy)" }}>Cotton swab machinery</span>
           </div>
         </div>
       </div>
@@ -39,10 +39,9 @@ as individual machines into existing lines.
         </div>
       </section>
 
-      {/* PROCESS BLOCKS — vertically stacked */}
+      {/* PROCESS BLOCKS: vertically stacked */}
       <section style={{ padding: "0 0 96px", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container" style={{ paddingTop: 80 }}>
-          <SectionLabel num="01">Production process</SectionLabel>
           <h2 style={{ fontSize: 48, lineHeight: 1.05, letterSpacing: "-0.025em", color: "var(--navy)", marginTop: 32, marginBottom: 64 }}>
             Three connected steps.<br />Run together, or independently.
           </h2>
@@ -85,7 +84,7 @@ as individual machines into existing lines.
 
           {/* Closer */}
           <div style={{ marginTop: 64, paddingTop: 40, borderTop: "1px solid var(--rule)", textAlign: "center" }}>
-            <p className="mono" style={{ fontSize: 12, color: "var(--ink-muted)", letterSpacing: "0.16em" }}>EACH STEP CAN BE IMPLEMENTED INDIVIDUALLY WITH EXISTING MACHINERY OR COMBINED INTO A COMPLETE PRODUCTION LINE
+            <p className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>Each step can be implemented individually with existing machinery or combined into a complete production line.
 
             </p>
           </div>
@@ -95,12 +94,11 @@ as individual machines into existing lines.
       {/* COMPLETE PRODUCTION LINE */}
       <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
         <div className="container">
-          <SectionLabel num="02" tone="dark">The complete line</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "end", marginBottom: 48, marginTop: 32 }}>
             <h2 style={{ color: "#fff", maxWidth: 760, fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               The three steps as one inline FALU line.
             </h2>
-            <p style={{ color: "#cfdcec", fontSize: 16, lineHeight: 1.65 }}>
+            <p style={{ color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65 }}>
               Stick production, swab forming and packaging, all engineered and serviced by FALU.
               Click any model below to see its product page.
             </p>
@@ -112,7 +110,7 @@ as individual machines into existing lines.
 
           <div style={lineRow.wrap}>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>01 · STICK PRODUCTION</div>
+              <div className="mono" style={lineRow.colHeader}>01 · Stick production</div>
               <a href="#prx" style={lineRow.link}>
                 <div style={lineRow.machine}>
                   <div className="mono" style={lineRow.code}>PRX <span style={lineRow.linkArrow}>↗</span></div>
@@ -123,7 +121,7 @@ as individual machines into existing lines.
             </div>
             <div style={lineRow.arrow}>→</div>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>02 · SWAB PRODUCTION</div>
+              <div className="mono" style={lineRow.colHeader}>02 · Swab production</div>
               <a href="#cb1" style={lineRow.link}>
                 <div style={lineRow.machine}>
                   <div className="mono" style={lineRow.code}>CB1 4.1 <span style={lineRow.linkArrow}>↗</span></div>
@@ -134,7 +132,7 @@ as individual machines into existing lines.
             </div>
             <div style={lineRow.arrow}>→</div>
             <div style={lineRow.col}>
-              <div className="mono" style={lineRow.colHeader}>03 · PACKAGING · 6 MACHINES</div>
+              <div className="mono" style={lineRow.colHeader}>03 · Packaging · 6 machines</div>
               <div style={lineRow.list}>
                 {[
                 ["SV-2X", "Cardboard box packaging", "#sv2x"],
@@ -146,13 +144,13 @@ as individual machines into existing lines.
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={lineRow.row}>
                     <span className="mono" style={{ color: "#fff", fontWeight: 600 }}>{code} <span style={lineRow.linkArrow}>↗</span></span>
-                    <span style={{ color: "#cfdcec", fontSize: 13 }}>{label}</span>
+                    <span style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>{label}</span>
                   </a>
                 )}
               </div>
             </div>
           </div>
-          {/* WHY A COMPLETE FALU LINE — benefits */}
+          {/* WHY A COMPLETE FALU LINE: benefits */}
           <div style={lineBenefits.wrap}>
             <h2 style={lineBenefits.label}>Why a complete FALU line.</h2>
             <p style={lineBenefits.lede}>
@@ -185,35 +183,35 @@ as individual machines into existing lines.
 const lineBenefits = {
   wrap: { marginTop: 64, paddingTop: 48, borderTop: "1px solid rgba(255,255,255,0.15)" },
   label: { fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#fff", maxWidth: 760, marginTop: 0, marginBottom: 24 },
-  lede: { color: "#cfdcec", fontSize: 16, lineHeight: 1.65, maxWidth: 820, marginBottom: 32 },
+  lede: { color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 820, marginBottom: 32 },
   grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 },
-  benefit: { paddingTop: 20, borderTop: "2px solid var(--falu-red)" },
+  benefit: { paddingTop: 20, borderTop: "1px solid var(--on-blue-muted)" },
   benefitTitle: { color: "#fff", fontSize: 16, fontWeight: 600, lineHeight: 1.3, marginBottom: 12 },
-  benefitBody: { color: "#9ab3cc", fontSize: 13, lineHeight: 1.6 }
+  benefitBody: { color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.6 }
 };
 
 // ============ LINE ROW STYLES ============
 const lineRow = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
   col: { background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.15)", padding: "28px" },
-  colHeader: { fontSize: 10, color: "#9ab3cc", letterSpacing: "0.18em", marginBottom: 20 },
+  colHeader: { fontSize: 13, color: "var(--on-blue-muted)", marginBottom: 20 },
   arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.3)", fontSize: 24 },
   link: { display: "block", textDecoration: "none", color: "inherit" },
   machine: { padding: "20px 0" },
   code: { fontSize: 22, color: "#fff", fontWeight: 600, letterSpacing: "-0.01em", display: "flex", alignItems: "baseline", gap: 6 },
   label: { color: "#fff", marginTop: 4, fontSize: 14, fontWeight: 500 },
-  note: { marginTop: 12, color: "#9ab3cc", fontSize: 13, lineHeight: 1.55 },
+  note: { marginTop: 12, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 },
   list: { display: "flex", flexDirection: "column" },
   row: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: 13, textDecoration: "none" },
-  linkArrow: { fontSize: 12, color: "#9ab3cc", fontWeight: 400 }
+  linkArrow: { fontSize: 13, color: "var(--on-blue-muted)", fontWeight: 400 }
 };
 
 // ============ PROCESS BLOCK ============
 function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel, flipped }) {
   const left =
   <div style={{ padding: "48px 48px" }}>
-      <div className="mono" style={{ fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.2em", marginBottom: 16 }}>
-        STEP · {num}
+      <div className="mono" style={{ fontSize: 13, color: "var(--ink)", marginBottom: 16 }}>
+        Step {num}
       </div>
       <h3 style={{ fontSize: 32, lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
         {title}
@@ -228,7 +226,7 @@ function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel,
       }
       <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 12, paddingTop: 24, borderTop: "1px solid var(--rule)", alignItems: "flex-start" }}>
         {linksLabel &&
-      <div className="mono" style={{ fontSize: 10, color: "var(--ink-muted)", letterSpacing: "0.16em", textTransform: "uppercase", marginBottom: 4 }}>
+      <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)", marginBottom: 4 }}>
             {linksLabel}
           </div>
       }
@@ -263,7 +261,7 @@ function ProcessConnector() {
         width: 0, height: 0,
         borderLeft: "32px solid transparent",
         borderRight: "32px solid transparent",
-        borderTop: "20px solid rgba(236, 28, 36, 0.28)"
+        borderTop: "20px solid var(--chart-3)"
       }} />
     </div>);
 

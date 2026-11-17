@@ -1,7 +1,7 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 
 // ============================================================
-// HOMEPAGE, DIRECTION B v2 · "INDUSTRIAL EDITORIAL"
+// HOMEPAGE, DIRECTION B v2 · "Industrial editorial"
 // Restructured around the user's wireframe + earlier feedback.
 // ============================================================
 
@@ -25,13 +25,13 @@ window.HomepageB = function HomepageB() {
           </div>
         </div>
 
-        <div className="container" style={heroB.subRow}>
+        <div className="container hero-subrow" style={heroB.subRow}>
           <p style={heroB.lede}>Swiss-engineered machinery for long-term, industrial use. Built for a decades long service life, the lowest total cost of ownership in the category, and lifetime spare-parts availability.
 
 
 
           </p>
-          <div style={{ display: "flex", gap: 12, flexShrink: 0 }}>
+          <div className="hero-subrow__actions" style={{ display: "flex", gap: 12, flexShrink: 0 }}>
             <a className="btn btn--primary btn--lg" href="#contact">Discuss your setup<span className="arrow" /></a>
             <a className="btn btn--ghost btn--lg" href="#machinery">Browse machinery<span className="arrow" /></a>
           </div>
@@ -40,7 +40,7 @@ window.HomepageB = function HomepageB() {
       </section>
 
       {/* 2. FEATURED CB1 */}
-      {/* No borderTop here — the hero sub-row already draws the rule. */}
+      {/* No borderTop here: the hero sub-row already draws the rule. */}
       <section style={{ padding: "120px 0" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 80, alignItems: "center" }}>
           <div>
@@ -61,7 +61,6 @@ window.HomepageB = function HomepageB() {
       {/* 3. MACHINERY, three families */}
       <section style={{ padding: "120px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="01">Machinery</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 72 }}>
             <h2 style={{ fontSize: 52, lineHeight: 1.0, letterSpacing: "-0.03em" }}>
               Production machinery, from single machines to complete production lines.
@@ -128,12 +127,12 @@ window.HomepageB = function HomepageB() {
               <h2 style={{ fontSize: 44, color: "#fff", lineHeight: 1.05 }}>
                 Production planning<br />& factory layout.
               </h2>
-              <p style={{ marginTop: 24, color: "#9ab3cc", fontSize: 16, lineHeight: 1.65, maxWidth: 520 }}>
+              <p style={{ marginTop: 24, color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 520 }}>
                 Engineering services covering material flow, line integration and operational
                 scalability. Before a single machine is specified, our engineers help structure
                 the plant around your output target, footprint and capacity roadmap.
               </p>
-              <a href="#contact" className="btn btn--primary" style={{ marginTop: 32 }}>Discuss your setup<span className="arrow" /></a>
+              <a href="#contact" className="btn btn--inverse" style={{ marginTop: 32 }}>Discuss your setup<span className="arrow" /></a>
             </div>
             <div style={planning.right}>
               {[
@@ -156,7 +155,6 @@ window.HomepageB = function HomepageB() {
       {/* 5. WHY FALU */}
       <section style={{ padding: "120px 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="02">Why FALU</SectionLabel>
           <h2 style={{ fontSize: 56, maxWidth: 1000, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
             Market leader in product quality, efficiency, and total cost of ownership.
           </h2>
@@ -197,7 +195,6 @@ window.HomepageB = function HomepageB() {
       {/* 6. PROVEN WORLDWIDE */}
       <section style={{ padding: "120px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="03">Proven worldwide</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 64 }}>
             <h2 style={{ fontSize: 52, lineHeight: 1.05, letterSpacing: "-0.03em" }}>
               FALU machines run in more than 70 countries.
@@ -215,7 +212,6 @@ window.HomepageB = function HomepageB() {
       {/* 7. ONE PARTNER FROM CONCEPT TO OPERATION */}
       <section style={{ padding: "120px 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <SectionLabel num="04">Scope & support</SectionLabel>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 72 }}>
             <h2 style={{ fontSize: 56, lineHeight: 1.0, letterSpacing: "-0.03em" }}>
               One partner from concept to operation.
@@ -258,7 +254,7 @@ window.HomepageB = function HomepageB() {
             map((p, i, arr) =>
             <div key={p.phase} style={{ ...journey.col, ...(i === arr.length - 1 ? { borderRight: "1px solid var(--rule)" } : {}) }}>
                 <div style={journey.head}>
-                  <div className="mono" style={journey.phase}>PHASE {p.phase}</div>
+                  <div className="mono" style={journey.phase}>Phase {p.phase}</div>
                   <h3 style={{ marginTop: 14, fontSize: 22 }}>{p.title}</h3>
                 </div>
                 <ul style={journey.list}>
@@ -282,8 +278,8 @@ window.HomepageB = function HomepageB() {
             Whether you are defining a new production concept or specifying machines, we help you structure the right setup.
           </h2>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 40 }}>
-            <a href="#contact" className="btn btn--primary btn--lg">Discuss your production project<span className="arrow" /></a>
-            <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "#9ab3cc", color: "#fff" }}>
+            <a href="#contact" className="btn btn--inverse btn--lg">Discuss your production project<span className="arrow" /></a>
+            <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "var(--on-blue-muted)", color: "#fff" }}>
               +41 55 225 51 51
             </a>
           </div>
@@ -339,7 +335,7 @@ function WorldMap() {
   };
 
   return (
-    <div ref={wrapRef} style={{ background: "#021a33", border: "1px solid #0c3056", padding: "24px", position: "relative" }}>
+    <div ref={wrapRef} style={{ background: "var(--falu-blue)", border: "1px solid var(--on-blue-line)", padding: "24px", position: "relative" }}>
       <svg viewBox="0 0 1200 560" style={{ width: "100%", display: "block" }} onMouseLeave={() => setTip(null)}>
         {paths ? paths.map((p, i) => {
           const isFalu = p.a2 && FALU_COUNTRIES.has(p.a2);
@@ -348,9 +344,9 @@ function WorldMap() {
             <path
               key={i}
               d={p.d}
-              fill={isFalu ? "var(--falu-red)" : "#0c3056"}
+              fill={isFalu ? "var(--falu-red)" : "var(--on-blue-line)"}
               fillOpacity={hovered ? 0.75 : 1}
-              stroke={hovered ? "#9ab3cc" : "#021a33"}
+              stroke={hovered ? "var(--on-blue-muted)" : "var(--falu-blue)"}
               strokeWidth="0.5"
               style={{ cursor: "default" }}
               onMouseMove={track(p.name)}
@@ -358,7 +354,7 @@ function WorldMap() {
 
 
         }) :
-        <text x="600" y="280" textAnchor="middle" fill="#9ab3cc" fontFamily="var(--font-mono)" fontSize="12">Loading map...</text>
+        <text x="600" y="280" textAnchor="middle" fill="var(--on-blue-muted)" fontFamily="var(--font-mono)" fontSize="12">Loading map...</text>
         }
       </svg>
 
@@ -368,13 +364,11 @@ function WorldMap() {
         left: tip.x + 14,
         top: tip.y + 14,
         pointerEvents: "none",
-        background: "#021a33",
-        border: "1px solid #0c3056",
+        background: "var(--falu-blue)",
+        border: "1px solid var(--on-blue-line)",
         color: "#fff",
         fontFamily: "var(--font-mono)",
-        fontSize: 11,
-        letterSpacing: "0.06em",
-        textTransform: "uppercase",
+        fontSize: 13,
         padding: "6px 10px",
         whiteSpace: "nowrap",
         zIndex: 2
@@ -383,7 +377,7 @@ function WorldMap() {
         </div>
       }
 
-      <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #0c3056", display: "flex", gap: 24, fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.06em", color: "#9ab3cc", textTransform: "uppercase", flexWrap: "wrap" }}>
+      <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--on-blue-line)", display: "flex", gap: 24, fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--on-blue-muted)", flexWrap: "wrap" }}>
         <span><span style={{ display: "inline-block", width: 10, height: 10, background: "var(--falu-red)", marginRight: 8, verticalAlign: "middle" }} />Country with FALU installations</span>
         <span style={{ marginLeft: "auto" }}>70+ countries served since 1965</span>
       </div>
@@ -396,21 +390,21 @@ const heroB = {
   wrap: { position: "relative" },
   overlay: { position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", paddingBottom: 56, background: "linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 100%)" },
   overlayInner: {},
-  eyebrow: { color: "#fff", fontSize: 11, letterSpacing: "0.2em", opacity: 0.9 },
+  eyebrow: { color: "#fff", fontSize: 13, opacity: 0.9 },
   title: { color: "#fff", fontSize: 96, lineHeight: 0.98, marginTop: 24, letterSpacing: "-0.035em", fontWeight: 600 },
   subRow: { display: "flex", gap: 64, alignItems: "center", padding: "56px 32px", borderBottom: "1px solid var(--rule)" },
   lede: { fontSize: 19, color: "var(--ink-soft)", lineHeight: 1.6, maxWidth: 640 },
   ribbon: { padding: "32px 0", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", borderBottom: "1px solid var(--rule)" },
   ribbonCell: { padding: "0 24px", borderRight: "1px solid var(--rule)" },
   ribbonNum: { fontSize: 24, fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
-  ribbonLabel: { marginTop: 8, fontSize: 12, color: "var(--ink-soft)" }
+  ribbonLabel: { marginTop: 8, fontSize: 13, color: "var(--ink-soft)" }
 };
 
 const featB = {
-  tag: { fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" },
+  tag: { fontSize: 13 },
   specGrid: { marginTop: 36, display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
   specCell: { padding: "18px 20px", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" },
-  specKey: { fontSize: 10, color: "var(--ink-muted)", letterSpacing: "0.18em" },
+  specKey: { fontSize: 13, color: "var(--ink-muted)" },
   specVal: { marginTop: 6, fontSize: 16, color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.005em" }
 };
 
@@ -419,42 +413,42 @@ const famB = {
   row: { display: "flex", gap: 64, alignItems: "center" },
   imageCol: { flex: "1 1 0", minWidth: 0 },
   textCol: { flex: "1 1 0", minWidth: 0 },
-  num: { fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: 500 },
+  num: { fontSize: 13, color: "var(--ink)", fontWeight: 500 },
   formats: { marginTop: 20, padding: "12px 0", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", maxWidth: 520 },
-  formatsLabel: { fontSize: 10, color: "var(--ink-muted)", letterSpacing: "0.18em", textTransform: "uppercase" },
-  formatsList: { marginTop: 8, color: "var(--navy)", fontSize: 13, letterSpacing: "0.04em", lineHeight: 1.6 }
+  formatsLabel: { fontSize: 13, color: "var(--ink-muted)" },
+  formatsList: { marginTop: 8, color: "var(--navy)", fontSize: 13, lineHeight: 1.6 }
 };
 
 const planning = {
-  wrap: { padding: "80px 0", background: "var(--navy)", borderTop: "4px solid var(--falu-red)" },
+  wrap: { padding: "80px 0", background: "var(--navy)" },
   frame: { display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 64, alignItems: "center" },
   left: {},
-  tag: { color: "var(--falu-red)", fontSize: 11, letterSpacing: "0.2em" },
-  right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderTop: "1px solid #103e6c", borderLeft: "1px solid #103e6c" },
-  tile: { padding: "28px 24px", borderRight: "1px solid #103e6c", borderBottom: "1px solid #103e6c" },
-  tileKey: { color: "var(--falu-red)", fontSize: 11, letterSpacing: "0.2em" },
+  tag: { color: "var(--on-blue-muted)", fontSize: 13 },
+  right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderTop: "1px solid var(--on-blue-line)", borderLeft: "1px solid var(--on-blue-line)" },
+  tile: { padding: "28px 24px", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)" },
+  tileKey: { color: "var(--on-blue-muted)", fontSize: 13 },
   tileTitle: { marginTop: 14, color: "#fff", fontSize: 17, fontWeight: 600 },
-  tileDesc: { marginTop: 8, color: "#9ab3cc", fontSize: 13, lineHeight: 1.55 }
+  tileDesc: { marginTop: 8, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 }
 };
 
 const whyB = {
   grid: { marginTop: 80, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 },
   cell: { padding: "0" },
-  cellNum: { fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.18em", fontWeight: 500 }
+  cellNum: { fontSize: 13, color: "var(--ink)", fontWeight: 500 }
 };
 
 const mapStats = {
   row: { marginTop: 32, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid var(--rule)" },
   cell: { padding: "20px 16px 0 0", borderRight: "1px solid var(--rule)" },
   num: { fontSize: 22, fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
-  label: { marginTop: 6, fontSize: 12, color: "var(--ink-soft)" }
+  label: { marginTop: 6, fontSize: 13, color: "var(--ink-soft)" }
 };
 
 const journey = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderTop: "2px solid var(--navy)", borderLeft: "1px solid var(--rule)" },
   col: { padding: "32px 28px 36px", borderRight: "1px solid var(--rule)", background: "#fff" },
   head: {},
-  phase: { fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.2em", fontWeight: 500 },
+  phase: { fontSize: 13, color: "var(--ink)", fontWeight: 500 },
   list: { marginTop: 24, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 12 },
   item: { display: "flex", gap: 12, alignItems: "flex-start", color: "var(--ink-soft)", fontSize: 15 },
   itemDot: { width: 14, height: 1, background: "var(--falu-red)", marginTop: 10, flexShrink: 0 }

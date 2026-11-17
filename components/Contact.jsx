@@ -1,4 +1,4 @@
-/* global React, FaluHeader, FaluFooter, SectionLabel, ImageSlot */
+/* global React, FaluHeader, FaluFooter, ImageSlot */
 const { useState: useStateC } = React;
 
 // ============================================================
@@ -36,12 +36,12 @@ function MapEmbed() {
 
   return (
     <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", background: "var(--bg-alt)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px", gap: 16 }}>
-      <div className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--ink-muted)" }}>
+      <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
         Location map
       </div>
       <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0, maxWidth: 320 }}>
         The map is loaded from Google Maps. Loading it may set cookies and transfer data to Google.
-        See our <a href="#privacy" style={{ color: "var(--falu-red)", textDecoration: "none" }}>privacy policy</a>.
+        See our <a href="#privacy" style={{ color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }}>privacy policy</a>.
       </p>
       <button type="button" onClick={allow} className="btn btn--primary">
         Load map<span className="arrow" />
@@ -107,16 +107,15 @@ window.Contact = function Contact() {
 
           {/* FORM */}
           <div style={{ padding: "56px", borderRight: "1px solid var(--rule)" }}>
-            <SectionLabel num="01">Your enquiry</SectionLabel>
 
             {/* Two-up: company / name */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 32 }}>
               <div>
-                <div className="mono" style={cForm.label}>COMPANY <span style={cForm.req}>*</span></div>
+                <div className="mono" style={cForm.label}>Company <span style={cForm.req}>*</span></div>
                 <input value={form.company} onChange={set("company")} placeholder="Company name" style={cForm.input} required />
               </div>
               <div>
-                <div className="mono" style={cForm.label}>CONTACT NAME <span style={cForm.req}>*</span></div>
+                <div className="mono" style={cForm.label}>Contact name <span style={cForm.req}>*</span></div>
                 <input value={form.name} onChange={set("name")} placeholder="Full name" style={cForm.input} required />
               </div>
             </div>
@@ -124,11 +123,11 @@ window.Contact = function Contact() {
             {/* Two-up: email / phone */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 28 }}>
               <div>
-                <div className="mono" style={cForm.label}>EMAIL <span style={cForm.req}>*</span></div>
+                <div className="mono" style={cForm.label}>Email <span style={cForm.req}>*</span></div>
                 <input type="email" value={form.email} onChange={set("email")} placeholder="name@company.com" style={cForm.input} required />
               </div>
               <div>
-                <div className="mono" style={cForm.label}>PHONE <span style={cForm.req}>*</span></div>
+                <div className="mono" style={cForm.label}>Phone <span style={cForm.req}>*</span></div>
                 <div style={{ display: "grid", gridTemplateColumns: "84px 1fr", gap: 0 }}>
                   <select value={form.dialCode} onChange={set("dialCode")} style={{ ...cForm.input, borderRight: "none", paddingRight: 30, minWidth: 0, appearance: "none", WebkitAppearance: "none", MozAppearance: "none", backgroundImage: "linear-gradient(45deg, transparent 50%, var(--ink-muted) 50%), linear-gradient(135deg, var(--ink-muted) 50%, transparent 50%)", backgroundPosition: "calc(100% - 18px) 19px, calc(100% - 13px) 19px", backgroundSize: "5px 5px, 5px 5px", backgroundRepeat: "no-repeat" }} required>
                     <option value="">Code</option>
@@ -143,13 +142,13 @@ window.Contact = function Contact() {
 
             {/* Country */}
             <div style={{ marginTop: 28 }}>
-              <div className="mono" style={cForm.label}>COUNTRY <span style={cForm.req}>*</span></div>
+              <div className="mono" style={cForm.label}>Country <span style={cForm.req}>*</span></div>
               <input value={form.country} onChange={set("country")} placeholder="Country" style={cForm.input} required />
             </div>
 
             {/* Message */}
             <div style={{ marginTop: 28 }}>
-              <div className="mono" style={cForm.label}>YOUR MESSAGE <span style={cForm.req}>*</span></div>
+              <div className="mono" style={cForm.label}>Your message <span style={cForm.req}>*</span></div>
               <textarea
                 value={form.message}
                 onChange={set("message")}
@@ -161,14 +160,14 @@ window.Contact = function Contact() {
 
             {/* Attachments */}
             <div style={{ marginTop: 28 }}>
-              <div className="mono" style={cForm.label}>ATTACHMENTS <span style={{ color: "var(--ink-muted)" }}>(optional)</span></div>
+              <div className="mono" style={cForm.label}>Attachments <span style={{ color: "var(--ink-muted)" }}>(optional)</span></div>
               <label style={cForm.dropzone}>
                 <input type="file" multiple onChange={onFiles} style={{ display: "none" }}
                   accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.dwg,.step,.stp" />
-                <span className="mono" style={{ fontSize: 12, color: "var(--navy)", letterSpacing: "0.04em" }}>
+                <span className="mono" style={{ fontSize: 13, color: "var(--navy)" }}>
                   + Attach files
                 </span>
-                <span style={{ fontSize: 12, color: "var(--ink-muted)" }}>
+                <span style={{ fontSize: 13, color: "var(--ink-muted)" }}>
                   Drawings, specs or RFQs. PDF, DOC, XLS, images, CAD. Up to 5 files.
                 </span>
               </label>
@@ -176,11 +175,11 @@ window.Contact = function Contact() {
               <div style={{ marginTop: 12, border: "1px solid var(--rule)" }}>
                 {files.map((f, idx) =>
                 <div key={idx} style={cForm.fileRow}>
-                    <span className="mono" style={{ fontSize: 11, color: "var(--falu-red)", letterSpacing: "0.1em", width: 36 }}>
+                    <span className="mono" style={{ fontSize: 13, color: "var(--ink)", width: 36 }}>
                       {(f.name.split(".").pop() || "").toUpperCase().slice(0, 4)}
                     </span>
                     <span style={{ flex: 1, fontSize: 13, color: "var(--navy)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{f.name}</span>
-                    <span className="mono" style={{ fontSize: 11, color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
+                    <span className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
                     <button onClick={() => removeFile(idx)} style={cForm.fileRemove} aria-label="Remove">×</button>
                   </div>
                 )}
@@ -201,30 +200,29 @@ window.Contact = function Contact() {
 
           {/* CONTACT RAIL */}
           <div style={{ padding: "56px" }}>
-            <SectionLabel num="02">Direct</SectionLabel>
 
             <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 28 }}>
               <div>
-                <div className="mono" style={cRail.label}>SALES</div>
+                <div className="mono" style={cRail.label}>Sales</div>
                 <a href="mailto:sales@falu.com" style={cRail.value}>sales@falu.com</a>
                 <a href="tel:+41552255151" style={cRail.value}>+41 55 225 51 51</a>
               </div>
 
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
-                <div className="mono" style={cRail.label}>FACTORY &amp; HEAD OFFICE</div>
+                <div className="mono" style={cRail.label}>Factory &amp; head office</div>
                 <p style={cRail.addr}>
                   FALU AG<br />
                   Joweid Zentrum 5<br />
                   8630 Rüti<br />
                   Switzerland
                 </p>
-                <div className="mono" style={{ fontSize: 11, color: "var(--ink-muted)", letterSpacing: "0.06em", marginTop: 12 }}>
+                <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)", marginTop: 12 }}>
                   UID CHE-105.813.399
                 </div>
               </div>
 
               <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
-                <div className="mono" style={cRail.label}>HOURS</div>
+                <div className="mono" style={cRail.label}>Hours</div>
                 <p style={cRail.addr}>
                   Monday to Friday<br />
                   08:00 to 17:00 CET
@@ -268,15 +266,15 @@ const DIAL_CODES = [
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
   link: { color: "var(--ink-soft)" },
-  sep: { color: "var(--rule)" },
+  sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cForm = {
-  label: { fontSize: 10, color: "var(--ink-muted)", letterSpacing: "0.18em", marginBottom: 10 },
-  req: { color: "var(--falu-red)" },
+  label: { fontSize: 13, color: "var(--ink-muted)", marginBottom: 10 },
+  req: { color: "var(--ink)" },
   dropzone: { display: "flex", flexDirection: "column", gap: 6, padding: "18px 20px", border: "1px dashed var(--rule)", background: "#fff", cursor: "pointer", transition: "border-color 120ms ease" },
   fileRow: { display: "flex", alignItems: "center", gap: 12, padding: "12px 16px", borderBottom: "1px solid var(--rule-soft)", background: "#fff" },
   fileRemove: { border: "none", background: "transparent", color: "var(--ink-muted)", fontSize: 18, lineHeight: 1, cursor: "pointer", padding: "0 4px" },
@@ -294,7 +292,7 @@ const cForm = {
 };
 
 const cRail = {
-  label: { fontSize: 10, color: "var(--falu-red)", letterSpacing: "0.18em", marginBottom: 12 },
+  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
   value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
   addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 }
 };
