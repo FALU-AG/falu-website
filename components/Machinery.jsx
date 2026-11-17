@@ -113,7 +113,7 @@ window.Machinery = function Machinery() {
                   </div>
                 )}
               </div>
-              <a href="#contact" style={{ marginTop: "var(--space-6)", display: "inline-flex", alignItems: "center", gap: "var(--space-1)", color: "var(--ink)", fontSize: "var(--fs-body)", fontWeight: 600, textDecoration: "none", borderBottom: "1px solid var(--falu-blue)", paddingBottom: "var(--space-half)", alignSelf: "flex-start" }}>Get in touch with our specialists<span className="arrow" style={{ borderColor: "var(--falu-red)" }} /></a>
+              <a href="#contact" style={{ marginTop: "var(--space-6)", display: "inline-flex", alignItems: "center", gap: "var(--space-1)", color: "var(--ink)", fontSize: "var(--fs-body)", fontWeight: 600, textDecoration: "none", borderBottom: "1px solid var(--falu-blue)", paddingBottom: "var(--space-half)", alignSelf: "flex-start" }}>Request a quotation<span className="arrow" style={{ borderColor: "var(--falu-red)" }} /></a>
             </div>
           </div>
         </div>

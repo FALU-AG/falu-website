@@ -214,7 +214,7 @@ window.FaluFooter = function FaluFooter() {
             <li><a href="#services">Service & lifecycle support</a></li>
             <li><a href="#services">Spare parts</a></li>
             <li><a href="#services">Retrofits & upgrades</a></li>
-            <li><a href="#contact">Request consultation</a></li>
+            <li><a href="#contact">Request a quotation</a></li>
           </ul>
         </div>
       </div>

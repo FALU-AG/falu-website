@@ -132,7 +132,7 @@ window.About = function About() {
             Want to know whether FALU is the right partner for your line?
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", alignItems: "flex-end" }}>
-            <a href="#contact" className="btn btn--primary btn--lg">Get in touch with our specialists<span className="arrow" /></a>
+            <a href="#contact" className="btn btn--primary btn--lg">Request a quotation<span className="arrow" /></a>
             <div className="mono" style={{ color: "var(--ink-muted)", fontSize: "var(--fs-label)" }}>
               <a href="mailto:sales@falu.com" style={{ color: "inherit" }}>sales@falu.com</a>
               {" · "}

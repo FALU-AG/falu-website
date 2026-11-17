@@ -26,13 +26,13 @@ window.HomepageB = function HomepageB() {
         </div>
 
         <div className="container hero-subrow" style={heroB.subRow}>
-          <p style={heroB.lede}>Swiss-engineered machinery for long-term, industrial use. Built for a decades long service life, the lowest total cost of ownership in the category, and lifetime spare-parts availability.
+          <p style={heroB.lede}>Swiss-engineered machinery for long-term, industrial use. Built for decades of service, with spare parts available for the entire machine lifecycle.
 
 
 
           </p>
           <div className="hero-subrow__actions" style={{ display: "flex", gap: "var(--space-1-5)", flexShrink: 0 }}>
-            <a className="btn btn--primary btn--lg" href="#contact">Discuss your setup<span className="arrow" /></a>
+            <a className="btn btn--primary btn--lg" href="#contact">Request a quotation<span className="arrow" /></a>
             <a className="btn btn--ghost btn--lg" href="#machinery">Browse machinery<span className="arrow" /></a>
           </div>
         </div>
@@ -44,10 +44,10 @@ window.HomepageB = function HomepageB() {
       <section style={{ padding: "var(--section-y) 0" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "var(--space-12)", alignItems: "center" }}>
           <div>
-            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>CB1, the cotton swab production machine that defines the category.
+            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>CB1: more than 3'100 cotton swabs per minute.
 
             </h2>
-            <p style={{ marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", lineHeight: 1.65, color: "var(--ink-soft)" }}>Mechanical speed in excess of 3'100 swabs per minute. Compatible with paper, plastic and wood sticks. Pairs upstream with the PRX paper-stick machine and downstream with different packaging configurations.
+            <p style={{ marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", lineHeight: 1.65, color: "var(--ink-soft)" }}>Runs on paper, plastic and wood sticks. Pairs upstream with the PRX paper-stick machine and downstream with different packaging configurations.
 
 
 
@@ -132,7 +132,7 @@ window.HomepageB = function HomepageB() {
                 scalability. Before a single machine is specified, our engineers help structure
                 the plant around your output target, footprint and capacity roadmap.
               </p>
-              <a href="#contact" className="btn btn--inverse" style={{ marginTop: "var(--space-4)" }}>Discuss your setup<span className="arrow" /></a>
+              <a href="#contact" className="btn btn--inverse" style={{ marginTop: "var(--space-4)" }}>Request a quotation<span className="arrow" /></a>
             </div>
             <div style={planning.right}>
               {[
@@ -156,11 +156,11 @@ window.HomepageB = function HomepageB() {
       <section style={{ padding: "var(--section-y) 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
           <h2 style={{ fontSize: "var(--fs-xxl)", maxWidth: 1000, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
-            Market leader in product quality, efficiency, and total cost of ownership.
+            Built in Switzerland since 1965, many machines running for over 40 years.
           </h2>
           <p style={{ marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", color: "var(--ink-soft)", maxWidth: 720, lineHeight: 1.65 }}>
-            Since 1965, FALU machines have been designed and assembled in Switzerland and operate
-            in more than 70 countries, valued for longevity, reliability and serviceability.
+            FALU machines are designed and assembled in Rüti, built for longevity, reliability
+            and serviceability.
           </p>
 
           <div style={whyB.grid}>
@@ -171,7 +171,7 @@ window.HomepageB = function HomepageB() {
             },
             {
               head: "Engineering excellence",
-              body: "Sixty years building exclusively this category of machinery. Specialised technicians and engineers combine precision, deep category experience and modern engineering practice, there is no second specialty."
+              body: "Sixty years building only this category of machinery. Our technicians and engineers combine precision, deep category experience and modern engineering practice."
             },
             {
               head: "Spare parts guarantee",
@@ -278,7 +278,7 @@ window.HomepageB = function HomepageB() {
             Whether you are defining a new production concept or specifying machines, we help you structure the right setup.
           </h2>
           <div style={{ display: "flex", gap: "var(--space-2)", justifyContent: "center", marginTop: "var(--space-6)" }}>
-            <a href="#contact" className="btn btn--inverse btn--lg">Discuss your production project<span className="arrow" /></a>
+            <a href="#contact" className="btn btn--inverse btn--lg">Request a quotation<span className="arrow" /></a>
             <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "var(--on-blue-muted)", color: "var(--on-blue)" }}>
               +41 55 225 51 51
             </a>

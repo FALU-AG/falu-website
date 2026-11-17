@@ -166,7 +166,7 @@ window.PackingMachines = function PackingMachines() {
             Not sure which format fits your market? We will help you choose.
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", alignItems: "flex-end" }}>
-            <a href="#contact" className="btn btn--primary btn--lg">Get in touch with our specialists<span className="arrow" /></a>
+            <a href="#contact" className="btn btn--primary btn--lg">Request a quotation<span className="arrow" /></a>
           </div>
         </div>
       </section>

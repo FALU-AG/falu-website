@@ -266,7 +266,7 @@ window.MachineCB1 = function MachineCB1() {
             <div>
                             <h3 style={{ marginTop: "var(--space-1)", color: "var(--on-blue)", fontSize: "var(--fs-l)", maxWidth: 720 }}>Already running a CB1? Any of the retrofits above can be installed on your existing line to lift output, quality and uptime. Reach out for a tailored quotation or a more detailed technical discussion.</h3>
             </div>
-            <a href="#contact" className="btn btn--inverse">Reach out to our specialist team<span className="arrow" /></a>
+            <a href="#contact" className="btn btn--inverse">Request a retrofit quotation<span className="arrow" /></a>
           </div>
         </div>
       </section>
