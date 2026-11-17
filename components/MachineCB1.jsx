@@ -39,7 +39,7 @@ window.MachineCB1 = function MachineCB1() {
 
             <div style={{ display: "flex", gap: "var(--space-1-5)", marginTop: "var(--space-6)" }}>
               <a className="btn btn--primary btn--lg" href="#contact">Request a quotation<span className="arrow" /></a>
-              <a className="btn btn--ghost btn--lg" href="#contact">Download datasheet (PDF)<span className="arrow" /></a>
+              <a className="btn btn--ghost btn--lg" href="#contact">Request the datasheet<span className="arrow" /></a>
             </div>
           </div>
 
