@@ -91,7 +91,7 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 - Real machine and factory photography only: machines at 3/4 front, details close up, the Rüti floor wide. No stock, no illustrations of people, no renders that are not a FALU machine.
 - Hero photo uses `--scrim` from the bottom so the headline passes 4.5:1.
 - Placeholders until the shoot: a flat `--surface-tint` block with the photo brief as caption. Slot codes (`HOME-01`) and stripes show only in development builds.
-- The world map colors only countries with confirmed installations, from a list FALU supplies. The visual must match the "70+" figure.
+- The world map colors only countries with installations, listed in `FALU_COUNTRIES` (`components/HomepageB.jsx`, 74 countries). The "70+" figure in the copy must stay true to that list; change both together.
 - Icons: none decorative. A thin arrow on links and buttons; 1.5px stroke icons at 16px for download and external links only.
 
 ## Copy
@@ -104,4 +104,6 @@ Nine sizes, nothing in between. Weights: 700 headlines, 600 labels and buttons, 
 
 ## Page basics
 
-Every route sets a specific `<title>` ("Cotton swab machinery · FALU"), a meta description, an Open Graph image (a machine photo, 1200 × 630) and uses a square favicon, not the full logo.
+- Every route sets its own title ("Cotton swab machinery · FALU") and meta description: static pages in `PAGE_META` in `components/FaluRouter.jsx`, machine pages from `code`, `name` and `lede` in `machines-data.jsx`. A new route gets an entry there.
+- `index.html` holds the home defaults for crawlers without JavaScript, the share image `public/og-image.png` (1200 × 630, logo and headline on falu-blue; replace with a machine photo once one exists) and 32px and 180px icons.
+- The Open Graph URLs are absolute and point at the GitHub Pages host; change them when the site moves to falu.com.

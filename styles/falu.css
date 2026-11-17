@@ -463,8 +463,12 @@ iframe { height: auto; }
 
 @media (max-width: 900px) {
   .falu-nav,
-  .falu-header__cta { display: none; }
-  .falu-burger { display: inline-flex; }
+  .falu-header__cta .falu-phone { display: none; }
+  /* The primary action stays on screen next to the burger (DESIGN.md, Navigation) */
+  .falu-header__cta { margin-left: auto; }
+  .falu-header__main { gap: var(--space-1-5); }
+  .falu-header__cta .btn { white-space: nowrap !important; padding: 10px 14px; }
+  .falu-burger { display: inline-flex; align-self: center; }
   .falu-header__main { height: 68px; }
   .falu-header__logo img { width: 46px; height: 46px; }
   .falu-mobile-menu {
@@ -513,6 +517,7 @@ iframe { height: auto; }
 
 @media (max-width: 480px) {
   .falu-footer__main { grid-template-columns: 1fr; }
+  .falu-header__cta .btn .arrow { display: none; }
 }
 
 /* ============================================================
