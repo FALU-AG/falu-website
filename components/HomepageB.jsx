@@ -7,11 +7,11 @@
 
 window.HomepageB = function HomepageB() {
   return (
-    <div style={{ background: "#fff" }}>
+    <div style={{ background: "var(--surface)" }}>
       <FaluHeader active="home" />
 
       {/* 1. HERO */}
-      <section style={{ background: "#fff" }}>
+      <section style={{ background: "var(--surface)" }}>
         <div style={heroB.wrap}>
           <ImageSlot id="HOME-01" label="CB1 line, Rüti production floor wide shot" height={620} />
           <div style={heroB.overlay}>
@@ -31,7 +31,7 @@ window.HomepageB = function HomepageB() {
 
 
           </p>
-          <div className="hero-subrow__actions" style={{ display: "flex", gap: 12, flexShrink: 0 }}>
+          <div className="hero-subrow__actions" style={{ display: "flex", gap: "var(--space-1-5)", flexShrink: 0 }}>
             <a className="btn btn--primary btn--lg" href="#contact">Discuss your setup<span className="arrow" /></a>
             <a className="btn btn--ghost btn--lg" href="#machinery">Browse machinery<span className="arrow" /></a>
           </div>
@@ -41,28 +41,28 @@ window.HomepageB = function HomepageB() {
 
       {/* 2. FEATURED CB1 */}
       {/* No borderTop here: the hero sub-row already draws the rule. */}
-      <section style={{ padding: "120px 0" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 80, alignItems: "center" }}>
+      <section style={{ padding: "var(--section-y) 0" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "var(--space-12)", alignItems: "center" }}>
           <div>
-            <h2 style={{ fontSize: 52, lineHeight: 1.05, letterSpacing: "-0.025em" }}>CB1, the cotton swab production machine that defines the category.
+            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>CB1, the cotton swab production machine that defines the category.
 
             </h2>
-            <p style={{ marginTop: 28, fontSize: 17, lineHeight: 1.65, color: "var(--ink-soft)" }}>Mechanical speed in excess of 3'100 swabs per minute. Compatible with paper, plastic and wood sticks. Pairs upstream with the PRX paper-stick machine and downstream with different packaging configurations.
+            <p style={{ marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", lineHeight: 1.65, color: "var(--ink-soft)" }}>Mechanical speed in excess of 3'100 swabs per minute. Compatible with paper, plastic and wood sticks. Pairs upstream with the PRX paper-stick machine and downstream with different packaging configurations.
 
 
 
             </p>
-            <a href="#cb1" className="btn btn--primary" style={{ marginTop: 36 }}>View CB1 specification<span className="arrow" /></a>
+            <a href="#cb1" className="btn btn--primary" style={{ marginTop: "var(--space-4)" }}>View CB1 specification<span className="arrow" /></a>
           </div>
           <ImageSlot id="HOME-02" label="CB1 4.1, front 3/4 product shot" ratio="4 / 5" />
         </div>
       </section>
 
       {/* 3. MACHINERY, three families */}
-      <section style={{ padding: "120px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 72 }}>
-            <h2 style={{ fontSize: 52, lineHeight: 1.0, letterSpacing: "-0.03em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-8)", alignItems: "end", marginBottom: "var(--space-8)" }}>
+            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
               Production machinery, from single machines to complete production lines.
             </h2>
           </div>
@@ -103,15 +103,15 @@ window.HomepageB = function HomepageB() {
                   <ImageSlot id={`HOME-0${i + 3}`} label={f.imgLabel} ratio="4 / 3" />
                 </div>
                 <div style={famB.textCol}>
-                  <h3 style={{ fontSize: 36, lineHeight: 1.1, letterSpacing: "-0.02em" }}>{f.title}</h3>
-                  <p style={{ marginTop: 18, color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.65, maxWidth: 520 }}>{f.desc}</p>
+                  <h3 style={{ fontSize: "var(--fs-l)", lineHeight: 1.1, letterSpacing: "-0.02em" }}>{f.title}</h3>
+                  <p style={{ marginTop: "var(--space-2)", color: "var(--ink-soft)", fontSize: "var(--fs-body)", lineHeight: 1.65, maxWidth: 520 }}>{f.desc}</p>
                   {f.formats &&
                   <div style={famB.formats}>
                       <div className="mono" style={famB.formatsLabel}>{f.formatsLabel}</div>
                       <div className="mono" style={famB.formatsList}>{f.formats}</div>
                     </div>
                   }
-                  <a href={f.href} className="btn btn--minimal" style={{ marginTop: 24 }}>View {f.cta}<span className="arrow" /></a>
+                  <a href={f.href} className="btn btn--minimal" style={{ marginTop: "var(--space-3)" }}>View {f.cta}<span className="arrow" /></a>
                 </div>
               </div>
             )}
@@ -124,15 +124,15 @@ window.HomepageB = function HomepageB() {
         <div className="container">
           <div style={planning.frame}>
             <div style={planning.left}>
-              <h2 style={{ fontSize: 44, color: "#fff", lineHeight: 1.05 }}>
+              <h2 style={{ fontSize: "var(--fs-xl)", color: "var(--on-blue)", lineHeight: 1.05 }}>
                 Production planning<br />& factory layout.
               </h2>
-              <p style={{ marginTop: 24, color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 520 }}>
+              <p style={{ marginTop: "var(--space-3)", color: "var(--on-blue-muted)", fontSize: "var(--fs-body)", lineHeight: 1.65, maxWidth: 520 }}>
                 Engineering services covering material flow, line integration and operational
                 scalability. Before a single machine is specified, our engineers help structure
                 the plant around your output target, footprint and capacity roadmap.
               </p>
-              <a href="#contact" className="btn btn--inverse" style={{ marginTop: 32 }}>Discuss your setup<span className="arrow" /></a>
+              <a href="#contact" className="btn btn--inverse" style={{ marginTop: "var(--space-4)" }}>Discuss your setup<span className="arrow" /></a>
             </div>
             <div style={planning.right}>
               {[
@@ -153,12 +153,12 @@ window.HomepageB = function HomepageB() {
       </section>
 
       {/* 5. WHY FALU */}
-      <section style={{ padding: "120px 0", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <h2 style={{ fontSize: 56, maxWidth: 1000, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
+          <h2 style={{ fontSize: "var(--fs-xxl)", maxWidth: 1000, lineHeight: 1.02, letterSpacing: "-0.03em" }}>
             Market leader in product quality, efficiency, and total cost of ownership.
           </h2>
-          <p style={{ marginTop: 28, fontSize: 17, color: "var(--ink-soft)", maxWidth: 720, lineHeight: 1.65 }}>
+          <p style={{ marginTop: "var(--space-4)", fontSize: "var(--fs-lead)", color: "var(--ink-soft)", maxWidth: 720, lineHeight: 1.65 }}>
             Since 1965, FALU machines have been designed and assembled in Switzerland and operate
             in more than 70 countries, valued for longevity, reliability and serviceability.
           </p>
@@ -184,8 +184,8 @@ window.HomepageB = function HomepageB() {
             map((v, i) =>
             <div key={i} style={whyB.cell}>
                 <div className="mono" style={whyB.cellNum}>{String(i + 1).padStart(2, "0")}</div>
-                <h3 style={{ marginTop: 16, fontSize: 24 }}>{v.head}</h3>
-                <p style={{ marginTop: 16, color: "var(--ink-soft)", fontSize: 15, lineHeight: 1.65 }}>{v.body}</p>
+                <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-l)" }}>{v.head}</h3>
+                <p style={{ marginTop: "var(--space-2)", color: "var(--ink-soft)", fontSize: "var(--fs-body)", lineHeight: 1.65 }}>{v.body}</p>
               </div>
             )}
           </div>
@@ -193,13 +193,13 @@ window.HomepageB = function HomepageB() {
       </section>
 
       {/* 6. PROVEN WORLDWIDE */}
-      <section style={{ padding: "120px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 64 }}>
-            <h2 style={{ fontSize: 52, lineHeight: 1.05, letterSpacing: "-0.03em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-8)", alignItems: "end", marginBottom: "var(--space-8)" }}>
+            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.05, letterSpacing: "-0.03em" }}>
               FALU machines run in more than 70 countries.
             </h2>
-            <p style={{ fontSize: 17, color: "var(--ink-soft)", lineHeight: 1.65 }}>
+            <p style={{ fontSize: "var(--fs-lead)", color: "var(--ink-soft)", lineHeight: 1.65 }}>
               From single CB1 installations to fully integrated multi-line plants, FALU equipment
               is in operation across the health, beauty and food industries on six continents.
             </p>
@@ -210,13 +210,13 @@ window.HomepageB = function HomepageB() {
       </section>
 
       {/* 7. ONE PARTNER FROM CONCEPT TO OPERATION */}
-      <section style={{ padding: "120px 0", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "end", marginBottom: 72 }}>
-            <h2 style={{ fontSize: 56, lineHeight: 1.0, letterSpacing: "-0.03em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-8)", alignItems: "end", marginBottom: "var(--space-8)" }}>
+            <h2 style={{ fontSize: "var(--fs-xxl)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
               One partner from concept to operation.
             </h2>
-            <p style={{ fontSize: 17, color: "var(--ink-soft)", lineHeight: 1.65 }}>FALU delivers support across planning, commissioning and long-term production, by the same engineers who built your machine.
+            <p style={{ fontSize: "var(--fs-lead)", color: "var(--ink-soft)", lineHeight: 1.65 }}>FALU delivers support across planning, commissioning and long-term production, by the same engineers who built your machine.
 
 
             </p>
@@ -255,7 +255,7 @@ window.HomepageB = function HomepageB() {
             <div key={p.phase} style={{ ...journey.col, ...(i === arr.length - 1 ? { borderRight: "1px solid var(--rule)" } : {}) }}>
                 <div style={journey.head}>
                   <div className="mono" style={journey.phase}>Phase {p.phase}</div>
-                  <h3 style={{ marginTop: 14, fontSize: 22 }}>{p.title}</h3>
+                  <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-m)" }}>{p.title}</h3>
                 </div>
                 <ul style={journey.list}>
                   {p.items.map((it) =>
@@ -274,12 +274,12 @@ window.HomepageB = function HomepageB() {
       {/* 8. CONVERSION */}
       <section style={ctaB.wrap}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ color: "#fff", fontSize: 56, maxWidth: 1100, marginLeft: "auto", marginRight: "auto", lineHeight: 1.05 }}>
+          <h2 style={{ color: "var(--on-blue)", fontSize: "var(--fs-xxl)", maxWidth: 1100, marginLeft: "auto", marginRight: "auto", lineHeight: 1.05 }}>
             Whether you are defining a new production concept or specifying machines, we help you structure the right setup.
           </h2>
-          <div style={{ display: "flex", gap: 16, justifyContent: "center", marginTop: 40 }}>
+          <div style={{ display: "flex", gap: "var(--space-2)", justifyContent: "center", marginTop: "var(--space-6)" }}>
             <a href="#contact" className="btn btn--inverse btn--lg">Discuss your production project<span className="arrow" /></a>
-            <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "var(--on-blue-muted)", color: "#fff" }}>
+            <a href="tel:+41552255151" className="btn btn--ghost btn--lg" style={{ borderColor: "var(--on-blue-muted)", color: "var(--on-blue)" }}>
               +41 55 225 51 51
             </a>
           </div>
@@ -335,7 +335,7 @@ function WorldMap() {
   };
 
   return (
-    <div ref={wrapRef} style={{ background: "var(--falu-blue)", border: "1px solid var(--on-blue-line)", padding: "24px", position: "relative" }}>
+    <div ref={wrapRef} style={{ background: "var(--falu-blue)", border: "1px solid var(--on-blue-line)", padding: "var(--space-3)", position: "relative" }}>
       <svg viewBox="0 0 1200 560" style={{ width: "100%", display: "block" }} onMouseLeave={() => setTip(null)}>
         {paths ? paths.map((p, i) => {
           const isFalu = p.a2 && FALU_COUNTRIES.has(p.a2);
@@ -366,10 +366,10 @@ function WorldMap() {
         pointerEvents: "none",
         background: "var(--falu-blue)",
         border: "1px solid var(--on-blue-line)",
-        color: "#fff",
+        color: "var(--on-blue)",
         fontFamily: "var(--font-mono)",
-        fontSize: 13,
-        padding: "6px 10px",
+        fontSize: "var(--fs-label)",
+        padding: "var(--space-1) var(--space-1-5)",
         whiteSpace: "nowrap",
         zIndex: 2
       }}>
@@ -377,8 +377,8 @@ function WorldMap() {
         </div>
       }
 
-      <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--on-blue-line)", display: "flex", gap: 24, fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--on-blue-muted)", flexWrap: "wrap" }}>
-        <span><span style={{ display: "inline-block", width: 10, height: 10, background: "var(--falu-red)", marginRight: 8, verticalAlign: "middle" }} />Country with FALU installations</span>
+      <div style={{ marginTop: "var(--space-2)", paddingTop: "var(--space-2)", borderTop: "1px solid var(--on-blue-line)", display: "flex", gap: "var(--space-3)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", flexWrap: "wrap" }}>
+        <span><span style={{ display: "inline-block", width: 10, height: 10, background: "var(--falu-red)", marginRight: "var(--space-1)", verticalAlign: "middle" }} />Country with FALU installations</span>
         <span style={{ marginLeft: "auto" }}>70+ countries served since 1965</span>
       </div>
     </div>);
@@ -388,72 +388,72 @@ function WorldMap() {
 // ========= STYLES =========
 const heroB = {
   wrap: { position: "relative" },
-  overlay: { position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", paddingBottom: 56, background: "linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 100%)" },
+  overlay: { position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", paddingBottom: "var(--space-8)", background: "var(--scrim)" },
   overlayInner: {},
-  eyebrow: { color: "#fff", fontSize: 13, opacity: 0.9 },
-  title: { color: "#fff", fontSize: 96, lineHeight: 0.98, marginTop: 24, letterSpacing: "-0.035em", fontWeight: 600 },
-  subRow: { display: "flex", gap: 64, alignItems: "center", padding: "56px 32px", borderBottom: "1px solid var(--rule)" },
-  lede: { fontSize: 19, color: "var(--ink-soft)", lineHeight: 1.6, maxWidth: 640 },
-  ribbon: { padding: "32px 0", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", borderBottom: "1px solid var(--rule)" },
-  ribbonCell: { padding: "0 24px", borderRight: "1px solid var(--rule)" },
-  ribbonNum: { fontSize: 24, fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
-  ribbonLabel: { marginTop: 8, fontSize: 13, color: "var(--ink-soft)" }
+  eyebrow: { color: "var(--on-blue)", fontSize: "var(--fs-label)", opacity: 0.9 },
+  title: { color: "var(--on-blue)", fontSize: "var(--fs-display)", lineHeight: 0.98, marginTop: "var(--space-3)", letterSpacing: "-0.035em", fontWeight: 600 },
+  subRow: { display: "flex", gap: "var(--space-8)", alignItems: "center", padding: "var(--space-8) var(--space-4)", borderBottom: "1px solid var(--rule)" },
+  lede: { fontSize: "var(--fs-lead)", color: "var(--ink-soft)", lineHeight: 1.6, maxWidth: 640 },
+  ribbon: { padding: "var(--space-4) 0", display: "grid", gridTemplateColumns: "repeat(5, 1fr)", borderBottom: "1px solid var(--rule)" },
+  ribbonCell: { padding: "0 var(--space-3)", borderRight: "1px solid var(--rule)" },
+  ribbonNum: { fontSize: "var(--fs-l)", fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
+  ribbonLabel: { marginTop: "var(--space-1)", fontSize: "var(--fs-label)", color: "var(--ink-soft)" }
 };
 
 const featB = {
-  tag: { fontSize: 13 },
-  specGrid: { marginTop: 36, display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  specCell: { padding: "18px 20px", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" },
-  specKey: { fontSize: 13, color: "var(--ink-muted)" },
-  specVal: { marginTop: 6, fontSize: 16, color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.005em" }
+  tag: { fontSize: "var(--fs-label)" },
+  specGrid: { marginTop: "var(--space-4)", display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
+  specCell: { padding: "var(--space-2) var(--space-3)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" },
+  specKey: { fontSize: "var(--fs-label)", color: "var(--ink-muted)" },
+  specVal: { marginTop: "var(--space-1)", fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 600, letterSpacing: "-0.005em" }
 };
 
 const famB = {
-  list: { display: "flex", flexDirection: "column", gap: 96 },
-  row: { display: "flex", gap: 64, alignItems: "center" },
+  list: { display: "flex", flexDirection: "column", gap: "var(--space-12)" },
+  row: { display: "flex", gap: "var(--space-8)", alignItems: "center" },
   imageCol: { flex: "1 1 0", minWidth: 0 },
   textCol: { flex: "1 1 0", minWidth: 0 },
-  num: { fontSize: 13, color: "var(--ink)", fontWeight: 500 },
-  formats: { marginTop: 20, padding: "12px 0", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", maxWidth: 520 },
-  formatsLabel: { fontSize: 13, color: "var(--ink-muted)" },
-  formatsList: { marginTop: 8, color: "var(--navy)", fontSize: 13, lineHeight: 1.6 }
+  num: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
+  formats: { marginTop: "var(--space-3)", padding: "var(--space-1-5) 0", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", maxWidth: 520 },
+  formatsLabel: { fontSize: "var(--fs-label)", color: "var(--ink-muted)" },
+  formatsList: { marginTop: "var(--space-1)", color: "var(--navy)", fontSize: "var(--fs-label)", lineHeight: 1.6 }
 };
 
 const planning = {
-  wrap: { padding: "80px 0", background: "var(--navy)" },
-  frame: { display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 64, alignItems: "center" },
+  wrap: { padding: "var(--section-y) 0", background: "var(--navy)" },
+  frame: { display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "var(--space-8)", alignItems: "center" },
   left: {},
-  tag: { color: "var(--on-blue-muted)", fontSize: 13 },
+  tag: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
   right: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderTop: "1px solid var(--on-blue-line)", borderLeft: "1px solid var(--on-blue-line)" },
-  tile: { padding: "28px 24px", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)" },
-  tileKey: { color: "var(--on-blue-muted)", fontSize: 13 },
-  tileTitle: { marginTop: 14, color: "#fff", fontSize: 17, fontWeight: 600 },
-  tileDesc: { marginTop: 8, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 }
+  tile: { padding: "var(--space-4) var(--space-3)", borderRight: "1px solid var(--on-blue-line)", borderBottom: "1px solid var(--on-blue-line)" },
+  tileKey: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" },
+  tileTitle: { marginTop: "var(--space-2)", color: "var(--on-blue)", fontSize: "var(--fs-lead)", fontWeight: 600 },
+  tileDesc: { marginTop: "var(--space-1)", color: "var(--on-blue-muted)", fontSize: "var(--fs-label)", lineHeight: 1.55 }
 };
 
 const whyB = {
-  grid: { marginTop: 80, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 },
+  grid: { marginTop: "var(--section-y)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-8)" },
   cell: { padding: "0" },
-  cellNum: { fontSize: 13, color: "var(--ink)", fontWeight: 500 }
+  cellNum: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 }
 };
 
 const mapStats = {
-  row: { marginTop: 32, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid var(--rule)" },
-  cell: { padding: "20px 16px 0 0", borderRight: "1px solid var(--rule)" },
-  num: { fontSize: 22, fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
-  label: { marginTop: 6, fontSize: 13, color: "var(--ink-soft)" }
+  row: { marginTop: "var(--space-4)", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", borderTop: "1px solid var(--rule)" },
+  cell: { padding: "var(--space-3) var(--space-2) 0 0", borderRight: "1px solid var(--rule)" },
+  num: { fontSize: "var(--fs-m)", fontWeight: 600, color: "var(--navy)", letterSpacing: "-0.01em" },
+  label: { marginTop: "var(--space-1)", fontSize: "var(--fs-label)", color: "var(--ink-soft)" }
 };
 
 const journey = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderTop: "2px solid var(--navy)", borderLeft: "1px solid var(--rule)" },
-  col: { padding: "32px 28px 36px", borderRight: "1px solid var(--rule)", background: "#fff" },
+  col: { padding: "var(--space-4) var(--space-4) var(--space-4)", borderRight: "1px solid var(--rule)", background: "var(--surface)" },
   head: {},
-  phase: { fontSize: 13, color: "var(--ink)", fontWeight: 500 },
-  list: { marginTop: 24, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 12 },
-  item: { display: "flex", gap: 12, alignItems: "flex-start", color: "var(--ink-soft)", fontSize: 15 },
-  itemDot: { width: 14, height: 1, background: "var(--falu-red)", marginTop: 10, flexShrink: 0 }
+  phase: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 },
+  list: { marginTop: "var(--space-3)", padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "var(--space-1-5)" },
+  item: { display: "flex", gap: "var(--space-1-5)", alignItems: "flex-start", color: "var(--ink-soft)", fontSize: "var(--fs-body)" },
+  itemDot: { width: 14, height: 1, background: "var(--falu-red)", marginTop: "var(--space-1-5)", flexShrink: 0 }
 };
 
 const ctaB = {
-  wrap: { padding: "120px 0", background: "var(--navy)" }
+  wrap: { padding: "var(--section-y) 0", background: "var(--navy)" }
 };

@@ -9,7 +9,7 @@
 
 window.Services = function Services() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="services" />
 
       {/* Breadcrumb */}
@@ -22,13 +22,13 @@ window.Services = function Services() {
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 88px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
               Services.
             </h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               A FALU machine is a multi-decade investment. We support it for the whole of that life,
               from line planning and commissioning through training, spare parts, and retrofits that
               keep an installed machine current.
@@ -38,9 +38,9 @@ window.Services = function Services() {
       </section>
 
       {/* LIFECYCLE SERVICES */}
-      <section style={{ padding: "96px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <h2 style={{ fontSize: 44, lineHeight: 1.05, letterSpacing: "-0.025em", marginTop: 32, marginBottom: 56 }}>
+          <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.05, letterSpacing: "-0.025em", marginTop: "var(--space-4)", marginBottom: "var(--space-8)" }}>
             One partner, from concept<br />to decades of operation.
           </h2>
 
@@ -55,8 +55,8 @@ window.Services = function Services() {
             ].map(([num, title, body]) => (
               <div key={num} style={svc.cell}>
                 <div className="mono" style={svc.num}>{num}</div>
-                <h3 style={{ marginTop: 14, fontSize: 20 }}>{title}</h3>
-                <p style={{ marginTop: 12, color: "var(--ink-soft)", fontSize: 14, lineHeight: 1.6 }}>{body}</p>
+                <h3 style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-m)" }}>{title}</h3>
+                <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
               </div>
             ))}
           </div>
@@ -64,13 +64,13 @@ window.Services = function Services() {
       </section>
 
       {/* SPARE PARTS COMMITMENT: navy slab */}
-      <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--navy)", color: "var(--on-blue)" }}>
         <div className="container">
           <div>
-            <h2 style={{ fontSize: 42, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.1, maxWidth: 820 }}>
+            <h2 style={{ fontSize: "var(--fs-xl)", color: "var(--on-blue)", letterSpacing: "-0.02em", lineHeight: 1.1, maxWidth: 820 }}>
               Spare parts guaranteed for the entire lifecycle of the machine.
             </h2>
-            <p style={{ marginTop: 22, color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 720 }}>
+            <p style={{ marginTop: "var(--space-3)", color: "var(--on-blue-muted)", fontSize: "var(--fs-body)", lineHeight: 1.65, maxWidth: 720 }}>
               Not a warranty window. FALU continues to manufacture parts for machines installed
               decades ago, which is why so many are still in service. Your line keeps running on the
               day the original engineer retires, and on the day the one after them retires too.
@@ -80,13 +80,13 @@ window.Services = function Services() {
       </section>
 
       {/* RETROFITS */}
-      <section style={{ padding: "96px 0", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "end", marginBottom: 56, marginTop: 32 }}>
-            <h2 style={{ fontSize: 44, lineHeight: 1.05, letterSpacing: "-0.025em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "var(--space-8)", alignItems: "end", marginBottom: "var(--space-8)", marginTop: "var(--space-4)" }}>
+            <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.05, letterSpacing: "-0.025em" }}>
               Add new capability to a<br />machine you already own.
             </h2>
-            <p style={{ color: "var(--ink-soft)", fontSize: 16, lineHeight: 1.65 }}>
+            <p style={{ color: "var(--ink-soft)", fontSize: "var(--fs-body)", lineHeight: 1.65 }}>
               The core retrofit programme. Each upgrade is available on new machines and as a field
               retrofit on existing installations, including machines built decades ago.
             </p>
@@ -121,7 +121,7 @@ window.Services = function Services() {
 
           <div style={svcRetro.banner}>
             <div>
-                            <h3 style={{ marginTop: 8, color: "#fff", fontSize: 24, maxWidth: 720 }}>
+                            <h3 style={{ marginTop: "var(--space-1)", color: "var(--on-blue)", fontSize: "var(--fs-l)", maxWidth: 720 }}>
                 Tell us your machine and serial number. We'll tell you which upgrades fit and what they change.
               </h3>
             </div>
@@ -131,14 +131,14 @@ window.Services = function Services() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "96px 0", background: "var(--bg-alt)", borderTop: "1px solid var(--rule)" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 48, alignItems: "center" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-alt)", borderTop: "1px solid var(--rule)" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: "var(--space-6)", alignItems: "center" }}>
           <h2 style={{ color: "var(--navy)", maxWidth: 720 }}>
             Already running a FALU machine, or planning your first line?
           </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-end" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", alignItems: "flex-end" }}>
             <a href="#contact" className="btn btn--primary btn--lg">Get in touch with our specialists<span className="arrow" /></a>
-            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: 13 }}>
+            <div className="mono" style={{ color: "var(--ink-muted)", fontSize: "var(--fs-label)" }}>
               <a href="mailto:sales@falu.com" style={{ color: "inherit" }}>sales@falu.com</a>
               {" · "}
               <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>
@@ -160,10 +160,10 @@ function RetroLine({ code, title, body, compat, status, statusTone }) {
         <div style={status ? (statusTone === "navy" ? svcRetro.statusNavy : svcRetro.status) : { display: "none" }}>{status}</div>
       </div>
       <div style={svcRetro.mid}>
-        <h3 style={{ fontSize: 22, color: "var(--navy)", letterSpacing: "-0.01em" }}>{title}</h3>
-        <p style={{ marginTop: 12, color: "var(--ink-soft)", fontSize: 14, lineHeight: 1.6 }}>{body}</p>
+        <h3 style={{ fontSize: "var(--fs-m)", color: "var(--navy)", letterSpacing: "-0.01em" }}>{title}</h3>
+        <p style={{ marginTop: "var(--space-1-5)", color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{body}</p>
         <div className="mono" style={svcRetro.compat}>
-          <span style={{ color: "var(--ink)", marginRight: 8 }}>Compatibility</span>
+          <span style={{ color: "var(--ink)", marginRight: "var(--space-1)" }}>Compatibility</span>
           {compat}
         </div>
       </div>
@@ -174,7 +174,7 @@ function RetroLine({ code, title, body, compat, status, statusTone }) {
 
 const svcCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "var(--space-1-5) var(--gutter)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", display: "flex", gap: "var(--space-1-5)" },
   link: { color: "var(--ink-soft)" },
   sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
@@ -182,19 +182,19 @@ const svcCrumb = {
 
 const svc = {
   grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0, borderTop: "1px solid var(--rule)", borderLeft: "1px solid var(--rule)" },
-  cell: { padding: "32px 28px 36px", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", background: "#fff" },
-  num: { fontSize: 13, color: "var(--ink)", fontWeight: 500 }
+  cell: { padding: "var(--space-4) var(--space-4) var(--space-4)", borderRight: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)", background: "var(--surface)" },
+  num: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 500 }
 };
 
 const svcRetro = {
   grid: { border: "1px solid var(--rule)", borderBottom: "none" },
-  row: { display: "grid", gridTemplateColumns: "160px 1fr auto", gap: 32, padding: "32px", borderBottom: "1px solid var(--rule)", alignItems: "start", background: "#fff" },
-  left: { display: "flex", flexDirection: "column", gap: 12 },
-  code: { fontSize: 13, color: "var(--ink)", fontWeight: 600 },
-  status: { fontSize: 13, color: "var(--ink-muted)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "4px 8px", border: "1px solid var(--rule)", alignSelf: "start" },
-  statusNavy: { fontSize: 13, color: "#fff", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "4px 8px", background: "var(--navy)", alignSelf: "start" },
+  row: { display: "grid", gridTemplateColumns: "160px 1fr auto", gap: "var(--space-4)", padding: "var(--space-4)", borderBottom: "1px solid var(--rule)", alignItems: "start", background: "var(--surface)" },
+  left: { display: "flex", flexDirection: "column", gap: "var(--space-1-5)" },
+  code: { fontSize: "var(--fs-label)", color: "var(--ink)", fontWeight: 600 },
+  status: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", border: "1px solid var(--rule)", alignSelf: "start" },
+  statusNavy: { fontSize: "var(--fs-label)", color: "var(--on-blue)", fontWeight: 500, fontFamily: "var(--font-mono)", padding: "var(--space-half) var(--space-1)", background: "var(--navy)", alignSelf: "start" },
   mid: {},
-  compat: { marginTop: 16, paddingTop: 14, borderTop: "1px solid var(--rule-soft)", fontSize: 13, color: "var(--ink-muted)", lineHeight: 1.5 },
-  link: { fontSize: 13, color: "var(--navy)", textDecoration: "none", whiteSpace: "nowrap", paddingTop: 6 },
-  banner: { marginTop: 48, padding: "32px 40px", background: "var(--navy)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32 }
+  compat: { marginTop: "var(--space-2)", paddingTop: "var(--space-2)", borderTop: "1px solid var(--rule-soft)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", lineHeight: 1.5 },
+  link: { fontSize: "var(--fs-label)", color: "var(--navy)", textDecoration: "none", whiteSpace: "nowrap", paddingTop: "var(--space-1)" },
+  banner: { marginTop: "var(--space-6)", padding: "var(--space-4) var(--space-6)", background: "var(--navy)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-4)" }
 };

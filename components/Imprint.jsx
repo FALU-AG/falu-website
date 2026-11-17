@@ -10,7 +10,7 @@
 
 window.Imprint = function Imprint() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="imprint" />
 
       {/* Breadcrumb */}
@@ -23,11 +23,11 @@ window.Imprint = function Imprint() {
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 80px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Imprint.</h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Imprint.</h1>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               Legal information about the operator of this website, in accordance with the
               Swiss Federal Act against Unfair Competition (UWG).
             </p>
@@ -36,11 +36,11 @@ window.Imprint = function Imprint() {
       </section>
 
       {/* CONTENT */}
-      <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "0 0 var(--section-y)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
+          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "var(--card-pad)" }}>
 
-            <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 28 }}>
+            <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-4)" }}>
               <div>
                 <div className="mono" style={cBody.label}>Operator</div>
                 <p style={cBody.addr}>
@@ -51,25 +51,25 @@ window.Imprint = function Imprint() {
                 </p>
               </div>
 
-              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "var(--space-4)" }}>
                 <div className="mono" style={cBody.label}>Contact</div>
                 <a href="mailto:sales@falu.com" style={cBody.value}>sales@falu.com</a>
                 <a href="tel:+41552255151" style={cBody.value}>+41 55 225 51 51</a>
               </div>
 
-              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "var(--space-4)" }}>
                 <div className="mono" style={cBody.label}>Legal form &amp; registration</div>
                 <p style={cBody.addr}>
                   Aktiengesellschaft (AG) under Swiss law, registered in the
                   Commercial Register of the Canton of Zurich.
                 </p>
-                <div style={{ marginTop: 14, display: "flex", flexDirection: "column", gap: 6 }}>
+                <div style={{ marginTop: "var(--space-2)", display: "flex", flexDirection: "column", gap: "var(--space-1)" }}>
                   <div className="mono" style={cBody.reg}>Company identification (UID): CHE-105.813.399</div>
                   <div className="mono" style={cBody.reg}>VAT number: CHE-105.813.399 MWST</div>
                 </div>
               </div>
 
-              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "var(--space-4)" }}>
                 <div className="mono" style={cBody.label}>Represented by</div>
                 <p style={cBody.addr}>
                   Marc Wyss, Owner &amp; Chief Executive Officer
@@ -77,9 +77,9 @@ window.Imprint = function Imprint() {
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
 
-              <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
+              <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
                 <div>
                   <h3 style={cBody.h3}>Liability for content</h3>
                   <p style={cBody.para}>
@@ -133,18 +133,18 @@ window.Imprint = function Imprint() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "var(--space-1-5) var(--gutter)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", display: "flex", gap: "var(--space-1-5)" },
   link: { color: "var(--ink-soft)" },
   sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
-  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
-  value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
-  addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
-  reg: { fontSize: 13, color: "var(--ink-soft)" },
-  h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
-  para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
+  label: { fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-1-5)" },
+  value: { display: "block", fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: "var(--space-half)", letterSpacing: "-0.005em" },
+  addr: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
+  reg: { fontSize: "var(--fs-label)", color: "var(--ink-soft)" },
+  h3: { fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 600, margin: "0 0 var(--space-1)", letterSpacing: "-0.01em" },
+  para: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
   inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }
 };

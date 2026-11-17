@@ -59,9 +59,9 @@ function faluToast(message) {
     el.id = "falu-toast";
     el.style.cssText =
       "position:fixed;left:50%;bottom:32px;transform:translateX(-50%);z-index:9999;" +
-      "background:var(--falu-blue);color:#fff;border:1px solid var(--on-blue-line);padding:12px 18px;" +
-      "font-family:var(--font-mono, monospace);font-size:12px;letter-spacing:0.08em;" +
-      "text-transform:uppercase;pointer-events:none;opacity:0;transition:opacity .18s ease;";
+      "background:var(--falu-blue);color:var(--on-blue);border:1px solid var(--on-blue-line);padding:var(--space-1-5) var(--space-2);" +
+      "font-family:var(--font-sans);font-size:var(--fs-label);font-weight:600;" +
+      "pointer-events:none;opacity:0;transition:opacity .18s ease;";
     document.body.appendChild(el);
   }
   el.textContent = message;
@@ -183,7 +183,7 @@ window.FaluFooter = function FaluFooter() {
             Swiss-engineered production and packaging machinery for cotton swabs, cotton pads,
             and paper sticks. Built in Switzerland since 1965.
           </p>
-          <p style={{ marginTop: 4, fontSize: 13, color: "var(--on-blue-muted)" }}>
+          <p style={{ marginTop: "var(--space-half)", fontSize: "var(--fs-label)", color: "var(--on-blue-muted)" }}>
             Joweidzentrum 5, 8630 Rüti, Switzerland<br/>
             <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>
             {" · "}
@@ -232,12 +232,18 @@ window.FaluFooter = function FaluFooter() {
 
 // ============ SHARED PRIMITIVES ============
 
-// Labelled image placeholder, diagonal stripes, mono caption.
+// Image placeholder until the photo exists (DESIGN.md, Imagery).
 // `id` is the shot number the team uses to hand images back (e.g. "CB1-01").
+// Stripes and the shot number show only in development builds; the published
+// site shows a flat panel with the photo caption.
+const SHOW_SLOT_IDS = import.meta.env.DEV;
 window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, dark = false, style = {} }) {
-  const bg = dark
-    ? "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, #13305b 8px 16px)"
-    : "repeating-linear-gradient(135deg, #eaeef3 0 8px, var(--surface-tint) 8px 16px)";
+  const flat = dark ? "var(--falu-blue)" : "var(--surface-tint)";
+  const bg = !SHOW_SLOT_IDS
+    ? flat
+    : dark
+    ? "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, var(--falu-blue-hover) 8px 16px)"
+    : "repeating-linear-gradient(135deg, var(--line) 0 8px, var(--surface-tint) 8px 16px)";
   const fg = dark ? "var(--on-blue-muted)" : "var(--muted)";
   const border = dark ? "1px solid var(--on-blue-line)" : "1px solid var(--line)";
   return (
@@ -257,29 +263,30 @@ window.ImageSlot = function ImageSlot({ id, label, ratio = "16 / 10", height, da
       <div
         style={{
           fontFamily: "var(--font-mono)",
-          fontSize: 13,
+          fontSize: "var(--fs-label)",
           color: fg,
-          background: dark ? "rgba(14,42,83,0.85)" : "rgba(255,255,255,0.85)",
-          padding: "8px 14px",
+          background: dark ? "var(--overlay)" : "var(--overlay-light)",
+          padding: "var(--space-1) var(--space-2)",
           border: dark ? "1px solid var(--on-blue-line)" : "1px solid var(--line)",
         }}
       >
         {label}
       </div>
-      <div
-        style={{
-          position: "absolute",
-          top: 10, left: 10,
-          fontFamily: "var(--font-mono)",
-          fontSize: id ? 13 : 10,
-          fontWeight: id ? 700 : 400,
-          color: id ? "#fff" : fg,
-          background: id ? "var(--falu-red)" : "transparent",
-          padding: id ? "5px 9px" : 0,
-        }}
-      >
-        {id || "IMG · placeholder"}
-      </div>
+      {SHOW_SLOT_IDS && (
+        <div
+          style={{
+            position: "absolute",
+            top: "var(--space-1)", left: "var(--space-1)",
+            fontSize: "var(--fs-label)",
+            fontWeight: id ? 700 : 400,
+            color: id ? "var(--on-blue)" : fg,
+            background: id ? "var(--falu-red)" : "transparent",
+            padding: id ? "var(--space-half) var(--space-1)" : 0,
+          }}
+        >
+          {id || "IMG · placeholder"}
+        </div>
+      )}
     </div>
   );
 };
@@ -416,7 +423,9 @@ function VideoPlaceholder({ id, label, ratio }) {
   return (
     <div
       style={{
-        background: "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, #13305b 8px 16px)",
+        background: SHOW_SLOT_IDS
+          ? "repeating-linear-gradient(135deg, var(--falu-blue) 0 8px, var(--falu-blue-hover) 8px 16px)"
+          : "var(--falu-blue)",
         border: "1px solid var(--on-blue-line)",
         aspectRatio: ratio,
         position: "relative",
@@ -424,38 +433,39 @@ function VideoPlaceholder({ id, label, ratio }) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: 14,
+        gap: "var(--space-2)",
       }}
     >
-      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: 18, border: "1px solid var(--on-blue-line)", background: "rgba(14,42,83,0.85)" }}>▶</div>
+      <div style={{ ...vid.btn, width: 52, height: 52, fontSize: "var(--fs-lead)", border: "1px solid var(--on-blue-line)", background: "var(--overlay)" }}>▶</div>
       <div
         style={{
           fontFamily: "var(--font-mono)",
-          fontSize: 13,
+          fontSize: "var(--fs-label)",
           color: "var(--on-blue-muted)",
-          background: "rgba(14,42,83,0.85)",
-          padding: "8px 14px",
+          background: "var(--overlay)",
+          padding: "var(--space-1) var(--space-2)",
           border: "1px solid var(--on-blue-line)",
           textAlign: "center",
         }}
       >
         {label}
       </div>
-      <div
-        style={{
-          position: "absolute",
-          top: 10,
-          left: 10,
-          fontFamily: "var(--font-mono)",
-          fontSize: 13,
-          fontWeight: 700,
-          color: "#fff",
-          background: "var(--falu-red)",
-          padding: "5px 9px",
-        }}
-      >
-        {id || "VIDEO · placeholder"}
-      </div>
+      {SHOW_SLOT_IDS && (
+        <div
+          style={{
+            position: "absolute",
+            top: "var(--space-1)",
+            left: "var(--space-1)",
+            fontSize: "var(--fs-label)",
+            fontWeight: 700,
+            color: "var(--on-blue)",
+            background: "var(--falu-red)",
+            padding: "var(--space-half) var(--space-1)",
+          }}
+        >
+          {id || "VIDEO · placeholder"}
+        </div>
+      )}
     </div>
   );
 }
@@ -471,9 +481,9 @@ const vid = {
     left: 0, right: 0, bottom: 0,
     display: "flex",
     alignItems: "center",
-    gap: 14,
-    padding: "14px 16px",
-    background: "linear-gradient(180deg, transparent, rgba(14,42,83,0.85) 45%)",
+    gap: "var(--space-2)",
+    padding: "var(--space-2) var(--space-2)",
+    background: "linear-gradient(180deg, transparent, var(--overlay) 45%)",
   },
   btn: {
     display: "flex",
@@ -483,10 +493,10 @@ const vid = {
     height: 32,
     flexShrink: 0,
     padding: 0,
-    border: "1px solid rgba(255,255,255,0.35)",
-    background: "rgba(14,42,83,0.6)",
-    color: "#fff",
-    fontSize: 13,
+    border: "1px solid var(--on-blue-line)",
+    background: "var(--overlay)",
+    color: "var(--on-blue)",
+    fontSize: "var(--fs-label)",
     lineHeight: 1,
     cursor: "pointer",
   },
@@ -499,7 +509,7 @@ const vid = {
   },
   time: {
     flexShrink: 0,
-    fontSize: 13,
-    color: "#fff",
+    fontSize: "var(--fs-label)",
+    color: "var(--on-blue)",
   },
 };

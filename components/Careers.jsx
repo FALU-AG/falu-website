@@ -188,7 +188,7 @@ function JobAccordion({ roles }) {
     return next;
   });
   return (
-    <div style={{ border: "1px solid var(--rule)", background: "#fff" }}>
+    <div style={{ border: "1px solid var(--rule)", background: "var(--surface)" }}>
       {roles.map((r, i) => {
         const isOpen = open.has(i);
         return (
@@ -229,28 +229,28 @@ function JobAccordion({ roles }) {
 
 window.Careers = function Careers() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="careers" />
 
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
-        <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+        <div className="container" style={{ padding: "var(--space-1-5) var(--gutter)" }}>
+          <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>
             <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
-            <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
+            <span style={{ margin: "0 var(--space-1-5)", opacity: 0.4 }}>/</span>
             <span style={{ color: "var(--navy)" }}>Careers</span>
           </div>
         </div>
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 88px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
               Work on machines<br />built to last.
             </h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               It takes more than engineers to build machines that run for decades. Design, assembly
               and service work alongside sales, purchasing and administration, all under one roof in
               Rüti. If you like doing careful work and seeing it last, this is a good place to do it.
@@ -260,21 +260,21 @@ window.Careers = function Careers() {
       </section>
 
       {/* WHY FALU */}
-      <section style={{ padding: "96px 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <h2 style={{ fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: 32, marginBottom: 56 }}>
+          <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: "var(--space-4)", marginBottom: "var(--space-8)" }}>
             A small team that owns its work.
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "var(--space-4)" }}>
             {[
               ["Ownership, end to end", "Whatever your role, you follow your work from start to finish. No handing things over a wall and hoping for the best."],
               ["Swiss craft, real depth", "Six decades of focus in one specialised field. From the workshop to the office, people here learn things that exist nowhere else."],
               ["Stability over churn", "We invest in people for the long run, the same way we build our machines. Many colleagues have been here a long time."]
             ].map(([t, b]) => (
               <div key={t}>
-                <div style={{ width: 28, height: 2, background: "var(--falu-red)", marginBottom: 18 }} />
-                <h4 style={{ color: "var(--navy)", fontSize: 18, fontWeight: 600, marginBottom: 12 }}>{t}</h4>
-                <p style={{ color: "var(--ink-soft)", fontSize: 14, lineHeight: 1.6 }}>{b}</p>
+                <div style={{ width: 28, height: 2, background: "var(--falu-red)", marginBottom: "var(--space-2)" }} />
+                <h4 style={{ color: "var(--navy)", fontSize: "var(--fs-lead)", fontWeight: 600, marginBottom: "var(--space-1-5)" }}>{t}</h4>
+                <p style={{ color: "var(--ink-soft)", fontSize: "var(--fs-ui)", lineHeight: 1.6 }}>{b}</p>
               </div>
             ))}
           </div>
@@ -282,21 +282,21 @@ window.Careers = function Careers() {
       </section>
 
       {/* WHO WE LOOK FOR + IMAGE */}
-      <section style={{ padding: "96px 0", borderBottom: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-12)", alignItems: "center" }}>
             <ImageSlot id="CAREERS-01" label="FALU team at work in Rüti" ratio="4 / 3" />
             <div>
-              <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: 32 }}>
+              <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.1, letterSpacing: "-0.025em", marginTop: "var(--space-4)" }}>
                 Precise, curious, patient.
               </h2>
-              <p style={{ marginTop: 24, fontSize: 16, lineHeight: 1.7, color: "var(--ink-soft)" }}>
+              <p style={{ marginTop: "var(--space-3)", fontSize: "var(--fs-body)", lineHeight: 1.7, color: "var(--ink-soft)" }}>
                 Our work runs from mechanical and electrical engineering, assembly and field service
                 to sales, purchasing and administration. We value people who care about getting the
                 details right, who finish what they start, and who are happy to get genuinely good at
                 something over time.
               </p>
-              <div style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px 24px" }}>
+              <div style={{ marginTop: "var(--space-4)", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-1-5) var(--space-3)" }}>
                 {[
                   "Engineering & design",
                   "Electrical & controls",
@@ -307,7 +307,7 @@ window.Careers = function Careers() {
                   "Administration & finance",
                   "Apprenticeships"
                 ].map((a) => (
-                  <div key={a} className="mono" style={{ fontSize: 13, color: "var(--navy)", display: "flex", alignItems: "center", gap: 10 }}>
+                  <div key={a} className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--navy)", display: "flex", alignItems: "center", gap: "var(--space-1-5)" }}>
                     <span style={{ width: 14, height: 1, background: "var(--falu-red)", flexShrink: 0 }} />
                     {a}
                   </div>
@@ -319,13 +319,13 @@ window.Careers = function Careers() {
       </section>
 
       {/* OPEN ROLES */}
-      <section style={{ padding: "96px 0", background: "var(--bg-band)", borderBottom: "1px solid var(--rule)" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--bg-band)", borderBottom: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 80, alignItems: "end", marginTop: 32, marginBottom: 48 }}>
-            <h2 style={{ fontSize: 40, lineHeight: 1.1, letterSpacing: "-0.025em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "var(--space-12)", alignItems: "end", marginTop: "var(--space-4)", marginBottom: "var(--space-6)" }}>
+            <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.1, letterSpacing: "-0.025em" }}>
               Current openings.
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.65, color: "var(--ink-soft)" }}>
+            <p style={{ fontSize: "var(--fs-body)", lineHeight: 1.65, color: "var(--ink-soft)" }}>
               Positions are based at our site in Rüti, Switzerland. We also welcome speculative
               applications from people who want to work in this field, even when nothing matching is
               listed.
@@ -337,20 +337,20 @@ window.Careers = function Careers() {
       </section>
 
       {/* SPECULATIVE / CTA */}
-      <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 64, alignItems: "center" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--navy)", color: "var(--on-blue)" }}>
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: "var(--space-8)", alignItems: "center" }}>
           <div>
-            <h2 style={{ fontSize: 44, color: "#fff", letterSpacing: "-0.025em", lineHeight: 1.1, marginTop: 32, maxWidth: 720 }}>
+            <h2 style={{ fontSize: "var(--fs-xl)", color: "var(--on-blue)", letterSpacing: "-0.025em", lineHeight: 1.1, marginTop: "var(--space-4)", maxWidth: 720 }}>
               Nothing matching, but you want to work here?
             </h2>
-            <p style={{ marginTop: 24, color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 640 }}>
+            <p style={{ marginTop: "var(--space-3)", color: "var(--on-blue-muted)", fontSize: "var(--fs-body)", lineHeight: 1.65, maxWidth: 640 }}>
               Send us your CV and a short note about what you would like to do. We read every
               application, and good people are worth making room for.
             </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-end" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", alignItems: "flex-end" }}>
             <a href="mailto:jobs@falu.com" className="btn btn--inverse btn--lg">Send a speculative application<span className="arrow" /></a>
-            <div className="mono" style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>
+            <div className="mono" style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>
               <a href="mailto:jobs@falu.com" style={{ color: "inherit" }}>jobs@falu.com</a>
               {" · "}
               <a href="tel:+41552255151" style={{ color: "inherit" }}>+41 55 225 51 51</a>

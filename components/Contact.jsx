@@ -35,11 +35,11 @@ function MapEmbed() {
   }
 
   return (
-    <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", background: "var(--bg-alt)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px", gap: 16 }}>
-      <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+    <div style={{ aspectRatio: "4 / 3", border: "1px solid var(--rule)", background: "var(--bg-alt)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--space-3)", gap: "var(--space-2)" }}>
+      <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>
         Location map
       </div>
-      <p style={{ fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0, maxWidth: 320 }}>
+      <p style={{ fontSize: "var(--fs-label)", color: "var(--ink-soft)", lineHeight: 1.6, margin: 0, maxWidth: 320 }}>
         The map is loaded from Google Maps. Loading it may set cookies and transfer data to Google.
         See our <a href="#privacy" style={{ color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }}>privacy policy</a>.
       </p>
@@ -73,7 +73,7 @@ window.Contact = function Contact() {
   const complete = required.every((k) => form[k].trim() !== "");
 
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="contact" />
 
       {/* Breadcrumb */}
@@ -86,13 +86,13 @@ window.Contact = function Contact() {
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 80px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Get in touch.
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Get in touch.
 
             </h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               Whatever you need, our dedicated team is happy to help. Ask us about a new line, a
               single machine, spare parts, or servicing an installation that has been running for
               decades. We reply within two working days.
@@ -102,14 +102,14 @@ window.Contact = function Contact() {
       </section>
 
       {/* FORM + CONTACT RAIL */}
-      <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "0 0 var(--section-y)", borderTop: "1px solid var(--rule)" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 0, borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)" }}>
 
           {/* FORM */}
-          <div style={{ padding: "56px", borderRight: "1px solid var(--rule)" }}>
+          <div style={{ padding: "var(--card-pad)", borderRight: "1px solid var(--rule)" }}>
 
             {/* Two-up: company / name */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 32 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-3)", marginTop: "var(--space-4)" }}>
               <div>
                 <div className="mono" style={cForm.label}>Company <span style={cForm.req}>*</span></div>
                 <input value={form.company} onChange={set("company")} placeholder="Company name" style={cForm.input} required />
@@ -121,7 +121,7 @@ window.Contact = function Contact() {
             </div>
 
             {/* Two-up: email / phone */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 28 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-3)", marginTop: "var(--space-4)" }}>
               <div>
                 <div className="mono" style={cForm.label}>Email <span style={cForm.req}>*</span></div>
                 <input type="email" value={form.email} onChange={set("email")} placeholder="name@company.com" style={cForm.input} required />
@@ -129,7 +129,7 @@ window.Contact = function Contact() {
               <div>
                 <div className="mono" style={cForm.label}>Phone <span style={cForm.req}>*</span></div>
                 <div style={{ display: "grid", gridTemplateColumns: "84px 1fr", gap: 0 }}>
-                  <select value={form.dialCode} onChange={set("dialCode")} style={{ ...cForm.input, borderRight: "none", paddingRight: 30, minWidth: 0, appearance: "none", WebkitAppearance: "none", MozAppearance: "none", backgroundImage: "linear-gradient(45deg, transparent 50%, var(--ink-muted) 50%), linear-gradient(135deg, var(--ink-muted) 50%, transparent 50%)", backgroundPosition: "calc(100% - 18px) 19px, calc(100% - 13px) 19px", backgroundSize: "5px 5px, 5px 5px", backgroundRepeat: "no-repeat" }} required>
+                  <select value={form.dialCode} onChange={set("dialCode")} style={{ ...cForm.input, borderRight: "none", paddingRight: "var(--space-4)", minWidth: 0, appearance: "none", WebkitAppearance: "none", MozAppearance: "none", backgroundImage: "linear-gradient(45deg, transparent 50%, var(--ink-muted) 50%), linear-gradient(135deg, var(--ink-muted) 50%, transparent 50%)", backgroundPosition: "calc(100% - 18px) 19px, calc(100% - 13px) 19px", backgroundSize: "5px 5px, 5px 5px", backgroundRepeat: "no-repeat" }} required>
                     <option value="">Code</option>
                     {DIAL_CODES.map((d) => (
                       <option key={d.code + d.iso} value={d.code}>{d.iso} {d.code}</option>
@@ -141,13 +141,13 @@ window.Contact = function Contact() {
             </div>
 
             {/* Country */}
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-4)" }}>
               <div className="mono" style={cForm.label}>Country <span style={cForm.req}>*</span></div>
               <input value={form.country} onChange={set("country")} placeholder="Country" style={cForm.input} required />
             </div>
 
             {/* Message */}
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-4)" }}>
               <div className="mono" style={cForm.label}>Your message <span style={cForm.req}>*</span></div>
               <textarea
                 value={form.message}
@@ -159,27 +159,27 @@ window.Contact = function Contact() {
             </div>
 
             {/* Attachments */}
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-4)" }}>
               <div className="mono" style={cForm.label}>Attachments <span style={{ color: "var(--ink-muted)" }}>(optional)</span></div>
               <label style={cForm.dropzone}>
                 <input type="file" multiple onChange={onFiles} style={{ display: "none" }}
                   accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.dwg,.step,.stp" />
-                <span className="mono" style={{ fontSize: 13, color: "var(--navy)" }}>
+                <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--navy)" }}>
                   + Attach files
                 </span>
-                <span style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+                <span style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>
                   Drawings, specs or RFQs. PDF, DOC, XLS, images, CAD. Up to 5 files.
                 </span>
               </label>
               {files.length > 0 &&
-              <div style={{ marginTop: 12, border: "1px solid var(--rule)" }}>
+              <div style={{ marginTop: "var(--space-1-5)", border: "1px solid var(--rule)" }}>
                 {files.map((f, idx) =>
                 <div key={idx} style={cForm.fileRow}>
-                    <span className="mono" style={{ fontSize: 13, color: "var(--ink)", width: 36 }}>
+                    <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", width: 36 }}>
                       {(f.name.split(".").pop() || "").toUpperCase().slice(0, 4)}
                     </span>
-                    <span style={{ flex: 1, fontSize: 13, color: "var(--navy)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{f.name}</span>
-                    <span className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
+                    <span style={{ flex: 1, fontSize: "var(--fs-label)", color: "var(--navy)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{f.name}</span>
+                    <span className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>{fmtSize(f.size)}</span>
                     <button onClick={() => removeFile(idx)} style={cForm.fileRemove} aria-label="Remove">×</button>
                   </div>
                 )}
@@ -187,28 +187,28 @@ window.Contact = function Contact() {
               }
             </div>
 
-            <div style={{ marginTop: 32, display: "flex", alignItems: "center", gap: 20 }}>
+            <div style={{ marginTop: "var(--space-4)", display: "flex", alignItems: "center", gap: "var(--space-3)" }}>
               <a
                 href="#"
                 className="btn btn--primary btn--lg"
                 style={complete ? undefined : { opacity: 0.4, pointerEvents: "none" }}>
                 Send enquiry<span className="arrow" />
               </a>
-              <span style={{ fontSize: 13, color: "var(--ink-muted)" }}>All fields required. We reply within two working days.</span>
+              <span style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>All fields required. We reply within two working days.</span>
             </div>
           </div>
 
           {/* CONTACT RAIL */}
-          <div style={{ padding: "56px" }}>
+          <div style={{ padding: "var(--card-pad)" }}>
 
-            <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 28 }}>
+            <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-4)" }}>
               <div>
                 <div className="mono" style={cRail.label}>Sales</div>
                 <a href="mailto:sales@falu.com" style={cRail.value}>sales@falu.com</a>
                 <a href="tel:+41552255151" style={cRail.value}>+41 55 225 51 51</a>
               </div>
 
-              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "var(--space-4)" }}>
                 <div className="mono" style={cRail.label}>Factory &amp; head office</div>
                 <p style={cRail.addr}>
                   FALU AG<br />
@@ -216,12 +216,12 @@ window.Contact = function Contact() {
                   8630 Rüti<br />
                   Switzerland
                 </p>
-                <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)", marginTop: 12 }}>
+                <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)", marginTop: "var(--space-1-5)" }}>
                   UID CHE-105.813.399
                 </div>
               </div>
 
-              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 28 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: "var(--space-4)" }}>
                 <div className="mono" style={cRail.label}>Hours</div>
                 <p style={cRail.addr}>
                   Monday to Friday<br />
@@ -266,25 +266,25 @@ const DIAL_CODES = [
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "var(--space-1-5) var(--gutter)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", display: "flex", gap: "var(--space-1-5)" },
   link: { color: "var(--ink-soft)" },
   sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cForm = {
-  label: { fontSize: 13, color: "var(--ink-muted)", marginBottom: 10 },
+  label: { fontSize: "var(--fs-label)", color: "var(--ink-muted)", marginBottom: "var(--space-1-5)" },
   req: { color: "var(--ink)" },
-  dropzone: { display: "flex", flexDirection: "column", gap: 6, padding: "18px 20px", border: "1px dashed var(--rule)", background: "#fff", cursor: "pointer", transition: "border-color 120ms ease" },
-  fileRow: { display: "flex", alignItems: "center", gap: 12, padding: "12px 16px", borderBottom: "1px solid var(--rule-soft)", background: "#fff" },
-  fileRemove: { border: "none", background: "transparent", color: "var(--ink-muted)", fontSize: 18, lineHeight: 1, cursor: "pointer", padding: "0 4px" },
+  dropzone: { display: "flex", flexDirection: "column", gap: "var(--space-1)", padding: "var(--space-2) var(--space-3)", border: "1px dashed var(--rule)", background: "var(--surface)", cursor: "pointer", transition: "border-color 120ms ease" },
+  fileRow: { display: "flex", alignItems: "center", gap: "var(--space-1-5)", padding: "var(--space-1-5) var(--space-2)", borderBottom: "1px solid var(--rule-soft)", background: "var(--surface)" },
+  fileRemove: { border: "none", background: "transparent", color: "var(--ink-muted)", fontSize: "var(--fs-lead)", lineHeight: 1, cursor: "pointer", padding: "0 var(--space-half)" },
   input: {
     width: "100%",
-    padding: "13px 16px",
+    padding: "var(--space-1-5) var(--space-2)",
     border: "1px solid var(--rule)",
-    background: "#fff",
+    background: "var(--surface)",
     fontFamily: "var(--font-sans)",
-    fontSize: 14,
+    fontSize: "var(--fs-ui)",
     color: "var(--ink)",
     outline: "none",
     boxSizing: "border-box"
@@ -292,7 +292,7 @@ const cForm = {
 };
 
 const cRail = {
-  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
-  value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
-  addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 }
+  label: { fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-1-5)" },
+  value: { display: "block", fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: "var(--space-half)", letterSpacing: "-0.005em" },
+  addr: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 }
 };

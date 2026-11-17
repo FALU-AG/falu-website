@@ -54,7 +54,7 @@ assets/falu-logo.png       # logo (keep as-is, never recreate)
 
 ## Design system
 
-The site follows the FALU design system (Claude artifact "FALU"). Light theme only for now.
+The site follows the FALU design system (Claude artifact "FALU"), written down for this site in [`DESIGN.md`](DESIGN.md): tokens, type scale, spacing, components, imagery and copy rules. Read it before editing. Light theme only for now.
 
 - **Colors** come from the tokens at the top of `styles/falu.css`: `--falu-blue`, `--falu-red`, `--ink`, `--muted`, `--line`, `--surface`, `--surface-tint`, `--on-blue`, `--on-blue-muted`. Older names (`--navy`, `--ink-soft`, `--rule`, ...) are aliases onto them. Do not hard-code colors in components.
 - **Type** is Archivo for everything; figures use tabular numerals (`.mono`).

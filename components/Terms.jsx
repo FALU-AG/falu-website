@@ -11,7 +11,7 @@
 
 window.Terms = function Terms() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="terms" />
 
       {/* Breadcrumb */}
@@ -24,11 +24,11 @@ window.Terms = function Terms() {
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 80px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Terms of use.</h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Terms of use.</h1>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               The conditions under which you may use this website. These terms govern the website
               only, not the sale of machinery, which is subject to FALU AG's separate contractual
               terms.
@@ -38,11 +38,11 @@ window.Terms = function Terms() {
       </section>
 
       {/* CONTENT */}
-      <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "0 0 var(--section-y)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
+          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "var(--card-pad)" }}>
 
-            <div style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 24 }}>
+            <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
               <div>
                 <h3 style={cBody.h3}>1. Scope and acceptance</h3>
                 <p style={cBody.para}>
@@ -145,7 +145,7 @@ window.Terms = function Terms() {
               </div>
             </div>
 
-            <div style={{ marginTop: 40, paddingTop: 28, borderTop: "1px solid var(--rule)" }}>
+            <div style={{ marginTop: "var(--space-6)", paddingTop: "var(--space-4)", borderTop: "1px solid var(--rule)" }}>
               <div className="mono" style={cBody.eff}>Effective June 2026</div>
             </div>
           </div>
@@ -159,15 +159,15 @@ window.Terms = function Terms() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "var(--space-1-5) var(--gutter)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", display: "flex", gap: "var(--space-1-5)" },
   link: { color: "var(--ink-soft)" },
   sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
-  h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
-  para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
+  h3: { fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 600, margin: "0 0 var(--space-1)", letterSpacing: "-0.01em" },
+  para: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
   inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 },
-  eff: { fontSize: 13, color: "var(--ink-muted)" }
+  eff: { fontSize: "var(--fs-label)", color: "var(--ink-muted)" }
 };

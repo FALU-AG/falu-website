@@ -14,7 +14,7 @@
 
 window.Privacy = function Privacy() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="privacy" />
 
       {/* Breadcrumb */}
@@ -27,11 +27,11 @@ window.Privacy = function Privacy() {
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 80px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Privacy.</h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>Privacy.</h1>
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               How FALU AG handles personal data on this website, under the Swiss Federal Act on
               Data Protection (FADP) and, for visitors in the EU, the GDPR.
             </p>
@@ -40,28 +40,28 @@ window.Privacy = function Privacy() {
       </section>
 
       {/* CONTENT */}
-      <section style={{ padding: "0 0 112px", borderTop: "1px solid var(--rule)" }}>
+      <section style={{ padding: "0 0 var(--section-y)", borderTop: "1px solid var(--rule)" }}>
         <div className="container">
-          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "56px" }}>
+          <div style={{ maxWidth: 860, margin: "0 auto", borderLeft: "1px solid var(--rule)", borderRight: "1px solid var(--rule)", padding: "var(--card-pad)" }}>
 
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-4)" }}>
               <p style={cBody.para}>
                 The controller responsible for the processing of personal data on this website is:
               </p>
-              <p style={{ ...cBody.addr, marginTop: 14 }}>
+              <p style={{ ...cBody.addr, marginTop: "var(--space-2)" }}>
                 FALU AG<br />
                 Joweid Zentrum 5<br />
                 8630 Rüti<br />
                 Switzerland
               </p>
-              <div style={{ marginTop: 14 }}>
+              <div style={{ marginTop: "var(--space-2)" }}>
                 <a href="mailto:sales@falu.com" style={cBody.value}>sales@falu.com</a>
                 <a href="tel:+41552255151" style={cBody.value}>+41 55 225 51 51</a>
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
-              <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
+              <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
                 <div>
                   <h3 style={cBody.h3}>Server log data (hosting)</h3>
                   <p style={cBody.para}>
@@ -88,8 +88,8 @@ window.Privacy = function Privacy() {
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
-              <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
+              <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
                 <div>
                   <p style={cBody.para}>
                     This website does not set tracking or advertising cookies and does not use web
@@ -101,8 +101,8 @@ window.Privacy = function Privacy() {
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
-              <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 24 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
+              <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-3)" }}>
                 <div>
                   <h3 style={cBody.h3}>Google Maps</h3>
                   <p style={cBody.para}>
@@ -135,8 +135,8 @@ window.Privacy = function Privacy() {
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
-              <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
+              <div style={{ marginTop: "var(--space-4)" }}>
                 <p style={cBody.para}>
                   Subject to the applicable law, you have the right to access the personal data we
                   hold about you, to have inaccurate data corrected, to request deletion or
@@ -149,8 +149,8 @@ window.Privacy = function Privacy() {
               </div>
             </div>
 
-            <div style={{ marginTop: 48 }}>
-              <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: "var(--space-6)" }}>
+              <div style={{ marginTop: "var(--space-4)" }}>
                 <p style={cBody.para}>
                   We may update this privacy policy to reflect changes to our website or to legal
                   requirements. The current version published on this page applies.
@@ -169,17 +169,17 @@ window.Privacy = function Privacy() {
 
 const cCrumb = {
   wrap: { background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" },
-  inner: { padding: "12px var(--gutter)", fontFamily: "var(--font-mono)", fontSize: 13, color: "var(--ink-muted)", display: "flex", gap: 10 },
+  inner: { padding: "var(--space-1-5) var(--gutter)", fontFamily: "var(--font-mono)", fontSize: "var(--fs-label)", color: "var(--ink-muted)", display: "flex", gap: "var(--space-1-5)" },
   link: { color: "var(--ink-soft)" },
   sep: { color: "var(--muted)" },
   current: { color: "var(--navy)", fontWeight: 600 }
 };
 
 const cBody = {
-  label: { fontSize: 13, color: "var(--ink)", marginBottom: 12 },
-  value: { display: "block", fontSize: 16, color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: 4, letterSpacing: "-0.005em" },
-  addr: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
-  h3: { fontSize: 16, color: "var(--navy)", fontWeight: 600, margin: "0 0 8px", letterSpacing: "-0.01em" },
-  para: { fontSize: 15, color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
+  label: { fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-1-5)" },
+  value: { display: "block", fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 500, textDecoration: "none", marginBottom: "var(--space-half)", letterSpacing: "-0.005em" },
+  addr: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.6, margin: 0 },
+  h3: { fontSize: "var(--fs-body)", color: "var(--navy)", fontWeight: 600, margin: "0 0 var(--space-1)", letterSpacing: "-0.01em" },
+  para: { fontSize: "var(--fs-body)", color: "var(--ink-soft)", lineHeight: 1.7, margin: 0 },
   inlineLink: { color: "var(--ink)", textDecoration: "underline", textUnderlineOffset: 3 }
 };

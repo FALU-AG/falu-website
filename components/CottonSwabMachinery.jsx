@@ -7,30 +7,30 @@
 // ============================================================
 window.CottonSwabMachinery = function CottonSwabMachinery() {
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
+    <div style={{ background: "var(--surface)", minHeight: "100vh" }}>
       <FaluHeader active="machinery" />
 
       {/* Breadcrumb */}
       <div style={{ background: "var(--bg-alt)", borderBottom: "1px solid var(--rule)" }}>
-        <div className="container" style={{ padding: "12px var(--gutter)" }}>
-          <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>
+        <div className="container" style={{ padding: "var(--space-1-5) var(--gutter)" }}>
+          <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>
             <a href="#home" style={{ color: "inherit", textDecoration: "none" }}>Home</a>
-            <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
+            <span style={{ margin: "0 var(--space-1-5)", opacity: 0.4 }}>/</span>
             <a href="#machinery" style={{ color: "inherit", textDecoration: "none" }}>Machinery</a>
-            <span style={{ margin: "0 10px", opacity: 0.4 }}>/</span>
+            <span style={{ margin: "0 var(--space-1-5)", opacity: 0.4 }}>/</span>
             <span style={{ color: "var(--navy)" }}>Cotton swab machinery</span>
           </div>
         </div>
       </div>
 
       {/* HERO */}
-      <section style={{ padding: "112px 0 88px" }}>
+      <section style={{ padding: "var(--section-y) 0 var(--section-y)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 80, alignItems: "end" }}>
-            <h1 style={{ fontSize: 80, lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "var(--space-12)", alignItems: "end" }}>
+            <h1 style={{ fontSize: "var(--fs-display)", lineHeight: 0.98, letterSpacing: "-0.035em", color: "var(--navy)" }}>
               Cotton swab machinery.
             </h1>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-soft)" }}>FALU designs and manufactures machinery for the industrial production of cotton swabs. Our machines
+            <p style={{ fontSize: "var(--fs-lead)", lineHeight: 1.6, color: "var(--ink-soft)" }}>FALU designs and manufactures machinery for the industrial production of cotton swabs. Our machines
 can be implemented as complete production lines or
 as individual machines into existing lines.
 
@@ -40,9 +40,9 @@ as individual machines into existing lines.
       </section>
 
       {/* PROCESS BLOCKS: vertically stacked */}
-      <section style={{ padding: "0 0 96px", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
-        <div className="container" style={{ paddingTop: 80 }}>
-          <h2 style={{ fontSize: 48, lineHeight: 1.05, letterSpacing: "-0.025em", color: "var(--navy)", marginTop: 32, marginBottom: 64 }}>
+      <section style={{ padding: "0 0 var(--section-y)", background: "var(--bg-band)", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
+        <div className="container" style={{ paddingTop: "var(--section-y)" }}>
+          <h2 style={{ fontSize: "var(--fs-xl)", lineHeight: 1.05, letterSpacing: "-0.025em", color: "var(--navy)", marginTop: "var(--space-4)", marginBottom: "var(--space-8)" }}>
             Three connected steps.<br />Run together, or independently.
           </h2>
 
@@ -83,8 +83,8 @@ as individual machines into existing lines.
           </div>
 
           {/* Closer */}
-          <div style={{ marginTop: 64, paddingTop: 40, borderTop: "1px solid var(--rule)", textAlign: "center" }}>
-            <p className="mono" style={{ fontSize: 13, color: "var(--ink-muted)" }}>Each step can be implemented individually with existing machinery or combined into a complete production line.
+          <div style={{ marginTop: "var(--space-8)", paddingTop: "var(--space-6)", borderTop: "1px solid var(--rule)", textAlign: "center" }}>
+            <p className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)" }}>Each step can be implemented individually with existing machinery or combined into a complete production line.
 
             </p>
           </div>
@@ -92,19 +92,19 @@ as individual machines into existing lines.
       </section>
 
       {/* COMPLETE PRODUCTION LINE */}
-      <section style={{ padding: "112px 0", background: "var(--navy)", color: "#fff" }}>
+      <section style={{ padding: "var(--section-y) 0", background: "var(--navy)", color: "var(--on-blue)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "end", marginBottom: 48, marginTop: 32 }}>
-            <h2 style={{ color: "#fff", maxWidth: 760, fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: "var(--space-8)", alignItems: "end", marginBottom: "var(--space-6)", marginTop: "var(--space-4)" }}>
+            <h2 style={{ color: "var(--on-blue)", maxWidth: 760, fontSize: "var(--fs-xl)", lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               The three steps as one inline FALU line.
             </h2>
-            <p style={{ color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65 }}>
+            <p style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-body)", lineHeight: 1.65 }}>
               Stick production, swab forming and packaging, all engineered and serviced by FALU.
               Click any model below to see its product page.
             </p>
           </div>
 
-          <div style={{ marginBottom: 32, border: "1px solid rgba(255,255,255,0.15)" }}>
+          <div style={{ marginBottom: "var(--space-4)", border: "1px solid var(--on-blue-line)" }}>
             <ImageSlot id="SWAB-04" label="Complete CB1 production line, video walkthrough" ratio="16 / 9" dark />
           </div>
 
@@ -143,8 +143,8 @@ as individual machines into existing lines.
                 ["BL-12", "Blister packaging", "#bl12"]].
                 map(([code, label, href]) =>
                 <a key={code} href={href} style={lineRow.row}>
-                    <span className="mono" style={{ color: "#fff", fontWeight: 600 }}>{code} <span style={lineRow.linkArrow}>↗</span></span>
-                    <span style={{ color: "var(--on-blue-muted)", fontSize: 13 }}>{label}</span>
+                    <span className="mono" style={{ color: "var(--on-blue)", fontWeight: 600 }}>{code} <span style={lineRow.linkArrow}>↗</span></span>
+                    <span style={{ color: "var(--on-blue-muted)", fontSize: "var(--fs-label)" }}>{label}</span>
                   </a>
                 )}
               </div>
@@ -181,52 +181,52 @@ as individual machines into existing lines.
 };
 
 const lineBenefits = {
-  wrap: { marginTop: 64, paddingTop: 48, borderTop: "1px solid rgba(255,255,255,0.15)" },
-  label: { fontSize: 44, lineHeight: 1.1, letterSpacing: "-0.02em", color: "#fff", maxWidth: 760, marginTop: 0, marginBottom: 24 },
-  lede: { color: "var(--on-blue-muted)", fontSize: 16, lineHeight: 1.65, maxWidth: 820, marginBottom: 32 },
-  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 },
-  benefit: { paddingTop: 20, borderTop: "1px solid var(--on-blue-muted)" },
-  benefitTitle: { color: "#fff", fontSize: 16, fontWeight: 600, lineHeight: 1.3, marginBottom: 12 },
-  benefitBody: { color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.6 }
+  wrap: { marginTop: "var(--space-8)", paddingTop: "var(--space-6)", borderTop: "1px solid var(--on-blue-line)" },
+  label: { fontSize: "var(--fs-xl)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--on-blue)", maxWidth: 760, marginTop: 0, marginBottom: "var(--space-3)" },
+  lede: { color: "var(--on-blue-muted)", fontSize: "var(--fs-body)", lineHeight: 1.65, maxWidth: 820, marginBottom: "var(--space-4)" },
+  grid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "var(--space-4)" },
+  benefit: { paddingTop: "var(--space-3)", borderTop: "1px solid var(--on-blue-muted)" },
+  benefitTitle: { color: "var(--on-blue)", fontSize: "var(--fs-body)", fontWeight: 600, lineHeight: 1.3, marginBottom: "var(--space-1-5)" },
+  benefitBody: { color: "var(--on-blue-muted)", fontSize: "var(--fs-label)", lineHeight: 1.6 }
 };
 
 // ============ LINE ROW STYLES ============
 const lineRow = {
   wrap: { display: "grid", gridTemplateColumns: "1fr 24px 1fr 24px 1.4fr", gap: 0, alignItems: "stretch" },
-  col: { background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.15)", padding: "28px" },
-  colHeader: { fontSize: 13, color: "var(--on-blue-muted)", marginBottom: 20 },
-  arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.3)", fontSize: 24 },
+  col: { background: "var(--on-blue-fill)", border: "1px solid var(--on-blue-line)", padding: "var(--space-4)" },
+  colHeader: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", marginBottom: "var(--space-3)" },
+  arrow: { display: "flex", alignItems: "center", justifyContent: "center", color: "var(--on-blue-line)", fontSize: "var(--fs-l)" },
   link: { display: "block", textDecoration: "none", color: "inherit" },
-  machine: { padding: "20px 0" },
-  code: { fontSize: 22, color: "#fff", fontWeight: 600, letterSpacing: "-0.01em", display: "flex", alignItems: "baseline", gap: 6 },
-  label: { color: "#fff", marginTop: 4, fontSize: 14, fontWeight: 500 },
-  note: { marginTop: 12, color: "var(--on-blue-muted)", fontSize: 13, lineHeight: 1.55 },
+  machine: { padding: "var(--space-3) 0" },
+  code: { fontSize: "var(--fs-m)", color: "var(--on-blue)", fontWeight: 600, letterSpacing: "-0.01em", display: "flex", alignItems: "baseline", gap: "var(--space-1)" },
+  label: { color: "var(--on-blue)", marginTop: "var(--space-half)", fontSize: "var(--fs-ui)", fontWeight: 500 },
+  note: { marginTop: "var(--space-1-5)", color: "var(--on-blue-muted)", fontSize: "var(--fs-label)", lineHeight: 1.55 },
   list: { display: "flex", flexDirection: "column" },
-  row: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: 13, textDecoration: "none" },
-  linkArrow: { fontSize: 13, color: "var(--on-blue-muted)", fontWeight: 400 }
+  row: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--space-1-5) 0", borderBottom: "1px solid var(--on-blue-line)", fontSize: "var(--fs-label)", textDecoration: "none" },
+  linkArrow: { fontSize: "var(--fs-label)", color: "var(--on-blue-muted)", fontWeight: 400 }
 };
 
 // ============ PROCESS BLOCK ============
 function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel, flipped }) {
   const left =
-  <div style={{ padding: "48px 48px" }}>
-      <div className="mono" style={{ fontSize: 13, color: "var(--ink)", marginBottom: 16 }}>
+  <div style={{ padding: "var(--space-6) var(--space-6)" }}>
+      <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink)", marginBottom: "var(--space-2)" }}>
         Step {num}
       </div>
-      <h3 style={{ fontSize: 32, lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
+      <h3 style={{ fontSize: "var(--fs-l)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--navy)" }}>
         {title}
       </h3>
-      <div style={{ marginTop: 20, fontSize: 15, lineHeight: 1.65, color: "var(--ink-soft)" }}>
+      <div style={{ marginTop: "var(--space-3)", fontSize: "var(--fs-body)", lineHeight: 1.65, color: "var(--ink-soft)" }}>
         {body}
       </div>
       {note &&
-      <div style={{ marginTop: 14, fontSize: 13, lineHeight: 1.55, color: "var(--ink-muted)", fontStyle: "italic" }}>
+      <div style={{ marginTop: "var(--space-2)", fontSize: "var(--fs-label)", lineHeight: 1.55, color: "var(--ink-muted)", fontStyle: "italic" }}>
           {note}
         </div>
       }
-      <div style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 12, paddingTop: 24, borderTop: "1px solid var(--rule)", alignItems: "flex-start" }}>
+      <div style={{ marginTop: "var(--space-4)", display: "flex", flexDirection: "column", gap: "var(--space-1-5)", paddingTop: "var(--space-3)", borderTop: "1px solid var(--rule)", alignItems: "flex-start" }}>
         {linksLabel &&
-      <div className="mono" style={{ fontSize: 13, color: "var(--ink-muted)", marginBottom: 4 }}>
+      <div className="mono" style={{ fontSize: "var(--fs-label)", color: "var(--ink-muted)", marginBottom: "var(--space-half)" }}>
             {linksLabel}
           </div>
       }
@@ -245,7 +245,7 @@ function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel,
     <div style={{
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
-      background: "#fff",
+      background: "var(--surface)",
       border: "1px solid var(--rule)",
       alignItems: "stretch"
     }}>
@@ -256,7 +256,7 @@ function ProcessBlock({ num, title, body, note, imgId, image, links, linksLabel,
 
 function ProcessConnector() {
   return (
-    <div style={{ display: "flex", justifyContent: "center", padding: "20px 0" }}>
+    <div style={{ display: "flex", justifyContent: "center", padding: "var(--space-3) 0" }}>
       <div style={{
         width: 0, height: 0,
         borderLeft: "32px solid transparent",
